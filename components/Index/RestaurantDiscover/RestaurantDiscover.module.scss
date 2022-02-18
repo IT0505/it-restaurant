@@ -31,9 +31,10 @@
     .mySwiper {
       width: 50%;
       margin-left: 20px;
-      padding: 50px 0 70px;
+      padding: 70px 0 120px;
 
       .swiperSlide {
+        height: 350px;
         position: relative;
         // background-color: red;
         right: -170px;
@@ -43,10 +44,10 @@
           position: relative;
           height: 100%;
           margin: 0;
-        }
 
-        &.active {
-          transform: scale(1.2);
+          &.active {
+            transform: scale(1.2);
+          }
         }
       }
 

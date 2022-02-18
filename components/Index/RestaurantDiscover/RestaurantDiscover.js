@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { restaurantDiscoverData } from '../../../utils/dataConfig';
 import Button from '../../Button/Button';
 import MainTitle from '../../MainTitle/MainTitle';
-import { useEffect } from 'react';
 
 import { Autoplay, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -21,11 +20,6 @@ export default function RestaurantDiscover() {
       return `<span class="${className} ${styles.pagination}"></span>`;
     },
   };
-
-  useEffect(() => {
-    document.querySelector('.swiper-slide-active').classList.add(styles.active);
-    console.log('Thanh da vao day');
-  });
 
   const mainContent = restaurantDiscoverData.mainContent;
   return (
@@ -47,7 +41,7 @@ export default function RestaurantDiscover() {
           <Swiper
             // install Swiper modules
             modules={[Autoplay, Pagination]}
-            spaceBetween={50}
+            spaceBetween={40}
             slidesPerView={1.5}
             loop={true}
             // autoplay={{
@@ -59,13 +53,17 @@ export default function RestaurantDiscover() {
           >
             {restaurantDiscoverData.swiperImgs.map((data, index) => (
               <SwiperSlide className={styles.swiperSlide} key={index}>
-                <figure className={styles.image}>
-                  <Image
-                    src={data.imgSrc}
-                    alt={data.imgAlt}
-                    layout='fill'
-                  ></Image>
-                </figure>
+                {({ isActive }) => (
+                  <figure
+                    className={`${styles.image} ${isActive && styles.active}`}
+                  >
+                    <Image
+                      src={data.imgSrc}
+                      alt={data.imgAlt}
+                      layout='fill'
+                    ></Image>
+                  </figure>
+                )}
               </SwiperSlide>
             ))}
           </Swiper>

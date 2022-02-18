@@ -21,19 +21,14 @@ export default function Submenu(props) {
               {data.title}
             </a>
           ) : (
-            <>
-              <span className={styles.menuItem} key={index}>
-                {data.title}
-                <i
-                  className='fa-solid fa-angle-right'
-                  style={{ float: 'right', lineHeight: '24px' }}
-                ></i>
-                <Submenu
-                  submenu={data.submenu}
-                  classImplement={styles.submenu}
-                />
-              </span>
-            </>
+            <span className={styles.menuItem} key={index}>
+              {data.title}
+              <i
+                className='fa-solid fa-angle-right'
+                style={{ float: 'right', lineHeight: '24px' }}
+              ></i>
+              <Submenu submenu={data.submenu} classImplement={styles.submenu} />
+            </span>
           )
         )}
       </FadeInUpDiv>
