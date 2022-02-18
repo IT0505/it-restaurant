@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { restaurantDiscoverData } from '../../../utils/dataConfig';
 import Button from '../../Button/Button';
 import MainTitle from '../../MainTitle/MainTitle';
+import { useEffect } from 'react';
 
 import { Autoplay, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -20,6 +21,12 @@ export default function RestaurantDiscover() {
       return `<span class="${className} ${styles.pagination}"></span>`;
     },
   };
+
+  useEffect(() => {
+    document.querySelector('.swiper-slide-active').classList.add(styles.active);
+    console.log('Thanh da vao day');
+  });
+
   const mainContent = restaurantDiscoverData.mainContent;
   return (
     <div className={`${styles.restaurantDiscover} section`}>
@@ -43,10 +50,10 @@ export default function RestaurantDiscover() {
             spaceBetween={50}
             slidesPerView={1.5}
             loop={true}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 3500,
+            //   disableOnInteraction: false,
+            // }}
             pagination={pagination}
             className={styles.mySwiper}
           >

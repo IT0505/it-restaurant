@@ -31,12 +31,23 @@
     .mySwiper {
       width: 50%;
       margin-left: 20px;
-      padding-bottom: 50px;
+      padding: 50px 0 70px;
 
       .swiperSlide {
         position: relative;
-        background-color: red;
+        // background-color: red;
         right: -170px;
+        cursor: pointer;
+
+        .image {
+          position: relative;
+          height: 100%;
+          margin: 0;
+        }
+
+        &.active {
+          transform: scale(1.2);
+        }
       }
 
       .pagination {

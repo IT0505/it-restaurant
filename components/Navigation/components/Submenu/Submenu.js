@@ -14,7 +14,7 @@ export default function Submenu(props) {
 
   return (
     <>
-      <FadeInUpDiv className={styles.submenu + ' ' + classImplement}>
+      <FadeInUpDiv className={`${styles.submenu} ${classImplement}`}>
         {submenu.map((data, index) =>
           data.url ? (
             <a className={styles.menuItem} href={data.url} key={index}>
