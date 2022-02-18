@@ -1,0 +1,61 @@
+.restaurantDiscover {
+  // padding-bottom: 120px;
+  .restaurantDiscoverInner {
+    display: flex;
+    justify-content: space-between;
+
+    .mainContent {
+      width: 50%;
+      padding: 0 10px;
+
+      .mainTitle {
+        text-align: left;
+      }
+
+      .description {
+        margin-bottom: 20px;
+      }
+
+      .button {
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 10px 40px;
+
+        &:hover {
+          color: #feb518;
+        }
+      }
+    }
+
+    .mySwiper {
+      width: 50%;
+      margin-left: 20px;
+      padding-bottom: 50px;
+
+      .swiperSlide {
+        position: relative;
+        background-color: red;
+        right: -170px;
+      }
+
+      .pagination {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: none;
+        z-index: 2;
+        border: 1px solid #d3d3d3;
+        position: relative;
+        bottom: 0px;
+        opacity: 1 !important;
+
+        // &:hover,
+        &.active {
+          background-color: #feb518;
+          border-color: #feb518;
+        }
+      }
+    }
+  }
+}

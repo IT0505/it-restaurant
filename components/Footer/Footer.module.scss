@@ -1,0 +1,161 @@
+.footer {
+  width: 100%;
+  background-color: #151515;
+  color: #888888;
+
+  .footerInner {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0px;
+
+    .contentWrap {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+
+      h2 {
+        position: relative;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 0 0 35px;
+        padding: 12px 0px 5px;
+        color: #cccccc;
+        font-family: 'Roboto Slab', serif;
+
+        &:after {
+          position: absolute;
+          content: '';
+          width: 30px;
+          height: 1px;
+          left: 0px;
+          bottom: 0px;
+          background-color: #feb518;
+        }
+      }
+    }
+
+    .aboutWidget {
+      padding: 0 10px;
+
+      .logo {
+        width: 100%;
+        margin: 0;
+      }
+
+      p {
+        margin: 10px 0 20px;
+      }
+
+      .contactInfo {
+        margin: 0 0 10px;
+      }
+    }
+
+    .usefulLink {
+      flex-shrink: 9;
+      padding: 0 10px;
+
+      a {
+        text-transform: capitalize;
+        margin: 0 0 10px;
+        transition: 0.5s;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .latestBlog {
+      padding: 0 10px;
+
+      .latestBlogContent {
+        display: flex;
+        margin-bottom: 16px;
+
+        &:hover {
+          .blogImage {
+            a {
+              opacity: 1;
+            }
+          }
+        }
+
+        .blogImage {
+          position: relative;
+          flex-shrink: 0;
+          width: 62px;
+          height: 62px;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 3px solid #5c5c5c;
+          margin: 0;
+
+          a {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgba(254, 181, 24, 0.8);
+            color: #ffffff;
+            opacity: 0;
+            border-radius: 50%;
+            display: flex;
+            // flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+          }
+        }
+
+        .blogText {
+          margin-left: 16px;
+
+          a {
+            position: relative;
+            font-size: 14px;
+            color: #cccccc;
+            line-height: 1.8em;
+            margin-bottom: 0px;
+          }
+
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .openingHours {
+      padding: 0 10px;
+
+      .openingHoursContent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+
+        p {
+          margin: 0;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+
+.footerBottom {
+  text-align: center;
+  padding: 34px 0px;
+  background-color: #111111;
+
+  .footerBottomInner {
+    p {
+      margin: 0;
+      color: #999999;
+      font-size: 13px;
+    }
+  }
+}
