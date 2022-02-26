@@ -13,19 +13,11 @@ export default function Navigation() {
   const [top, setTop] = useState(true);
 
   useEffect(() => {
-    // window.onscroll = () => {
-    //   if (window.pageYOffset === 0) {
-    //     setTop(true);
-    //   } else {
-    //     setTop(false);
-    //   }
-    // };
     window.addEventListener('scroll', () => {
       if (window.pageYOffset === 0) {
         setTop(true);
       } else setTop(false);
     });
-    console.log(top);
   }, [top]);
 
   return (
@@ -68,12 +60,10 @@ export default function Navigation() {
                       id={data.title}
                       name={data.title}
                     ></input>
-                    <label className={styles.menuItem} htmlFor={data.title}>
-                      {data.title}
-                      <span className={styles.icon}>
-                        <i className='fa-solid fa-angle-right'></i>
-                      </span>
+                    <label className={styles.icon} htmlFor={data.title}>
+                      <i className='fa-solid fa-angle-right'></i>
                     </label>
+                    <div className={styles.menuItem}>{data.title}</div>
                     <Submenu
                       submenu={data.submenu}
                       classImplement={styles.submenu}

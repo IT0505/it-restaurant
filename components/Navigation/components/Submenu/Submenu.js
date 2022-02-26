@@ -29,15 +29,13 @@ export default function Submenu(props) {
               <input
                 className={styles.checkbox}
                 type='checkbox'
-                id={data.title}
-                name={data.title}
+                id={data.id}
+                name={data.id}
               ></input>
-              <label className={styles.subItem} htmlFor={data.title}>
-                {data.title}
-                <span className={styles.icon}>
-                  <i className='fa-solid fa-angle-right'></i>
-                </span>
+              <label className={styles.icon} htmlFor={data.id}>
+                <i className='fa-solid fa-angle-right'></i>
               </label>
+              <div className={styles.subItem}>{data.title}</div>
               <Submenu submenu={data.submenu} classImplement={styles.submenu} />
             </>
           )}

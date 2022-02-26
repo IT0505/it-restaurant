@@ -181,6 +181,10 @@
           margin-left: 20px;
           width: -webkit-fill-available;
 
+          @include Responsive(XS) {
+            margin-left: 0;
+          }
+
           .inlineWrap {
             color: #ffffff;
             font-size: 17px;

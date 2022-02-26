@@ -88,7 +88,7 @@
 
         &:hover {
           .submenu {
-            display: flex !important;
+            display: flex;
           }
         }
 
@@ -99,15 +99,41 @@
         .checkbox {
           display: none;
         }
+
         input[type='checkbox']:checked ~ .submenu {
           transition: all 0.5s;
           height: fit-content;
           max-height: 500px;
         }
-        input[type='checkbox']:checked ~ .menuItem {
-          .icon {
-            @include Responsive(M) {
-              transform: rotate(-90deg);
+        input[type='checkbox']:checked ~ .icon {
+          @include Responsive(M) {
+            transform: rotate(-90deg);
+          }
+        }
+
+        .icon {
+          display: none;
+          // float: right;
+          line-height: 24px;
+
+          @include Responsive(M) {
+            cursor: pointer;
+            display: inline-block;
+            background: none;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            padding: 3px 12px;
+            font-size: 14px;
+            border-radius: 0px;
+            outline: none;
+            z-index: 9;
+            position: absolute;
+            top: 9px;
+            right: 15px;
+            transform: rotate(90deg);
+
+            &:hover {
+              background: rgba(255, 255, 255, 0.1);
             }
           }
         }
@@ -128,27 +154,27 @@
           text-transform: capitalize;
           // padding: 0;
 
-          .icon {
-            display: none;
-            // float: right;
-            line-height: 24px;
+          // .icon {
+          //   display: none;
+          //   // float: right;
+          //   line-height: 24px;
 
-            @include Responsive(M) {
-              display: inline-block;
-              background: none;
-              color: #ffffff;
-              border: 1px solid rgba(255, 255, 255, 0.8);
-              padding: 3px 12px;
-              font-size: 14px;
-              border-radius: 0px;
-              outline: none;
-              position: absolute;
-              top: 9px;
-              right: 15px;
+          //   @include Responsive(M) {
+          //     display: inline-block;
+          //     background: none;
+          //     color: #ffffff;
+          //     border: 1px solid rgba(255, 255, 255, 0.8);
+          //     padding: 3px 12px;
+          //     font-size: 14px;
+          //     border-radius: 0px;
+          //     outline: none;
+          //     position: absolute;
+          //     top: 9px;
+          //     right: 15px;
 
-              transform: rotate(90deg);
-            }
-          }
+          //     transform: rotate(90deg);
+          //   }
+          // }
 
           @include Responsive(M) {
             text-align: left;

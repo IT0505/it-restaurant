@@ -56,39 +56,48 @@ export const navigationData = {
         {
           title: 'Homepage one',
           url: '#',
+          id: 'homepage1',
         },
         {
           title: 'Homepage two',
           url: '#',
+          id: 'homepage2',
         },
         {
           title: 'Homepage three',
+          id: 'homepage3',
           submenu: [
             {
               title: 'Homepage one',
               url: '#',
+              id: 'homepage31',
             },
             {
               title: 'Homepage two',
               url: '#',
+              id: 'homepage32',
             },
             {
               title: 'Homepage three',
-              url: '#',
-              // submenu: [
-              //   {
-              //     title: 'Homepage one',
-              //     url: '#',
-              //   },
-              //   {
-              //     title: 'Homepage two',
-              //     url: '#',
-              //   },
-              //   {
-              //     title: 'Homepage three',
-              //     url: '#',
-              //   },
-              // ],
+              id: 'homepage33',
+              // url: '#',
+              submenu: [
+                {
+                  title: 'Homepage one',
+                  url: '#',
+                  id: 'homepage331',
+                },
+                {
+                  title: 'Homepage two',
+                  url: '#',
+                  id: 'homepage332',
+                },
+                {
+                  title: 'Homepage three',
+                  url: '#',
+                  id: 'homepage333',
+                },
+              ],
             },
           ],
         },
@@ -108,27 +117,33 @@ export const navigationData = {
         {
           title: 'Menu style one',
           url: '#',
+          id: 'menu1',
         },
         {
           title: 'Menu style two',
+          id: 'menu2',
           submenu: [
             {
               title: 'Menu style one',
               url: '#',
+              id: 'menu21',
             },
             {
               title: 'Menu style two',
               url: '#',
+              id: 'menu22',
             },
             {
               title: 'Menu style three',
               url: '#',
+              id: 'menu23',
             },
           ],
         },
         {
           title: 'Menu style three',
           url: '#',
+          id: 'menu3',
         },
       ],
     },
@@ -142,14 +157,17 @@ export const navigationData = {
         {
           title: 'Shop one',
           url: '#',
+          id: 'shop1',
         },
         {
           title: 'Shop two',
           url: '#',
+          id: 'shop2',
         },
         {
           title: 'Shop three',
           url: '#',
+          id: 'shop3',
         },
       ],
     },
@@ -159,10 +177,12 @@ export const navigationData = {
         {
           title: 'Blog',
           url: '#',
+          id: 'blog1',
         },
         {
           title: 'Blog simple',
           url: '#',
+          id: 'blog2',
         },
       ],
     },

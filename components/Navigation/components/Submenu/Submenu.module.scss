@@ -51,24 +51,47 @@
       height: fit-content;
       max-height: 500px;
     }
-    input[type='checkbox']:checked ~ .subItem {
-      .icon {
-        @include Responsive(M) {
-          transform: rotate(-90deg);
-        }
+    input[type='checkbox']:checked ~ .icon {
+      @include Responsive(M) {
+        transform: rotate(-90deg);
       }
     }
 
-    &:hover {
-      .submenu {
-        display: flex;
-        top: 0;
-        left: 220px;
-        color: #000;
+    &:hover > .submenu {
+      display: flex;
+      top: 0;
+      left: 220px;
+      color: #000;
 
-        @include Responsive(M) {
-          top: unset;
-          left: unset;
+      @include Responsive(M) {
+        top: unset;
+        left: unset;
+      }
+    }
+
+    .icon {
+      font-size: 14px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 3;
+
+      @include Responsive(M) {
+        background: none;
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        padding: 3px 12px;
+        font-size: 14px;
+        border-radius: 0px;
+        outline: none;
+        top: 6px;
+        right: 15px;
+        z-index: 9;
+        cursor: pointer;
+        transform: rotate(90deg);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
         }
       }
     }
@@ -85,26 +108,25 @@
       cursor: pointer;
       background-color: #fff;
 
-      .icon {
-        float: right;
-        line-height: 24px;
+      // .icon {
+      //   line-height: 24px;
+      //   position: absolute;
 
-        @include Responsive(M) {
-          float: none;
-          background: none;
-          color: #ffffff;
-          border: 1px solid rgba(255, 255, 255, 0.8);
-          padding: 3px 12px;
-          font-size: 14px;
-          border-radius: 0px;
-          outline: none;
-          position: absolute;
-          top: 6px;
-          right: 15px;
+      //   @include Responsive(M) {
+      //     background: none;
+      //     color: #ffffff;
+      //     border: 1px solid rgba(255, 255, 255, 0.8);
+      //     padding: 3px 12px;
+      //     font-size: 14px;
+      //     border-radius: 0px;
+      //     outline: none;
+      //     position: absolute;
+      //     top: 6px;
+      //     right: 15px;
 
-          transform: rotate(90deg);
-        }
-      }
+      //     transform: rotate(90deg);
+      //   }
+      // }
       &:hover {
         color: #ffffff;
         background: #feb518;
