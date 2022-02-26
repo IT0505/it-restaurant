@@ -69,18 +69,16 @@ export default function OurDeliciousMenu() {
               <div key={index} className={styles.content}>
                 <a className={styles.image} href={data.url}>
                   {data.new && <p>New</p>}
-                  <Image
-                    src={data.imgSrc}
-                    alt={data.imgAlt}
-                    layout='fill'
-                  ></Image>
+                  <Image src={data.imgSrc} alt={data.imgAlt}></Image>
                 </a>
                 <div className={styles.text}>
                   <div className={styles.inlineWrap}>
                     <a href={data.url} className={styles.inlineText}>
                       {data.name}
                     </a>
-                    <span className={styles.inlineText}>...............</span>
+                    <span className={`${styles.inlineText} ${styles.dots}`}>
+                      ...............
+                    </span>
                     <p className={styles.inlineText}>{data.price}</p>
                   </div>
                   <p className={styles.description}>{data.description}</p>

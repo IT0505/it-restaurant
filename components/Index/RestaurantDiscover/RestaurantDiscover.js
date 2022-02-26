@@ -26,7 +26,7 @@ export default function RestaurantDiscover() {
     <div className={`${styles.restaurantDiscover} section`}>
       <div className='container'>
         <div className={styles.restaurantDiscoverInner}>
-          <div className={styles.mainContent}>
+          <div className={`${styles.mainContent}`}>
             <MainTitle
               slogan={mainContent.slogan}
               classImplement={styles.mainTitle}
@@ -37,19 +37,25 @@ export default function RestaurantDiscover() {
             <p className={styles.description}>{mainContent.description2}</p>
             <Button classImplement={styles.button}>Read More</Button>
           </div>
-          {/* <div className={styles.swiper}> */}
+          {/* <div className={`${styles.swiperWrap} animate`}> */}
           <Swiper
             // install Swiper modules
             modules={[Autoplay, Pagination]}
             spaceBetween={40}
-            slidesPerView={1.5}
+            slidesPerView={1}
             loop={true}
-            // autoplay={{
-            //   delay: 3500,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
             pagination={pagination}
-            className={styles.mySwiper}
+            className={`${styles.mySwiper} animate fadeInRight`}
+            breakpoints={{
+              992: {
+                slidesPerView: 1.5,
+                spaceBetween: 40,
+              },
+            }}
           >
             {restaurantDiscoverData.swiperImgs.map((data, index) => (
               <SwiperSlide className={styles.swiperSlide} key={index}>
@@ -57,11 +63,7 @@ export default function RestaurantDiscover() {
                   <figure
                     className={`${styles.image} ${isActive && styles.active}`}
                   >
-                    <Image
-                      src={data.imgSrc}
-                      alt={data.imgAlt}
-                      layout='fill'
-                    ></Image>
+                    <Image src={data.imgSrc} alt={data.imgAlt}></Image>
                   </figure>
                 )}
               </SwiperSlide>

@@ -6,7 +6,9 @@
 
       .image {
         max-width: 288px;
-        height: 288px;
+        max-height: 288px;
+        height: 100%;
+        display: flex;
         margin: 0 auto;
         border-radius: 50%;
         overflow: hidden;

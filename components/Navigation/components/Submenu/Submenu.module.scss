@@ -1,8 +1,10 @@
+@import '../../../../styles/_mixin';
+
 .submenu {
   // visibility: hidden;
   // display: flex;
   display: none;
-  top: 90px;
+  top: 89px;
   // opacity: 0;
   flex-direction: column;
   position: absolute;
@@ -15,32 +17,116 @@
   transition: 0.5s;
   color: #272727;
 
-  .menuItem {
+  @include Responsive(M) {
+    display: flex;
+    height: 0;
+    max-height: 0;
     position: relative;
-    text-align: left;
+    top: unset;
+    left: unset;
+    background: transparent;
+    border: none;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.5s max-height;
+  }
+
+  .subItemWrap {
+    position: relative;
     width: 100%;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 10px 15px;
-    line-height: 24px;
-    font-weight: 400;
-    font-size: 13px;
-    text-transform: capitalize;
-    cursor: pointer;
-    background-color: #fff;
+    padding: 0;
+
+    @include Responsive(M) {
+      border: none;
+    }
+
+    .checkbox {
+      display: none;
+    }
+
+    input[type='checkbox']:checked ~ .submenu {
+      transition: all 0.5s;
+      height: fit-content;
+      max-height: 500px;
+    }
+    input[type='checkbox']:checked ~ .subItem {
+      .icon {
+        @include Responsive(M) {
+          transform: rotate(-90deg);
+        }
+      }
+    }
 
     &:hover {
-      color: #ffffff;
-      background: #feb518;
-
       .submenu {
-        // visibility: visible;
         display: flex;
-        // top: 100px;
-        // opacity: 1;
         top: 0;
         left: 220px;
         color: #000;
+
+        @include Responsive(M) {
+          top: unset;
+          left: unset;
+        }
+      }
+    }
+
+    .subItem {
+      display: block;
+      padding: 10px 15px;
+      position: relative;
+      text-align: left;
+      line-height: 24px;
+      font-weight: 400;
+      font-size: 13px;
+      text-transform: capitalize;
+      cursor: pointer;
+      background-color: #fff;
+
+      .icon {
+        float: right;
+        line-height: 24px;
+
+        @include Responsive(M) {
+          float: none;
+          background: none;
+          color: #ffffff;
+          border: 1px solid rgba(255, 255, 255, 0.8);
+          padding: 3px 12px;
+          font-size: 14px;
+          border-radius: 0px;
+          outline: none;
+          position: absolute;
+          top: 6px;
+          right: 15px;
+
+          transform: rotate(90deg);
+        }
+      }
+      &:hover {
+        color: #ffffff;
+        background: #feb518;
+
+        @include Responsive(M) {
+          background: rgba(255, 255, 255, 0.1);
+          color: #ffffff;
+        }
+      }
+
+      @include Responsive(M) {
+        text-transform: capitalize;
+        font-size: 14px;
+        text-align: left;
+        margin: 0;
+        font-weight: 500;
+        color: #fff;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 10px 15px 10px 20px;
+        width: 100%;
+        background-color: transparent;
       }
     }
   }

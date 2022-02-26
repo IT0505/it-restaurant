@@ -14,7 +14,7 @@ export default function OurSpecialDishes() {
             {ourSpecialDishesData.title}
           </MainTitle>
           <div className={styles.mainContent}>
-            <div className={styles.openingHours}>
+            <div className={`${styles.openingHours} animate fadeInLeft`}>
               <h2 className={styles.title}>Opening Hours</h2>
               <ul>
                 {openingHours.map((data, index) => (
@@ -42,14 +42,7 @@ export default function OurSpecialDishes() {
                   key={index}
                 >
                   <figure className={styles.image}>
-                    <Image
-                      src={data.imgSrc}
-                      alt={data.imgAlt}
-                      layout='fill'
-                      // width='100%'
-                      // height='100%'
-                      // objectFit='cover'
-                    />
+                    <Image src={data.imgSrc} alt={data.imgAlt} />
                     <div className={styles.overlay}>{data.price}</div>
                   </figure>
                   <div className={styles.text}>

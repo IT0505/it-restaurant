@@ -1,6 +1,12 @@
+@import '../../../styles/_mixin';
+
 .ourBest {
   padding: 200px 0;
   position: relative;
+
+  @include Responsive(XS) {
+    padding: 100px 0;
+  }
 
   .ourBestInner {
     position: relative;

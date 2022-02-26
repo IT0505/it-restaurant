@@ -21,7 +21,7 @@ export default function OurDelicious() {
           <div className={styles.mainContent}>
             <Swiper
               className={styles.mySwiper}
-              slidesPerView={3}
+              slidesPerView={1}
               spaceBetween={10}
               autoplay={{
                 delay: 3500,
@@ -29,6 +29,16 @@ export default function OurDelicious() {
               }}
               modules={[Autoplay]}
               loop={true}
+              breakpoints={{
+                654: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                },
+                992: {
+                  slidesPerView: 3,
+                  spaceBetween: 40,
+                },
+              }}
             >
               {chefList.map((data, index) => (
                 <SwiperSlide key={index}>

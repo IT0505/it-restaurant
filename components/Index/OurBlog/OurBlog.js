@@ -12,7 +12,7 @@ export default function OurBlog() {
           <MainTitle slogan={ourBlogData.slogan}>{ourBlogData.title}</MainTitle>
           <div className={styles.mainContent}>
             {mainContent.map((data, index) => (
-              <div className={styles.content} key={index}>
+              <div className={`${styles.content} animate fadeIn`} key={index}>
                 <figure className={styles.image}>
                   <Image src={data.imgSrc} alt={data.imgAlt}></Image>
                 </figure>

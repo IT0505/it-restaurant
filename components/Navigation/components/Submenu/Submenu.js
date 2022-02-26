@@ -1,37 +1,48 @@
 import styles from './Submenu.module.scss';
-import styled, { keyframes } from 'styled-components';
 import { fadeInUp } from 'react-animations';
 
-const fadeInUpAnimation = keyframes`${fadeInUp}`;
+import { StyleSheet, css } from 'aphrodite';
 
-const FadeInUpDiv = styled.div`
-  animation: 0.5s ${fadeInUpAnimation};
-`;
+const classes = StyleSheet.create({
+  fadeInUp: {
+    animationName: fadeInUp,
+    animationDuration: '0.5s',
+  },
+});
 
 export default function Submenu(props) {
   const submenu = props.submenu;
   const classImplement = props.classImplement;
 
   return (
-    <>
-      <FadeInUpDiv className={`${styles.submenu} ${classImplement}`}>
-        {submenu.map((data, index) =>
-          data.url ? (
-            <a className={styles.menuItem} href={data.url} key={index}>
+    <div
+      className={`${styles.submenu} ${classImplement} ${css(classes.fadeInUp)}`}
+    >
+      {submenu.map((data, index) => (
+        <div className={styles.subItemWrap} key={index}>
+          {data.url ? (
+            <a className={styles.subItem} href={data.url}>
               {data.title}
             </a>
           ) : (
-            <span className={styles.menuItem} key={index}>
-              {data.title}
-              <i
-                className='fa-solid fa-angle-right'
-                style={{ float: 'right', lineHeight: '24px' }}
-              ></i>
+            <>
+              <input
+                className={styles.checkbox}
+                type='checkbox'
+                id={data.title}
+                name={data.title}
+              ></input>
+              <label className={styles.subItem} htmlFor={data.title}>
+                {data.title}
+                <span className={styles.icon}>
+                  <i className='fa-solid fa-angle-right'></i>
+                </span>
+              </label>
               <Submenu submenu={data.submenu} classImplement={styles.submenu} />
-            </span>
-          )
-        )}
-      </FadeInUpDiv>
-    </>
+            </>
+          )}
+        </div>
+      ))}
+    </div>
   );
 }

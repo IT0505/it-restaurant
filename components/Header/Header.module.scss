@@ -1,3 +1,5 @@
+@import '../../styles/_mixin';
+
 .header {
   width: 100%;
   background: #222222;
@@ -8,7 +10,19 @@
     justify-content: space-between;
     align-items: center;
 
+    @include Responsive(M) {
+      flex-direction: column;
+    }
+
     .topLeft {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include Responsive(M) {
+        flex-direction: column;
+      }
+
       p {
         line-height: 24px;
         color: #dddddd;
@@ -23,6 +37,11 @@
         display: inline-block;
         border-right: 1px solid #434343;
 
+        @include Responsive(M) {
+          margin: 0;
+          border: none;
+        }
+
         a {
           position: relative;
           display: inline-block;
@@ -31,14 +50,17 @@
           line-height: 22px;
           font-size: 13px;
           color: #dddddd;
+
+          @include Responsive(M) {
+            margin: 0 10px;
+          }
         }
       }
     }
 
     .topRight {
       p,
-      span,
-      i {
+      span {
         margin: 0;
         color: #dddddd;
         font-size: 13px;
@@ -46,6 +68,32 @@
         padding: 8px 18px;
         background-color: #222222;
         border-left: 1px solid #434343;
+      }
+
+      .icon {
+        position: relative;
+
+        .count {
+          position: absolute;
+          padding: 0;
+          right: 8px;
+          top: 18px;
+          font-size: 10px;
+          width: 16px;
+          height: 16px;
+          line-height: 16px;
+          color: #ffffff;
+          text-align: center;
+          border-radius: 50%;
+          display: inline-block;
+          background-color: #feb518;
+        }
+      }
+
+      p {
+        @include Responsive(M) {
+          border-left: none;
+        }
       }
     }
   }

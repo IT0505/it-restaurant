@@ -4,16 +4,27 @@ import styles from './Slideshow.module.scss';
 import Button from '../../Button/Button';
 import { slideshowData } from '../../../utils/dataConfig';
 
-// import { Swiper, SwiperSlide } from 'swiper/react';
+import { fadeIn, fadeInUp, slideInLeft, slideInRight } from 'react-animations';
+import { StyleSheet, css } from 'aphrodite';
 
-// // Import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/effect-fade';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-
-// // import required modules
-// import { EffectFade, Navigation, Pagination } from 'swiper';
+const classes = StyleSheet.create({
+  fadeIn: {
+    animationName: fadeIn,
+    animationDuration: '2s',
+  },
+  fadeInUp: {
+    animationName: fadeInUp,
+    animationDuration: '2s',
+  },
+  slideInLeft: {
+    animationName: slideInLeft,
+    animationDuration: '2s',
+  },
+  slideInRight: {
+    animationName: slideInRight,
+    animationDuration: '2s',
+  },
+});
 
 export default function SlideShow() {
   const [slide, setSlide] = useState(0);
@@ -24,13 +35,24 @@ export default function SlideShow() {
     switch (title) {
       case 'The Fresh And Tasty Burgers':
         return 'custom1';
+      default:
+        return '';
+    }
+  };
+
+  const animateCustom = (custom) => {
+    switch (custom) {
+      case 'custom1':
+        return css(classes.slideInLeft);
+      default:
+        return css(classes.fadeIn);
     }
   };
   return (
     <div className={styles.slideshow}>
       {slideshowItems.map((data, index) => (
         <figure
-          className={`${styles.slide} ${styles.fade} ${
+          className={`${styles.slide} ${css(classes.fadeIn)} ${
             slide === index && styles.active
           }`}
           key={index}
@@ -48,11 +70,30 @@ export default function SlideShow() {
               }`}
             >
               {data.iconSrc && (
-                <Image src={data.iconSrc} alt={data.imgAlt}></Image>
+                <figure className={`${styles.image} ${css(classes.fadeInUp)}`}>
+                  <Image
+                    src={data.iconSrc}
+                    alt={data.imgAlt}
+                    // layout='fill'
+                    // objectFit='contain'
+                  ></Image>
+                </figure>
               )}
-              <h3 className={styles.title}>{data.title}</h3>
-              <p className={styles.description}>{data.description}</p>
-              <Button classImplement={styles.button}>Buy Now</Button>
+              <h3 className={`${styles.title} ${css(classes.slideInLeft)}`}>
+                {data.title}
+              </h3>
+              <p
+                className={`${styles.description} ${css(classes.slideInRight)}`}
+              >
+                {data.description}
+              </p>
+              <Button
+                classImplement={`${styles.button} ${animateCustom(
+                  classNameCustom(data.title)
+                )}`}
+              >
+                Buy Now
+              </Button>
             </div>
           </div>
         </figure>
@@ -80,47 +121,6 @@ export default function SlideShow() {
           ></span>
         ))}
       </div>
-      {/* <Swiper
-        spaceBetween={30}
-        effect={'fade'}
-        navigation={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[EffectFade, Navigation, Pagination]}
-        className={styles.mySwiper}
-      >
-        {slideshowItems.map((data, index) => (
-          <SwiperSlide key={index}>
-            <figure
-              className={styles.slide}
-              // style={{ display: slide === index && 'block' }}
-              // key={index}
-            >
-              <Image
-                src={data.imgSrc}
-                alt={data.imgAlt}
-                objectFit='cover'
-                layout='fill'
-              />
-              <div className={styles.textWrap}>
-                <div
-                  className={`${styles.text} ${
-                    styles[classNameCustom(data.title)]
-                  }`}
-                >
-                  {data.iconSrc && (
-                    <Image src={data.iconSrc} alt={data.imgAlt}></Image>
-                  )}
-                  <h3 className={styles.title}>{data.title}</h3>
-                  <p className={styles.description}>{data.description}</p>
-                  <Button classImplement={styles.button}>Buy Now</Button>
-                </div>
-              </div>
-            </figure>
-          </SwiperSlide>
-        ))}
-      </Swiper> */}
     </div>
   );
 }

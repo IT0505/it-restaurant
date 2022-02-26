@@ -15,7 +15,9 @@ export default function OurServices() {
           <div className={styles.mainContent}>
             {mainContent.map((data, index) => (
               <div className={styles.content} key={index}>
-                <Image src={data.imgSrc} alt={data.imgAlt} />
+                <div className={`${styles.image} animate zoomIn`}>
+                  <Image src={data.imgSrc} alt={data.imgAlt} />
+                </div>
                 <a className={styles.title}>{data.title}</a>
                 <p className={styles.description}>{data.description}</p>
                 <a href={data.url} className={styles.url}>

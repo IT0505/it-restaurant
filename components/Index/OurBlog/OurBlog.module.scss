@@ -1,3 +1,5 @@
+@import '../../../styles/_mixin';
+
 .ourBlog {
   .ourBlogInner {
     .mainContent {
@@ -5,11 +7,26 @@
       justify-content: space-between;
       padding: 30px 0;
 
+      @include Responsive(M) {
+        flex-wrap: wrap;
+      }
+
       .content {
         padding: 0 15px;
 
+        @include Responsive(M) {
+          width: 50%;
+          margin: 0 auto 30px;
+        }
+
+        @include Responsive(XS) {
+          width: 100%;
+          text-align: center;
+        }
+
         .image {
-          margin: 0 0 20px;
+          width: fit-content;
+          margin: 0 auto 20px;
         }
 
         .title {

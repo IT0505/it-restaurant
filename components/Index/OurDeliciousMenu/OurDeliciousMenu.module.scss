@@ -1,13 +1,28 @@
+@import '../../../styles/_mixin';
+
 .ourDeliciousMenu {
   padding: 120px 0;
   position: relative;
 
+  @include Responsive(XS) {
+    padding: 50px 0;
+  }
+
   .ourDeliciousMenuInner {
-    padding: 72px 70px 55px 100px;
+    padding: 70px 50px 100px;
     border: 9px solid rgba(255, 255, 255, 0.2);
     display: flex;
     justify-content: space-between;
     position: relative;
+
+    @include Responsive(M) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include Responsive(XS) {
+      padding: 20px 10px;
+    }
 
     &::after {
       position: absolute;
@@ -23,6 +38,14 @@
     .swiperWrap {
       width: 40%;
       margin: 0;
+      // flex-grow: 4;
+
+      @include Responsive(M) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
       .title {
         position: relative;
@@ -31,6 +54,10 @@
         color: #ffffff;
         line-height: 46px;
         font-family: 'Dancing Script', cursive;
+
+        @include Responsive(M) {
+          text-align: center;
+        }
       }
 
       .slogan {
@@ -43,6 +70,8 @@
 
       .mySwiper {
         padding: 10px 0 60px;
+        width: -webkit-fill-available;
+        text-align: center;
 
         .image {
           margin: 0;
@@ -67,6 +96,11 @@
           // padding: 10px;
           // display: flex;
 
+          @include Responsive(M) {
+            top: 45%;
+            bottom: unset;
+          }
+
           &:hover {
             background: none repeat scroll 0 0 #869791;
           }
@@ -78,6 +112,11 @@
 
         .next {
           left: 50px;
+
+          @include Responsive(M) {
+            left: unset;
+            right: 0;
+          }
         }
       }
     }
@@ -87,25 +126,43 @@
       padding: 0 10px;
       position: relative;
       z-index: 1;
-      width: 60%;
+      width: -webkit-fill-available;
+
+      // flex-grow: 6;
+      @include Responsive(M) {
+        margin-left: 0;
+      }
 
       .title {
         color: #ffffff;
         font-size: 22px;
         font-weight: 400;
         margin-bottom: 30px;
+
+        @include Responsive(M) {
+          text-align: center;
+        }
       }
 
       .content {
         display: flex;
         margin: 0 0 20px;
 
+        @include Responsive(XS) {
+          flex-direction: column;
+          align-items: center;
+          margin: 0;
+        }
+
         .image {
           position: relative;
           height: 86px;
-          width: 86px;
           margin: 0;
           flex-shrink: 0;
+
+          @include Responsive(XS) {
+            margin-bottom: 20px;
+          }
 
           p {
             position: absolute;
@@ -135,11 +192,21 @@
             .inlineText {
               margin: 0;
             }
+
+            @include Responsive(XS) {
+              flex-direction: column;
+              text-align: center;
+            }
           }
 
           .description {
             color: #aaaaaa;
             margin: 10px 0 0;
+
+            @include Responsive(XS) {
+              margin: 0 auto 30px;
+              text-align: center;
+            }
           }
         }
       }

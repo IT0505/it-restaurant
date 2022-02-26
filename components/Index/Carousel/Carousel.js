@@ -13,7 +13,7 @@ export default function Carousel() {
     <div className={styles.carouselContainer}>
       <Swiper
         className={styles.myCarousel}
-        slidesPerView={3}
+        slidesPerView={1}
         spaceBetween={10}
         autoplay={{
           delay: 3500,
@@ -21,6 +21,16 @@ export default function Carousel() {
         }}
         modules={[Autoplay]}
         loop={true}
+        breakpoints={{
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
       >
         {imgList.map((data, index) => (
           <SwiperSlide key={index}>

@@ -11,7 +11,7 @@ export default function Footer() {
           <div className={styles.footerInner}>
             <div className={`${styles.aboutWidget} ${styles.contentWrap}`}>
               <figure className={styles.logo}>
-                <Image src={logoImg} alt='logo' objectFit='contain' />
+                <Image src={logoImg} alt='logo' />
               </figure>
               <p>{footerData.aboutWidget.text}</p>
               <span className={styles.contactInfo}>
@@ -38,7 +38,7 @@ export default function Footer() {
               {footerData.latestBlog.map((data, index) => (
                 <div className={styles.latestBlogContent} key={index}>
                   <figure className={styles.blogImage}>
-                    <Image src={data.imgSrc} alt={data.imgAlt} layout='fill' />
+                    <Image src={data.imgSrc} alt={data.imgAlt} />
                     <a href={data.url}>
                       <i
                         className='fa-solid fa-link'

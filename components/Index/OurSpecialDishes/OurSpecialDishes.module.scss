@@ -1,8 +1,15 @@
+@import '../../../styles/_mixin';
+
 .ourSpecialDishes {
   .ourSpecialDishesInner {
     .mainContent {
       display: flex;
       justify-content: space-between;
+
+      @include Responsive(M) {
+        flex-direction: column;
+        align-items: center;
+      }
 
       .openingHours {
         background-image: url('../../../assets/images/opening-bg.jpg');
@@ -10,8 +17,11 @@
         background-size: cover;
         outline: 1px dashed #818181;
         outline-offset: -30px;
-        width: 30%;
         height: fit-content;
+
+        @include Responsive(M) {
+          width: 100%;
+        }
 
         .title {
           font-size: 14px;
@@ -50,6 +60,11 @@
         margin: 0 0 0 50px;
         width: 70%;
 
+        @include Responsive(M) {
+          width: 100%;
+          margin: 0;
+        }
+
         .content {
           display: flex;
           align-items: center;
@@ -57,14 +72,21 @@
           border-bottom: 1px dashed #818181;
           padding: 30px 0;
 
+          @include Responsive(XS) {
+            flex-direction: column;
+          }
+
           .image {
             flex-shrink: 0;
             height: 206px;
-            width: 206px;
             border-radius: 50%;
             overflow: hidden;
             margin: 0;
             position: relative;
+
+            @include Responsive(XS) {
+              margin-bottom: 20px;
+            }
 
             &:hover {
               .overlay {
@@ -96,6 +118,11 @@
           .text {
             margin: 0 0 0 30px;
 
+            @include Responsive(XS) {
+              margin: 0;
+              text-align: center;
+            }
+
             .title {
               color: #333333;
               font-size: 20px;
@@ -124,8 +151,16 @@
           &.reverse {
             flex-direction: row-reverse;
 
+            @include Responsive(XS) {
+              flex-direction: column;
+            }
+
             .text {
               margin: 0 30px 0 0;
+
+              @include Responsive(XS) {
+                margin: 0;
+              }
             }
           }
 
