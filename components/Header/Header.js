@@ -18,7 +18,7 @@ export default function Header() {
           </div>
           <div className={styles.topRight}>
             <p>Opening Hours : {headerData.openingHours}</p>
-            <span></span>
+            <span className={styles.space}></span>
             <span className={styles.icon}>
               <i className='fas fa-bag-shopping'></i>
               <span className={styles.count}>0</span>

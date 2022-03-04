@@ -97,6 +97,16 @@
         @include Responsive(M) {
           border-left: none;
         }
+
+        @include Responsive(M) {
+          padding: 8px;
+        }
+      }
+
+      .space {
+        @include Responsive(XS) {
+          display: none;
+        }
       }
     }
   }
