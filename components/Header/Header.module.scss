@@ -50,6 +50,9 @@
           line-height: 22px;
           font-size: 13px;
           color: #dddddd;
+          &:hover {
+            color: #feb518;
+          }
 
           @include Responsive(M) {
             margin: 0 10px;
