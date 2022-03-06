@@ -23,6 +23,15 @@ import chefImg3 from '../assets/images/chef-3.jpg';
 import blogImg1 from '../assets/images/news-1.jpg';
 import blogImg2 from '../assets/images/news-2.jpg';
 import blogImg3 from '../assets/images/news-3.jpg';
+import deliciousComboImg1 from '../assets/images/dish-1.jpg';
+import deliciousComboImg2 from '../assets/images/dish-2.jpg';
+import deliciousComboImg3 from '../assets/images/dish-3.jpg';
+import deliciousComboImg4 from '../assets/images/dish-4.jpg';
+import deliciousComboImg5 from '../assets/images/dish-5.jpg';
+import deliciousComboImg6 from '../assets/images/dish-6.jpg';
+import deliciousComboImg7 from '../assets/images/dish-7.jpg';
+import deliciousComboImg8 from '../assets/images/dish-8.jpg';
+import deliciousComboImg9 from '../assets/images/dish-9.jpg';
 
 export const headerData = {
   socialIcon: [
@@ -116,7 +125,7 @@ export const navigationData = {
       submenu: [
         {
           title: 'Menu style one',
-          url: '#',
+          url: '/menu',
           id: 'menu1',
         },
         {
@@ -574,6 +583,88 @@ export const ourBlogData = {
       description:
         'Curabitur quas nets lacusets nulat iaculis loremis etis nisle varius vitae seditum fugiatum ligul aliquam qui sequi nets lacusets nulat',
       like: '11',
+    },
+  ],
+};
+
+export const ourDeliciousComboData = {
+  title: 'Our Delicious Menu Items Combo',
+  slogan: 'Fresh And Healthy Food Available',
+  mainContent: [
+    {
+      status: 'new',
+      imgSrc: deliciousComboImg1,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+    {
+      imgSrc: deliciousComboImg2,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+    {
+      status: 'new',
+      imgSrc: deliciousComboImg3,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+    {
+      imgSrc: deliciousComboImg4,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+    {
+      imgSrc: deliciousComboImg5,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+    {
+      imgSrc: deliciousComboImg6,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+    {
+      imgSrc: deliciousComboImg7,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+    {
+      imgSrc: deliciousComboImg8,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+    {
+      status: 'new',
+      imgSrc: deliciousComboImg9,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
     },
   ],
 };
