@@ -36,6 +36,10 @@
       // flex-grow: 0;
       // margin: 0;
       position: relative;
+
+      @include Responsive(XS) {
+        max-width: 150px;
+      }
     }
 
     .navigationRight {
