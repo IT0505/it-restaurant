@@ -48,6 +48,11 @@ export default function SlideShow() {
         return css(classes.fadeIn);
     }
   };
+
+  // setInterval(() => {
+  //   setSlide(slide === slideLength - 1 ? 0 : slide + 1);
+  // }, 15000);
+
   return (
     <div className={styles.slideshow}>
       {slideshowItems.map((data, index) => (

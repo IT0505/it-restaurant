@@ -8,6 +8,10 @@
     padding: 50px 0;
   }
 
+  &::after {
+    content: none;
+  }
+
   .ourDeliciousMenuInner {
     padding: 70px 50px 100px;
     border: 9px solid rgba(255, 255, 255, 0.2);
@@ -39,6 +43,7 @@
       width: 40%;
       margin: 0;
       // flex-grow: 4;
+      position: relative;
 
       @include Responsive(M) {
         width: 100%;

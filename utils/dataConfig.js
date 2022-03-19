@@ -4,34 +4,49 @@ import sliderImg2 from '../assets/images/image-2.jpg';
 import sliderImg3 from '../assets/images/image-3.jpg';
 import sliderIcon1 from '../assets/images/icon-1.png';
 import restaurantImg1 from '../assets/images/slide-1-2.jpg';
+import backgroundImg1 from '../assets/images/1-1024x750.jpg';
 import serviceIcon1 from '../assets/images/services-1.png';
 import serviceIcon2 from '../assets/images/services-2.png';
 import serviceIcon3 from '../assets/images/services-3.png';
-import menuSlideImg1 from '../assets/images/chicken-1.png';
-import menuImg1 from '../assets/images/dining-item-1.jpg';
-import menuImg2 from '../assets/images/dining-item-2.jpg';
-import menuImg3 from '../assets/images/dining-item-3.jpg';
-import menuImg4 from '../assets/images/dining-item-4.jpg';
-import specialDishesImg1 from '../assets/images/special-1.jpg';
-import specialDishesImg2 from '../assets/images/special-2.jpg';
+import chickenImg1 from '../assets/images/chicken-1.png';
+import diningImg1 from '../assets/images/dining-item-1.jpg';
+import diningImg2 from '../assets/images/dining-item-2.jpg';
+import diningImg3 from '../assets/images/dining-item-3.jpg';
+import diningImg4 from '../assets/images/dining-item-4.jpg';
+import diningImg5 from '../assets/images/dining-item-5.jpg';
+import diningImg6 from '../assets/images/dining-item-6.jpg';
+import diningImg7 from '../assets/images/dining-item-7.jpg';
+import diningImg8 from '../assets/images/dining-item-8.jpg';
+import diningImg9 from '../assets/images/dining-item-9.jpg';
+import diningImg10 from '../assets/images/dining-item-10.jpg';
+import backgroundImg2 from '../assets/images/2-860x1024.jpg';
+import specialImg1 from '../assets/images/special-1.jpg';
+import specialImg2 from '../assets/images/special-2.jpg';
 import carouselImg1 from '../assets/images/1-1.jpg';
 import carouselImg2 from '../assets/images/2-1.jpg';
 import carouselImg3 from '../assets/images/3.jpg';
+import backgroundImg3 from '../assets/images/3-1-683x1024.jpg';
 import chefImg1 from '../assets/images/chef-1.jpg';
 import chefImg2 from '../assets/images/chef-2.jpg';
 import chefImg3 from '../assets/images/chef-3.jpg';
 import blogImg1 from '../assets/images/news-1.jpg';
 import blogImg2 from '../assets/images/news-2.jpg';
 import blogImg3 from '../assets/images/news-3.jpg';
-import deliciousComboImg1 from '../assets/images/dish-1.jpg';
-import deliciousComboImg2 from '../assets/images/dish-2.jpg';
-import deliciousComboImg3 from '../assets/images/dish-3.jpg';
-import deliciousComboImg4 from '../assets/images/dish-4.jpg';
-import deliciousComboImg5 from '../assets/images/dish-5.jpg';
-import deliciousComboImg6 from '../assets/images/dish-6.jpg';
-import deliciousComboImg7 from '../assets/images/dish-7.jpg';
-import deliciousComboImg8 from '../assets/images/dish-8.jpg';
-import deliciousComboImg9 from '../assets/images/dish-9.jpg';
+import dishImg1 from '../assets/images/dish-1.jpg';
+import dishImg2 from '../assets/images/dish-2.jpg';
+import dishImg3 from '../assets/images/dish-3.jpg';
+import dishImg4 from '../assets/images/dish-4.jpg';
+import dishImg5 from '../assets/images/dish-5.jpg';
+import dishImg6 from '../assets/images/dish-6.jpg';
+import dishImg7 from '../assets/images/dish-7.jpg';
+import dishImg8 from '../assets/images/dish-8.jpg';
+import dishImg9 from '../assets/images/dish-9.jpg';
+import backgroundImg4 from '../assets/images/10.jpg';
+import serviceIcon4 from '../assets/images/services-4.png';
+import backgroundImg5 from '../assets/images/5.jpg';
+import serviceIcon5 from '../assets/images/services-5.png';
+import serviceIcon6 from '../assets/images/services-6.png';
+import backgroundImg6 from '../assets/images/7.jpg';
 
 export const headerData = {
   socialIcon: [
@@ -64,7 +79,7 @@ export const navigationData = {
       submenu: [
         {
           title: 'Homepage one',
-          url: '#',
+          url: '/',
           id: 'homepage1',
         },
         {
@@ -125,29 +140,13 @@ export const navigationData = {
       submenu: [
         {
           title: 'Menu style one',
-          url: '/menu',
+          url: '/menu1',
           id: 'menu1',
         },
         {
           title: 'Menu style two',
           id: 'menu2',
-          submenu: [
-            {
-              title: 'Menu style one',
-              url: '#',
-              id: 'menu21',
-            },
-            {
-              title: 'Menu style two',
-              url: '#',
-              id: 'menu22',
-            },
-            {
-              title: 'Menu style three',
-              url: '#',
-              id: 'menu23',
-            },
-          ],
+          url: '/menu2',
         },
         {
           title: 'Menu style three',
@@ -329,6 +328,12 @@ export const restaurantDiscoverData = {
   ],
 };
 
+export const ourBestData = {
+  title: 'Healthy Fresh And Hot Dishes.',
+  slogan: 'Best offers from the house chef.',
+  backgroundImg: backgroundImg1,
+};
+
 export const ourServicesData = {
   title: 'Our Services',
   slogan: 'We Create Delicious Memory',
@@ -363,17 +368,18 @@ export const ourServicesData = {
 export const ourDeliciousMenuData = {
   title: 'Our Delicious Menu',
   slogan: 'Best offers from the house chef',
+  backgroundImg: backgroundImg2,
   slideImgs: [
     {
-      imgSrc: menuSlideImg1,
+      imgSrc: chickenImg1,
       imgAlt: 'chicken',
     },
     {
-      imgSrc: menuSlideImg1,
+      imgSrc: chickenImg1,
       imgAlt: 'chicken',
     },
     {
-      imgSrc: menuSlideImg1,
+      imgSrc: chickenImg1,
       imgAlt: 'chicken',
     },
   ],
@@ -382,7 +388,7 @@ export const ourDeliciousMenuData = {
     menuList: [
       {
         new: 'new',
-        imgSrc: menuImg1,
+        imgSrc: diningImg1,
         imgAlt: 'dining',
         name: 'Gosh Egg-White Omelet',
         url: '#',
@@ -390,7 +396,7 @@ export const ourDeliciousMenuData = {
         price: '$35.40',
       },
       {
-        imgSrc: menuImg2,
+        imgSrc: diningImg2,
         imgAlt: 'dining',
         name: 'Powered Turkey Meatballs',
         url: '#',
@@ -398,7 +404,7 @@ export const ourDeliciousMenuData = {
         price: '$35.40',
       },
       {
-        imgSrc: menuImg3,
+        imgSrc: diningImg3,
         imgAlt: 'dining',
         name: 'Creamy Feta Salad Dressing',
         url: '#',
@@ -406,7 +412,7 @@ export const ourDeliciousMenuData = {
         price: '$35.40',
       },
       {
-        imgSrc: menuImg4,
+        imgSrc: diningImg4,
         imgAlt: 'dining',
         name: 'Roasted Red Pepper Hummus',
         url: '#',
@@ -438,7 +444,7 @@ export const ourSpecialDishesData = {
   ],
   specialDishes: [
     {
-      imgSrc: specialDishesImg1,
+      imgSrc: specialImg1,
       imgAlt: 'Special Dishes',
       price: '$50.35',
       url: '#',
@@ -447,7 +453,7 @@ export const ourSpecialDishesData = {
         'Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor nequeu tellus rhoncus ut eleifend nibh porttitor ut in nulla enim hasellus mirolestie magna non lorem ipsum dolor site amet.',
     },
     {
-      imgSrc: specialDishesImg2,
+      imgSrc: specialImg2,
       imgAlt: 'Special Dishes',
       price: '$50.35',
       url: '#',
@@ -531,6 +537,7 @@ export const ourDeliciousData = {
 };
 
 export const testimonialData = {
+  backgroundImg: backgroundImg3,
   mainContent: [
     {
       text: '“ We enjoy sharing the projects and posts we make just as much as we enjoy creating them. consectetur adipiscing elit, sed do eiusmod tempor incididunt Sit back & take a moment to browse through some of our recent completed work.”',
@@ -593,7 +600,7 @@ export const ourDeliciousComboData = {
   mainContent: [
     {
       status: 'new',
-      imgSrc: deliciousComboImg1,
+      imgSrc: dishImg1,
       imgAlt: 'Delicious Combo',
       name: 'Trio Sausages',
       price: '$100',
@@ -601,56 +608,7 @@ export const ourDeliciousComboData = {
       description: 'Home 2, Wine',
     },
     {
-      imgSrc: deliciousComboImg2,
-      imgAlt: 'Delicious Combo',
-      name: 'Trio Sausages',
-      price: '$100',
-      url: '#',
-      description: 'Home 2, Wine',
-    },
-    {
-      status: 'new',
-      imgSrc: deliciousComboImg3,
-      imgAlt: 'Delicious Combo',
-      name: 'Trio Sausages',
-      price: '$100',
-      url: '#',
-      description: 'Home 2, Wine',
-    },
-    {
-      imgSrc: deliciousComboImg4,
-      imgAlt: 'Delicious Combo',
-      name: 'Trio Sausages',
-      price: '$100',
-      url: '#',
-      description: 'Home 2, Wine',
-    },
-    {
-      imgSrc: deliciousComboImg5,
-      imgAlt: 'Delicious Combo',
-      name: 'Trio Sausages',
-      price: '$100',
-      url: '#',
-      description: 'Home 2, Wine',
-    },
-    {
-      imgSrc: deliciousComboImg6,
-      imgAlt: 'Delicious Combo',
-      name: 'Trio Sausages',
-      price: '$100',
-      url: '#',
-      description: 'Home 2, Wine',
-    },
-    {
-      imgSrc: deliciousComboImg7,
-      imgAlt: 'Delicious Combo',
-      name: 'Trio Sausages',
-      price: '$100',
-      url: '#',
-      description: 'Home 2, Wine',
-    },
-    {
-      imgSrc: deliciousComboImg8,
+      imgSrc: dishImg2,
       imgAlt: 'Delicious Combo',
       name: 'Trio Sausages',
       price: '$100',
@@ -659,12 +617,360 @@ export const ourDeliciousComboData = {
     },
     {
       status: 'new',
-      imgSrc: deliciousComboImg9,
+      imgSrc: dishImg3,
       imgAlt: 'Delicious Combo',
       name: 'Trio Sausages',
       price: '$100',
       url: '#',
       description: 'Home 2, Wine',
+    },
+    {
+      imgSrc: dishImg4,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+    {
+      imgSrc: dishImg5,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+    {
+      imgSrc: dishImg6,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+    {
+      imgSrc: dishImg7,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+    {
+      imgSrc: dishImg8,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+    {
+      status: 'new',
+      imgSrc: dishImg9,
+      imgAlt: 'Delicious Combo',
+      name: 'Trio Sausages',
+      price: '$100',
+      url: '#',
+      description: 'Home 2, Wine',
+    },
+  ],
+};
+
+export const pageTitleData = {
+  title: 'Taste The Best Dishes.',
+  slogan: 'Our Menu List',
+  backgroundImg: backgroundImg4,
+};
+
+export const breakfastMenuData = {
+  imgSrc: serviceIcon4,
+  imgAlt: 'Breakfast Icon',
+  title: 'Our Fresh And Hot Dishes',
+  slogan: 'Special BreakFast Menu Items',
+  mainContent: [
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg1,
+      imgAlt: 'Breakfast',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg2,
+      imgAlt: 'Breakfast',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg3,
+      imgAlt: 'Breakfast',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg4,
+      imgAlt: 'Breakfast',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg5,
+      imgAlt: 'Breakfast',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg6,
+      imgAlt: 'Breakfast',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg7,
+      imgAlt: 'Breakfast',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg8,
+      imgAlt: 'Breakfast',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg9,
+      imgAlt: 'Breakfast',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg10,
+      imgAlt: 'Breakfast',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+  ],
+};
+
+export const lunchTitleData = {
+  title: 'With Meat, Fish or Vegetables',
+  slogan: 'Special Lunch Menu Items',
+  iconSrc: serviceIcon5,
+  iconAlt: 'lunch',
+  backgroundImg: backgroundImg5,
+};
+
+export const lunchMenuData = {
+  mainContent: [
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg1,
+      imgAlt: 'Lunch',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg2,
+      imgAlt: 'Lunch',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg3,
+      imgAlt: 'Lunch',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg4,
+      imgAlt: 'Lunch',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg5,
+      imgAlt: 'Lunch',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg6,
+      imgAlt: 'Lunch',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg7,
+      imgAlt: 'Lunch',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg8,
+      imgAlt: 'Lunch',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg9,
+      imgAlt: 'Lunch',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg10,
+      imgAlt: 'Lunch',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+  ],
+};
+
+export const dinnerTitleData = {
+  title: 'Our Fresh And Healthy',
+  slogan: 'Special Dinner Menu Items',
+  iconSrc: serviceIcon6,
+  iconAlt: 'dinner',
+  backgroundImg: backgroundImg6,
+};
+
+export const dinnerMenuData = {
+  mainContent: [
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg1,
+      imgAlt: 'Dinner',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg2,
+      imgAlt: 'Dinner',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg3,
+      imgAlt: 'Dinner',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg4,
+      imgAlt: 'Dinner',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg5,
+      imgAlt: 'Dinner',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg6,
+      imgAlt: 'Dinner',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg7,
+      imgAlt: 'Dinner',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg8,
+      imgAlt: 'Dinner',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg9,
+      imgAlt: 'Dinner',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
+    },
+    {
+      name: 'Gosh Egg-White Omelet',
+      imgSrc: diningImg10,
+      imgAlt: 'Dinner',
+      url: '#',
+      price: '$25.40',
+      description: 'Menu Style 2, Shrimp',
+      status: 'new',
     },
   ],
 };

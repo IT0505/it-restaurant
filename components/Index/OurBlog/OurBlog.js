@@ -9,7 +9,7 @@ export default function OurBlog() {
     <div className={`${styles.ourBlog} section`}>
       <div className='container'>
         <div className={styles.ourBlogInner}>
-          <MainTitle slogan={ourBlogData.slogan}>{ourBlogData.title}</MainTitle>
+          <MainTitle slogan={ourBlogData.slogan} title={ourBlogData.title} />
           <div className={styles.mainContent}>
             {mainContent.map((data, index) => (
               <div className={`${styles.content} animate fadeIn`} key={index}>

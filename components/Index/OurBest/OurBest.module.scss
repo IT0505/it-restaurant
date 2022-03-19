@@ -1,41 +1,12 @@
 @import '../../../styles/_mixin';
 
 .ourBest {
-  padding: 200px 0;
-  position: relative;
-
-  @include Responsive(XS) {
-    padding: 100px 0;
-  }
+  // @include Responsive(XS) {
+  //   padding: 100px 0;
+  // }
 
   .ourBestInner {
     position: relative;
     z-index: 1;
-
-    .title {
-      text-align: center;
-      font-size: 38px;
-      color: #feb518;
-      font-family: 'Dancing Script', cursive;
-      font-weight: 400;
-    }
-
-    .slogan {
-      text-align: center;
-      color: #ffffff;
-      font-size: 36px;
-      font-weight: 400;
-    }
-  }
-
-  &::after {
-    background: rgba(0, 0, 0, 0.5);
-    content: ' ';
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
   }
 }

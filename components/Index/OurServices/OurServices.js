@@ -9,9 +9,10 @@ export default function OurServices() {
     <div className={styles.ourServices}>
       <div className='container'>
         <div className={`${styles.ourServicesInner} section`}>
-          <MainTitle slogan={ourServicesData.slogan}>
-            {ourServicesData.title}
-          </MainTitle>
+          <MainTitle
+            slogan={ourServicesData.slogan}
+            title={ourServicesData.title}
+          />
           <div className={styles.mainContent}>
             {mainContent.map((data, index) => (
               <div className={styles.content} key={index}>

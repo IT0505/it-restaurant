@@ -6,9 +6,19 @@
 
   /* Set a specific height */
   min-height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 200px 0;
 
   @include Responsive(M) {
     min-height: 400px;
+    padding: 100px 0;
+  }
+
+  @include Responsive(XS) {
+    min-height: 350px;
+    padding: 50px 0;
   }
 
   /* Create the parallax scrolling effect */
@@ -16,4 +26,15 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  &::after {
+    background: rgba(0, 0, 0, 0.5);
+    content: '';
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
 }

@@ -9,17 +9,14 @@ export default function OurDeliciousCombo() {
     <div className={`${styles.ourDeliciousCombo} section`}>
       <div className='container'>
         <div className={styles.ourDeliciousComboInner}>
-          <MainTitle slogan={ourDeliciousComboData.slogan}>
-            {ourDeliciousComboData.title}
-          </MainTitle>
+          <MainTitle
+            slogan={ourDeliciousComboData.slogan}
+            title={ourDeliciousComboData.title}
+          />
           <div className={styles.mainContent}>
             {mainContent.map((data, index) => (
               <div
-                className={`${styles.content} animate ${
-                  // index % 6 === 0 || index % 6 === 1 || index % 6 === 2
-                  'fadeInLeft'
-                  // : 'fadeInRight'
-                }`}
+                className={`${styles.content} animate ${'fadeInLeft'}`}
                 key={index}
               >
                 <a className={styles.image} href={data.url}>

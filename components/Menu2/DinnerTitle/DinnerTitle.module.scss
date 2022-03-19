@@ -1,0 +1,30 @@
+@import '../../../styles/_mixin';
+
+.dinnerTitle {
+  // padding: 200px 0;
+
+  // @include Responsive(M) {
+  //   padding: 100px 0;
+  // }
+
+  // @include Responsive(XS) {
+  //   padding: 50px 0;
+  // }
+
+  .dinnerTitleInner {
+    .icon {
+      position: relative;
+      z-index: 1;
+      width: fit-content;
+      margin: 0 auto;
+
+      @include Responsive(M) {
+        max-width: 150px;
+      }
+
+      // @include Responsive(XS) {
+      //   max-width: 100px;
+      // }
+    }
+  }
+}

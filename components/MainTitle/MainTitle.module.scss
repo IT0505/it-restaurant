@@ -1,13 +1,21 @@
+@import '../../styles/_mixin';
+
 .mainTitle {
   text-align: center;
+  position: relative;
+  z-index: 1;
 
   h2 {
     font-size: 38px;
-    font-weight: 700;
+    font-weight: 500;
     color: #feb518;
     line-height: 1.4em;
     font-family: 'Dancing Script', cursive;
     margin: 0 0 5px;
+
+    @include Responsive(XS) {
+      font-size: 30px;
+    }
   }
 
   h3 {
@@ -19,5 +27,19 @@
     text-transform: capitalize;
     line-height: 1.4em;
     margin: 0 0 20px;
+
+    @include Responsive(XS) {
+      font-size: 20px;
+    }
+  }
+
+  &.style2 {
+    h2 {
+      color: #feb518;
+    }
+
+    h3 {
+      color: #ffffff;
+    }
   }
 }

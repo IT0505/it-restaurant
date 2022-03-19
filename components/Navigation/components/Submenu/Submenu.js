@@ -1,5 +1,6 @@
 import styles from './Submenu.module.scss';
 import { fadeInUp } from 'react-animations';
+import Link from 'next/link';
 
 import { StyleSheet, css } from 'aphrodite';
 
@@ -21,9 +22,9 @@ export default function Submenu(props) {
       {submenu.map((data, index) => (
         <div className={styles.subItemWrap} key={index}>
           {data.url ? (
-            <a className={styles.subItem} href={data.url}>
-              {data.title}
-            </a>
+            <Link href={data.url}>
+              <a className={styles.subItem}>{data.title}</a>
+            </Link>
           ) : (
             <>
               <input

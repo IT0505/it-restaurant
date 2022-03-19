@@ -1,0 +1,22 @@
+@import '../../../styles/_mixin';
+.pageTitle {
+  .pageTitleInner {
+    .title {
+      h2 {
+        font-size: 32px;
+
+        @include Responsive(XS) {
+          font-size: 28px;
+        }
+      }
+
+      h3 {
+        font-size: 28px;
+
+        @include Responsive(XS) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

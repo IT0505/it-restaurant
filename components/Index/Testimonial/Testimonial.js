@@ -1,7 +1,6 @@
 // import './Testimonial.scss';
 import styles from './Testimonial.module.scss';
 import Parallax from '../../Parallax/Parallax';
-import backgroundImage from '../../../assets/images/3-1-683x1024.jpg';
 import { testimonialData } from '../../../utils/dataConfig';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -22,7 +21,7 @@ export default function Testimonial() {
   return (
     <Parallax
       classImplement={styles.testimonial}
-      backgroundImage={backgroundImage}
+      backgroundImage={testimonialData.backgroundImg}
     >
       <div className='container'>
         <div className={styles.testimonialInner}>

@@ -10,9 +10,10 @@ export default function OurSpecialDishes() {
     <div className={styles.ourSpecialDishes}>
       <div className='container'>
         <div className={`${styles.ourSpecialDishesInner} section`}>
-          <MainTitle slogan={ourSpecialDishesData.slogan}>
-            {ourSpecialDishesData.title}
-          </MainTitle>
+          <MainTitle
+            slogan={ourSpecialDishesData.slogan}
+            title={ourSpecialDishesData.title}
+          />
           <div className={styles.mainContent}>
             <div className={`${styles.openingHours} animate fadeInLeft`}>
               <h2 className={styles.title}>Opening Hours</h2>

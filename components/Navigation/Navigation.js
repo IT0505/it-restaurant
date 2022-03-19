@@ -7,6 +7,7 @@ import Button from '../Button/Button';
 import Submenu from './components/Submenu/Submenu';
 import SocialIcon from './components/SocialIcon/SocialIcon';
 import { navigationData } from '../../utils/dataConfig';
+import Link from 'next/link';
 
 export default function Navigation() {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -27,9 +28,11 @@ export default function Navigation() {
     >
       <div className='container'>
         <div className={styles.navigationInner}>
-          <a href='#' className={styles.logo}>
-            <Image src={logoImg} alt='logo'></Image>
-          </a>
+          <Link href='/'>
+            <a className={styles.logo}>
+              <Image src={logoImg} alt='logo'></Image>
+            </a>
+          </Link>
           <div
             className={`${styles.navigationRight} ${
               navigationOpen && styles.open
@@ -42,16 +45,18 @@ export default function Navigation() {
             >
               <i className='fa-solid fa-xmark'></i>
             </button>
-            <a href='#' className={styles.logo}>
-              <Image src={logoImg2} alt='logo'></Image>
-            </a>
+            <Link href='/'>
+              <a className={styles.logo}>
+                <Image src={logoImg2} alt='logo'></Image>
+              </a>
+            </Link>
 
             {navigationData.menuItems.map((data, index) => (
               <div className={styles.menuItemWrap} key={index}>
                 {data.url ? (
-                  <a className={styles.menuItem} href={data.url}>
-                    {data.title}
-                  </a>
+                  <Link href={data.url}>
+                    <a className={styles.menuItem}>{data.title}</a>
+                  </Link>
                 ) : (
                   <>
                     <input

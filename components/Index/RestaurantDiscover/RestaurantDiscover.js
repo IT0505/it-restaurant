@@ -29,10 +29,9 @@ export default function RestaurantDiscover() {
           <div className={`${styles.mainContent}`}>
             <MainTitle
               slogan={mainContent.slogan}
+              title={mainContent.title}
               classImplement={styles.mainTitle}
-            >
-              {mainContent.title}
-            </MainTitle>
+            />
             <p className={styles.description}>{mainContent.description1}</p>
             <p className={styles.description}>{mainContent.description2}</p>
             <Button classImplement={styles.button}>Read More</Button>

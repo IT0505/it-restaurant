@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 import { useEffect } from 'react';
 import Layout from '../components/Layout/Layout';
-import OurDeliciousCombo from '../components/Menu/OurDeliciousCombo/OurDeliciousCombo';
+import OurDeliciousCombo from '../components/Menu1/OurDeliciousCombo/OurDeliciousCombo';
 
 import { fadeIn, fadeInRight, fadeInLeft, zoomIn } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';

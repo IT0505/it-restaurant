@@ -1,0 +1,25 @@
+@import '../../../styles/_mixin';
+
+.breakfastMenu {
+  .breakfastMenuInner {
+    .titleWrap {
+      .icon {
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+
+        @include Responsive(M) {
+          max-width: 150px;
+        }
+
+        // @include Responsive(XS) {
+        //   max-width: 100px;
+        // }
+      }
+    }
+
+    .mainContent {
+      margin-top: 70px;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@import '../../styles/mixin';
+
+.mainContent {
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+  width: -webkit-fill-available;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  // flex-grow: 6;
+  @include Responsive(M) {
+    margin-left: 0;
+  }
+
+  .title {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 30px;
+
+    @include Responsive(M) {
+      text-align: center;
+    }
+  }
+
+  .content {
+    display: flex;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+
+    @include Responsive(L) {
+      max-width: 1024px;
+    }
+
+    @include Responsive(XS) {
+      flex-direction: column;
+      align-items: center;
+      // margin: 0 0 20px;
+    }
+
+    .image {
+      position: relative;
+      height: 86px;
+      margin: 0;
+      flex-shrink: 0;
+
+      @include Responsive(XS) {
+        margin-bottom: 20px;
+      }
+
+      .status {
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: 17px;
+        padding: 0px 11px;
+        font-size: 11px;
+        color: #333333;
+        background-color: #feb518;
+        font-family: 'Roboto', sans-serif;
+      }
+    }
+
+    .text {
+      margin: auto;
+      margin-left: 20px;
+      width: -webkit-fill-available;
+
+      @include Responsive(XS) {
+        margin-left: 0;
+      }
+
+      .inlineWrap {
+        font-size: 17px;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .inlineText {
+          margin: 0;
+        }
+
+        @include Responsive(XS) {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      .description {
+        color: #aaaaaa;
+        margin: 10px 0 0;
+
+        @include Responsive(XS) {
+          margin: 0 auto 30px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

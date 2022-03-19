@@ -15,9 +15,10 @@ export default function OurDelicious() {
     <div className={`${styles.ourDelicious} section`}>
       <div className='container'>
         <div className={styles.ourDeliciousInner}>
-          <MainTitle slogan={ourDeliciousData.slogan}>
-            {ourDeliciousData.title}
-          </MainTitle>
+          <MainTitle
+            slogan={ourDeliciousData.slogan}
+            title={ourDeliciousData.title}
+          />
           <div className={styles.mainContent}>
             <Swiper
               className={styles.mySwiper}

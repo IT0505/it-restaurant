@@ -1,7 +1,6 @@
 import styles from './OurDeliciousMenu.module.scss';
 import React from 'react';
 import Parallax from '../../Parallax/Parallax';
-import backgroundImage from '../../../assets/images/2-860x1024.jpg';
 import { ourDeliciousMenuData } from '../../../utils/dataConfig';
 import Image from 'next/image';
 
@@ -23,7 +22,7 @@ export default function OurDeliciousMenu() {
   return (
     <Parallax
       classImplement={styles.ourDeliciousMenu}
-      backgroundImage={backgroundImage}
+      backgroundImage={ourDeliciousMenuData.backgroundImg}
     >
       <div className='container'>
         <div className={styles.ourDeliciousMenuInner}>
