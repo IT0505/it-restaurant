@@ -1,6 +1,6 @@
 @import '../../styles/mixin';
 
-.mainContent {
+.menuList {
   padding: 0 10px;
   position: relative;
   z-index: 1;
@@ -14,23 +14,34 @@
     margin-left: 0;
   }
 
-  .title {
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: 400;
-    margin-bottom: 30px;
-
-    @include Responsive(M) {
-      text-align: center;
+  &.style1 {
+    .menuItem {
+      .text {
+        .inlineWrap {
+          font-size: 17px;
+          color: #fff;
+        }
+      }
     }
   }
 
-  .content {
+  // .title {
+  //   color: #ffffff;
+  //   font-size: 22px;
+  //   font-weight: 400;
+  //   margin-bottom: 30px;
+
+  //   @include Responsive(M) {
+  //     text-align: center;
+  //   }
+  // }
+
+  .menuItem {
     display: flex;
-    max-width: 500px;
+    align-items: center;
+    max-width: 550px;
     width: 100%;
-    margin: 0 auto 20px;
-    padding: 0 20px;
+    margin-bottom: 20px;
 
     @include Responsive(L) {
       max-width: 1024px;
@@ -42,11 +53,28 @@
       // margin: 0 0 20px;
     }
 
+    pointer-events: none;
+
+    &:hover {
+      .image {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+
     .image {
       position: relative;
-      height: 86px;
+      max-width: 86px;
+      width: 100%;
       margin: 0;
       flex-shrink: 0;
+      flex-grow: 1;
+      pointer-events: auto;
+
+      img {
+        transition: transform 0.5s;
+      }
 
       @include Responsive(XS) {
         margin-bottom: 20px;
@@ -67,7 +95,6 @@
     }
 
     .text {
-      margin: auto;
       margin-left: 20px;
       width: -webkit-fill-available;
 
@@ -76,7 +103,7 @@
       }
 
       .inlineWrap {
-        font-size: 17px;
+        font-size: 15px;
         font-weight: 400;
         display: flex;
         justify-content: space-between;
@@ -84,6 +111,18 @@
 
         .inlineText {
           margin: 0;
+
+          &.name {
+            pointer-events: auto;
+          }
+
+          &.dots {
+            font-weight: 300;
+          }
+
+          &.price {
+            font-weight: 700;
+          }
         }
 
         @include Responsive(XS) {
@@ -94,6 +133,7 @@
 
       .description {
         color: #aaaaaa;
+        font-size: 14px;
         margin: 10px 0 0;
 
         @include Responsive(XS) {

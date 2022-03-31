@@ -2,6 +2,7 @@ import Image from 'next/image';
 import logoImg from '../../assets/images/footer-logo.png';
 import styles from './Footer.module.scss';
 import { footerData } from '../../utils/dataConfig';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -10,9 +11,11 @@ export default function Footer() {
         <div className='container'>
           <div className={styles.footerInner}>
             <div className={`${styles.aboutWidget} ${styles.contentWrap}`}>
-              <figure className={styles.logo}>
-                <Image src={logoImg} alt='logo' />
-              </figure>
+              <Link href='/'>
+                <a className={styles.logo}>
+                  <Image src={logoImg} alt='logo' layout='responsive' />
+                </a>
+              </Link>
               <p>{footerData.aboutWidget.text}</p>
               <span className={styles.contactInfo}>
                 <i className='fas fa-phone'></i> Phone :
@@ -26,20 +29,24 @@ export default function Footer() {
 
             <div className={`${styles.usefulLink} ${styles.contentWrap}`}>
               <h2>Useful Link</h2>
-              {footerData.usefulLink.map((data, index) => (
-                <a href={data.url} key={index}>
-                  {data.text}
+              {footerData.usefulLink.map((item, index) => (
+                <a href={item.url} key={index}>
+                  {item.text}
                 </a>
               ))}
             </div>
 
             <div className={`${styles.latestBlog} ${styles.contentWrap}`}>
               <h2>Latest Blog Post</h2>
-              {footerData.latestBlog.map((data, index) => (
+              {footerData.latestBlog.map((item, index) => (
                 <div className={styles.latestBlogContent} key={index}>
                   <figure className={styles.blogImage}>
-                    <Image src={data.imgSrc} alt={data.imgAlt} />
-                    <a href={data.url}>
+                    <Image
+                      src={item.imgSrc}
+                      alt={item.imgAlt}
+                      layout='responsive'
+                    />
+                    <a href={item.url}>
                       <i
                         className='fa-solid fa-link'
                         style={{ fontSize: '16px' }}
@@ -47,8 +54,8 @@ export default function Footer() {
                     </a>
                   </figure>
                   <div className={styles.blogText}>
-                    <a href={data.url}>{data.title}</a>
-                    <p>{data.time}</p>
+                    <a href={item.url}>{item.title}</a>
+                    <p>{item.time}</p>
                   </div>
                 </div>
               ))}
@@ -56,14 +63,14 @@ export default function Footer() {
 
             <div className={`${styles.openingHours} ${styles.contentWrap}`}>
               <h2>Opening Hours</h2>
-              {footerData.openingHours.map((data, index) =>
-                data.note ? (
-                  <p key={index}>{data.note}</p>
+              {footerData.openingHours.map((item, index) =>
+                item.note ? (
+                  <p key={index}>{item.note}</p>
                 ) : (
                   <div className={styles.openingHoursContent} key={index}>
-                    <p>{data.date}</p>
+                    <p>{item.date}</p>
                     <span>..............</span>
-                    <p>{data.hours}</p>
+                    <p>{item.hours}</p>
                   </div>
                 )
               )}

@@ -47,7 +47,7 @@
     }
 
     input[type='checkbox']:checked ~ .submenu {
-      transition: all 0.5s;
+      transition: 0.5s;
       height: fit-content;
       max-height: 500px;
     }
@@ -108,25 +108,6 @@
       cursor: pointer;
       background-color: #fff;
 
-      // .icon {
-      //   line-height: 24px;
-      //   position: absolute;
-
-      //   @include Responsive(M) {
-      //     background: none;
-      //     color: #ffffff;
-      //     border: 1px solid rgba(255, 255, 255, 0.8);
-      //     padding: 3px 12px;
-      //     font-size: 14px;
-      //     border-radius: 0px;
-      //     outline: none;
-      //     position: absolute;
-      //     top: 6px;
-      //     right: 15px;
-
-      //     transform: rotate(90deg);
-      //   }
-      // }
       &:hover {
         color: #ffffff;
         background: #feb518;

@@ -7,7 +7,9 @@
     .mainContent {
       display: flex;
       justify-content: space-between;
-      padding: 20px 0;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 50px -15px 0;
 
       @include Responsive(XS) {
         flex-direction: column;
@@ -15,14 +17,22 @@
       }
 
       .content {
-        padding: 0 10px;
+        padding: 0 15px;
+        width: 33.33333333%;
+        margin: 0 auto 40px;
+
+        @include Responsive(M) {
+          width: 50%;
+        }
 
         @include Responsive(XS) {
-          margin-bottom: 50px;
+          width: 100%;
         }
 
         .image {
-          height: 100px;
+          max-width: 175px;
+          width: 100%;
+          margin: 0 auto;
         }
 
         .title {
@@ -43,7 +53,7 @@
         .url {
           cursor: pointer;
           color: #feb518;
-          transition: 0.5s;
+          transition: color 0.5s;
 
           &:hover {
             color: #000;

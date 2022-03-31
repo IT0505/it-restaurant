@@ -1,15 +1,12 @@
 import styles from './MainTitle.module.scss';
 
-export default function MainTitle(props) {
-  const style = props.style;
+export default function MainTitle({ title, slogan, style, className }) {
+  // const customStyle = props.style;
+  // const classImplement = props.className;
   return (
-    <div
-      className={`${styles.mainTitle} ${style === 2 && styles.style2} ${
-        props.classImplement
-      }`}
-    >
-      <h2>{props.title}</h2>
-      <h3>{props.slogan}</h3>
+    <div className={`${styles.mainTitle} ${styles[style]} ${className}`}>
+      <h2>{title}</h2>
+      <h3>{slogan}</h3>
     </div>
   );
 }

@@ -7,18 +7,22 @@ import Image from 'next/image';
 export default function LunchTitle() {
   return (
     <Parallax
-      classImplement={styles.lunchTitle}
-      backgroundImage={lunchTitleData.backgroundImg}
+      backgroundImage={lunchTitleData.backgroundImage}
+      className={styles.lunchTitle}
     >
       <div className='container'>
         <div className={styles.lunchTitleInner}>
           <figure className={styles.icon}>
-            <Image src={lunchTitleData.iconSrc} alt={lunchTitleData.iconAlt} />
+            <Image
+              src={lunchTitleData.iconSrc}
+              alt={lunchTitleData.iconAlt}
+              layout='responsive'
+            />
           </figure>
           <MainTitle
             slogan={lunchTitleData.slogan}
             title={lunchTitleData.title}
-            style={2}
+            style={'style1'}
           />
         </div>
       </div>

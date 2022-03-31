@@ -11,33 +11,31 @@ const classes = StyleSheet.create({
   },
 });
 
-export default function Submenu(props) {
-  const submenu = props.submenu;
-  const classImplement = props.classImplement;
+export default function Submenu({ submenu, className }) {
+  // const submenu = props.submenu;
+  // const classImplement = props.className;
 
   return (
-    <div
-      className={`${styles.submenu} ${classImplement} ${css(classes.fadeInUp)}`}
-    >
-      {submenu.map((data, index) => (
+    <div className={`${styles.submenu} ${className} ${css(classes.fadeInUp)}`}>
+      {submenu.map((item, index) => (
         <div className={styles.subItemWrap} key={index}>
-          {data.url ? (
-            <Link href={data.url}>
-              <a className={styles.subItem}>{data.title}</a>
+          {item.url ? (
+            <Link href={item.url}>
+              <a className={styles.subItem}>{item.title}</a>
             </Link>
           ) : (
             <>
               <input
                 className={styles.checkbox}
                 type='checkbox'
-                id={data.id}
-                name={data.id}
+                id={item.id}
+                name={item.id}
               ></input>
-              <label className={styles.icon} htmlFor={data.id}>
+              <label className={styles.icon} htmlFor={item.id}>
                 <i className='fa-solid fa-angle-right'></i>
               </label>
-              <div className={styles.subItem}>{data.title}</div>
-              <Submenu submenu={data.submenu} classImplement={styles.submenu} />
+              <p className={styles.subItem}>{item.title}</p>
+              <Submenu submenu={item.submenu} className={styles.submenu} />
             </>
           )}
         </div>

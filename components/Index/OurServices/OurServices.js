@@ -14,14 +14,18 @@ export default function OurServices() {
             title={ourServicesData.title}
           />
           <div className={styles.mainContent}>
-            {mainContent.map((data, index) => (
+            {mainContent.map((item, index) => (
               <div className={styles.content} key={index}>
                 <div className={`${styles.image} animate zoomIn`}>
-                  <Image src={data.imgSrc} alt={data.imgAlt} />
+                  <Image
+                    src={item.imgSrc}
+                    alt={item.imgAlt}
+                    layout='responsive'
+                  />
                 </div>
-                <a className={styles.title}>{data.title}</a>
-                <p className={styles.description}>{data.description}</p>
-                <a href={data.url} className={styles.url}>
+                <a className={styles.title}>{item.title}</a>
+                <p className={styles.description}>{item.description}</p>
+                <a href={item.url} className={styles.url}>
                   Read More
                 </a>
               </div>

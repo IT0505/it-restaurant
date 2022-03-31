@@ -1,0 +1,33 @@
+.starRating {
+  // unicode-bidi: bidi-override;
+  color: #d3ced2;
+  display: inline-block;
+  // font-size: 64px;
+
+  width: fit-content;
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  font-size: 12px;
+
+  .fillRating {
+    color: #feb518;
+    // height: 50px;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    // Allows us to grab the width of the span elements
+  }
+
+  .emptyRating {
+    display: flex;
+    padding: 0;
+    z-index: 0;
+  }
+}

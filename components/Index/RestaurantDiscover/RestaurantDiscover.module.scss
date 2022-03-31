@@ -20,9 +20,9 @@
 
     .mainContent {
       // width: 50%;
-      padding: 0 10px;
+      // padding: 0 10px;
 
-      .mainTitle {
+      .title {
         text-align: left;
 
         @include Responsive(M) {
@@ -75,8 +75,9 @@
         .image {
           position: relative;
           // height: 100%;
-          // width: 100%;
-          height: fit-content;
+          max-width: 100%;
+          width: 100%;
+          // height: fit-content;
           margin: 0;
 
           &.active {

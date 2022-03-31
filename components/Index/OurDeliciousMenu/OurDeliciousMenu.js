@@ -3,6 +3,7 @@ import React from 'react';
 import Parallax from '../../Parallax/Parallax';
 import { ourDeliciousMenuData } from '../../../utils/dataConfig';
 import Image from 'next/image';
+import MenuList from '../../MenuList/MenuList';
 
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -21,8 +22,8 @@ export default function OurDeliciousMenu() {
 
   return (
     <Parallax
-      classImplement={styles.ourDeliciousMenu}
-      backgroundImage={ourDeliciousMenuData.backgroundImg}
+      backgroundImage={ourDeliciousMenuData.backgroundImage}
+      className={styles.ourDeliciousMenu}
     >
       <div className='container'>
         <div className={styles.ourDeliciousMenuInner}>
@@ -46,10 +47,14 @@ export default function OurDeliciousMenu() {
               }}
               className={styles.mySwiper}
             >
-              {ourDeliciousMenuData.slideImgs.map((data, index) => (
+              {ourDeliciousMenuData.slideImgs.map((item, index) => (
                 <SwiperSlide className={styles.swiperSlide} key={index}>
                   <figure className={styles.image}>
-                    <Image src={data.imgSrc} alt={data.imgAlt}></Image>
+                    <Image
+                      src={item.imgSrc}
+                      alt={item.imgAlt}
+                      layout='responsive'
+                    ></Image>
                   </figure>
                 </SwiperSlide>
               ))}
@@ -64,26 +69,7 @@ export default function OurDeliciousMenu() {
 
           <div className={styles.mainContent}>
             <h2 className={styles.title}>{mainContent.title}</h2>
-            {mainContent.menuList.map((data, index) => (
-              <div key={index} className={styles.content}>
-                <a className={styles.image} href={data.url}>
-                  {data.new && <p>New</p>}
-                  <Image src={data.imgSrc} alt={data.imgAlt}></Image>
-                </a>
-                <div className={styles.text}>
-                  <div className={styles.inlineWrap}>
-                    <a href={data.url} className={styles.inlineText}>
-                      {data.name}
-                    </a>
-                    <span className={`${styles.inlineText} ${styles.dots}`}>
-                      ...............
-                    </span>
-                    <p className={styles.inlineText}>{data.price}</p>
-                  </div>
-                  <p className={styles.description}>{data.description}</p>
-                </div>
-              </div>
-            ))}
+            <MenuList data={mainContent.menuList} style={'style1'} />
           </div>
         </div>
       </div>

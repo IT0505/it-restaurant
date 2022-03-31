@@ -1,0 +1,12 @@
+@import '../../styles/_mixin';
+
+.zaloWidget {
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 20px !important;
+
+  @include Responsive(XS) {
+    bottom: 10px !important;
+    left: 10px !important;
+  }
+}

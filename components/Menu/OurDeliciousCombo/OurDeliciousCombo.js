@@ -14,26 +14,30 @@ export default function OurDeliciousCombo() {
             title={ourDeliciousComboData.title}
           />
           <div className={styles.mainContent}>
-            {mainContent.map((data, index) => (
+            {mainContent.map((item, index) => (
               <div
                 className={`${styles.content} animate ${'fadeInLeft'}`}
                 key={index}
               >
-                <a className={styles.image} href={data.url}>
-                  {data.status && (
-                    <span className={styles.status}>{data.status}</span>
+                <a className={styles.image} href={item.url}>
+                  {item.status && (
+                    <span className={styles.status}>{item.status}</span>
                   )}
-                  <Image src={data.imgSrc} alt={data.imgAlt} />
+                  <Image
+                    src={item.imgSrc}
+                    alt={item.imgAlt}
+                    layout='responsive'
+                  />
                 </a>
-                <a href={data.url} className={styles.link}>
-                  <p className={styles.name}>{data.name}</p>
-                  <span className={styles.price}>{data.price}</span>
+                <a href={item.url} className={styles.link}>
+                  <p className={styles.name}>{item.name}</p>
+                  <span className={styles.price}>{item.price}</span>
                 </a>
-                <p className={styles.description}>{data.description}</p>
+                <p className={styles.description}>{item.description}</p>
               </div>
             ))}
           </div>
-          <Button classImplement={styles.button}>Book My Table</Button>
+          <Button className={styles.button}>Book My Table</Button>
         </div>
       </div>
     </div>

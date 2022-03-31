@@ -6,34 +6,58 @@
       display: flex;
       justify-content: space-between;
       padding: 30px 0;
-
-      @include Responsive(M) {
-        flex-wrap: wrap;
-      }
+      margin: 0 -15px;
+      flex-wrap: wrap;
 
       .content {
         padding: 0 15px;
+        max-width: 33.33333333333%;
+        width: 100%;
+        margin: 0 auto 30px;
 
         @include Responsive(M) {
-          width: 50%;
-          margin: 0 auto 30px;
+          max-width: 50%;
         }
 
         @include Responsive(XS) {
-          width: 100%;
+          max-width: 100%;
           text-align: center;
         }
 
+        pointer-events: none;
+
+        &:hover {
+          .image {
+            img {
+              transform: scale(1.2);
+            }
+          }
+        }
+
         .image {
-          width: fit-content;
+          // min-height: 400px;
+          position: relative;
+          display: block;
           margin: 0 auto 20px;
+          max-width: 100%;
+          width: 100%;
+
+          img {
+            transition: transform 0.5s;
+          }
+          // height: 400px;
+
+          pointer-events: auto;
         }
 
         .title {
+          margin-top: 30px;
           color: #333333;
           font-size: 18px;
           text-transform: capitalize;
-          transition: 0.5s;
+          transition: color 0.5s;
+
+          pointer-events: auto;
 
           &:hover {
             color: #feb518;
@@ -64,11 +88,11 @@
         display: flex;
         justify-content: space-between;
 
-        .readMore {
+        .url {
           color: #333333;
           font-size: 14px;
           font-weight: 700;
-          transition: 0.5s;
+          transition: color 0.5s;
 
           &:hover {
             color: #feb518;

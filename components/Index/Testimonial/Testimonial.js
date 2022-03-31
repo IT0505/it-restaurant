@@ -20,8 +20,8 @@ export default function Testimonial() {
 
   return (
     <Parallax
-      classImplement={styles.testimonial}
-      backgroundImage={testimonialData.backgroundImg}
+      backgroundImage={testimonialData.backgroundImage}
+      className={styles.testimonial}
     >
       <div className='container'>
         <div className={styles.testimonialInner}>
@@ -37,16 +37,16 @@ export default function Testimonial() {
             modules={[Autoplay, Pagination]}
             loop={true}
           >
-            {testimonialData.mainContent.map((data, index) => (
+            {testimonialData.mainContent.map((item, index) => (
               <SwiperSlide key={index}>
                 <p className={styles.text}>
                   <i className='fa-solid fa-quote-left'></i>
                   <br />
-                  {data.text}
+                  {item.text}
                 </p>
                 <h3 className={styles.name}>
                   <span>- </span>
-                  {data.name}
+                  {item.name}
                 </h3>
               </SwiperSlide>
             ))}

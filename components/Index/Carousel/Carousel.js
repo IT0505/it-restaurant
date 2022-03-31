@@ -32,12 +32,12 @@ export default function Carousel() {
           },
         }}
       >
-        {imgList.map((data, index) => (
+        {imgList.map((item, index) => (
           <SwiperSlide key={index}>
             <figure className={styles.image}>
-              <Image src={data.imgSrc} alt={data.imgAlt} />
+              <Image src={item.imgSrc} alt={item.imgAlt} layout='responsive' />
               <figcaption className={styles.caption}>
-                {data.imgCaption}
+                {item.imgCaption}
               </figcaption>
             </figure>
           </SwiperSlide>

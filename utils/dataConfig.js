@@ -47,6 +47,15 @@ import backgroundImg5 from '../assets/images/5.jpg';
 import serviceIcon5 from '../assets/images/services-5.png';
 import serviceIcon6 from '../assets/images/services-6.png';
 import backgroundImg6 from '../assets/images/7.jpg';
+import poster2 from '../assets/images/poster_2_up.jpg';
+import poster3 from '../assets/images/poster_3_up-300x300.jpg';
+import poster4 from '../assets/images/poster_4_up-300x300.jpg';
+import poster5 from '../assets/images/poster_5_up-300x300.jpg';
+
+import reviewerAvt1 from '../assets/images/f0cde930b42c79145194679d5b6e3b1d.png';
+import reviewerAvt2 from '../assets/images/3472757f6a3732d6470f98d7d7e9cece.png';
+import reviewerAvt3 from '../assets/images/7a6df00789e50714fcde1b759befcc84.jpeg';
+import reviewerAvt4 from '../assets/images/8026a390d28369f7a2befcaeb9557359.jpeg';
 
 export const headerData = {
   socialIcon: [
@@ -73,6 +82,25 @@ export const headerData = {
 };
 
 export const navigationData = {
+  socialIcon: [
+    {
+      url: '#',
+      icon: 'fa-brands fa-facebook-f',
+    },
+    {
+      url: '#',
+      icon: 'fa-brands fa-twitter',
+    },
+    {
+      url: '#',
+      icon: 'fa-brands fa-google-plus-g',
+    },
+    {
+      url: '#',
+      icon: 'fa-brands fa-tumblr',
+    },
+  ],
+
   menuItems: [
     {
       title: 'Home',
@@ -140,13 +168,13 @@ export const navigationData = {
       submenu: [
         {
           title: 'Menu style one',
-          url: '/menu1',
-          id: 'menu1',
+          url: '/menu',
+          id: 'menu',
         },
         {
           title: 'Menu style two',
-          id: 'menu2',
-          url: '/menu2',
+          id: 'menu1',
+          url: '/menu1',
         },
         {
           title: 'Menu style three',
@@ -168,8 +196,8 @@ export const navigationData = {
           id: 'shop1',
         },
         {
-          title: 'Shop two',
-          url: '#',
+          title: 'Shop Single',
+          url: '/shopsingle',
           id: 'shop2',
         },
         {
@@ -331,7 +359,7 @@ export const restaurantDiscoverData = {
 export const ourBestData = {
   title: 'Healthy Fresh And Hot Dishes.',
   slogan: 'Best offers from the house chef.',
-  backgroundImg: backgroundImg1,
+  backgroundImage: backgroundImg1,
 };
 
 export const ourServicesData = {
@@ -368,7 +396,7 @@ export const ourServicesData = {
 export const ourDeliciousMenuData = {
   title: 'Our Delicious Menu',
   slogan: 'Best offers from the house chef',
-  backgroundImg: backgroundImg2,
+  backgroundImage: backgroundImg2,
   slideImgs: [
     {
       imgSrc: chickenImg1,
@@ -387,7 +415,7 @@ export const ourDeliciousMenuData = {
     title: 'Our Best Chicken Recipes',
     menuList: [
       {
-        new: 'new',
+        status: 'new',
         imgSrc: diningImg1,
         imgAlt: 'dining',
         name: 'Gosh Egg-White Omelet',
@@ -537,7 +565,7 @@ export const ourDeliciousData = {
 };
 
 export const testimonialData = {
-  backgroundImg: backgroundImg3,
+  backgroundImage: backgroundImg3,
   mainContent: [
     {
       text: '“ We enjoy sharing the projects and posts we make just as much as we enjoy creating them. consectetur adipiscing elit, sed do eiusmod tempor incididunt Sit back & take a moment to browse through some of our recent completed work.”',
@@ -676,10 +704,10 @@ export const ourDeliciousComboData = {
   ],
 };
 
-export const pageTitleData = {
+export const menu1PageTitleData = {
   title: 'Taste The Best Dishes.',
   slogan: 'Our Menu List',
-  backgroundImg: backgroundImg4,
+  backgroundImage: backgroundImg4,
 };
 
 export const breakfastMenuData = {
@@ -782,7 +810,7 @@ export const lunchTitleData = {
   slogan: 'Special Lunch Menu Items',
   iconSrc: serviceIcon5,
   iconAlt: 'lunch',
-  backgroundImg: backgroundImg5,
+  backgroundImage: backgroundImg5,
 };
 
 export const lunchMenuData = {
@@ -881,7 +909,7 @@ export const dinnerTitleData = {
   slogan: 'Special Dinner Menu Items',
   iconSrc: serviceIcon6,
   iconAlt: 'dinner',
-  backgroundImg: backgroundImg6,
+  backgroundImage: backgroundImg6,
 };
 
 export const dinnerMenuData = {
@@ -971,6 +999,193 @@ export const dinnerMenuData = {
       price: '$25.40',
       description: 'Menu Style 2, Shrimp',
       status: 'new',
+    },
+  ],
+};
+
+export const shopSinglePageTitleData = {
+  title: 'Flying Ninja',
+  backgroundImage: backgroundImg4,
+};
+
+export const shopSingleSideBarData = {
+  mainContent: [
+    {
+      title: 'Categories',
+      contents: [
+        {
+          text: 'Home 1',
+          url: '#',
+        },
+        {
+          text: 'Latest news',
+          url: '#',
+        },
+      ],
+    },
+    {
+      title: 'Top Rated',
+      contents: [
+        {
+          text: 'Hearty Grain Breakfast',
+          url: '#',
+          imgSrc: diningImg1,
+          imgAlt: 'breakfast',
+        },
+        {
+          text: 'Hearty Grain Breakfast',
+          url: '#',
+          imgSrc: diningImg4,
+          imgAlt: 'breakfast',
+        },
+        {
+          text: 'Hearty Grain Breakfast',
+          url: '#',
+          imgSrc: diningImg3,
+          imgAlt: 'breakfast',
+        },
+      ],
+    },
+    {
+      title: 'Archives',
+      contents: [
+        {
+          text: 'January 2017',
+          url: '#',
+        },
+      ],
+    },
+  ],
+};
+
+export const flyingNinjaProductData = {
+  // sideBarContent: [
+  //   {
+  //     title: 'Categories',
+  //     contents: [
+  //       {
+  //         text: 'Home 1',
+  //         url: '#',
+  //       },
+  //       {
+  //         text: 'Latest news',
+  //         url: '#',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     title: 'Top Rated',
+  //     contents: [
+  //       {
+  //         text: 'Hearty Grain Breakfast',
+  //         url: '#',
+  //         imgSrc: diningImg1,
+  //         imgAlt: 'breakfast',
+  //       },
+  //       {
+  //         text: 'Hearty Grain Breakfast',
+  //         url: '#',
+  //         imgSrc: diningImg2,
+  //         imgAlt: 'breakfast',
+  //       },
+  //       {
+  //         text: 'Hearty Grain Breakfast',
+  //         url: '#',
+  //         imgSrc: diningImg3,
+  //         imgAlt: 'breakfast',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     title: 'Archives',
+  //     contents: [
+  //       {
+  //         text: 'January 2017',
+  //         url: '#',
+  //       },
+  //     ],
+  //   },
+  // ],
+  title: 'Flying Ninja',
+  starRating: '70%',
+  totalReviews: '4',
+  description:
+    'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+
+  shortDescription:
+    'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+  price: '£12.00',
+  oldPrice: '£15.00',
+  imgSrc: poster2,
+  imgAlt: 'Flying Ninja',
+
+  reviews: [
+    {
+      imgSrc: reviewerAvt1,
+      imgAlt: 'avatar',
+      name: 'Cobus Bester',
+      starRating: 4,
+      date: 'June 7, 2013',
+      comment:
+        'Really happy with this print. The colors are great, and the paper quality is good too.',
+    },
+    {
+      imgSrc: reviewerAvt2,
+      imgAlt: 'avatar',
+      name: 'Cobus Bester',
+      starRating: 5,
+      date: 'June 7, 2013',
+      comment:
+        'You only get the picture, not the person holding it, something they don’t mention in the description, now I’ve got to find my own person',
+    },
+    {
+      imgSrc: reviewerAvt3,
+      imgAlt: 'avatar',
+      name: 'Cobus Bester',
+      starRating: 2,
+      date: 'June 7, 2013',
+      comment:
+        'Really happy with this print. The colors are great, and the paper quality is good too.',
+    },
+    {
+      imgSrc: reviewerAvt4,
+      imgAlt: 'avatar',
+      name: 'Cobus Bester',
+      starRating: 4,
+      date: 'June 7, 2013',
+      comment:
+        'You only get the picture, not the person holding it, something they don’t mention in the description, now I’ve got to find my own person',
+    },
+  ],
+
+  relatedProduct: [
+    {
+      imgSrc: poster3,
+      imgAlt: 'ninja',
+      name: 'Premium Quality',
+      description:
+        'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+      price: '£15',
+      oldPrice: '£12',
+      starRating: '80%',
+    },
+    {
+      imgSrc: poster4,
+      imgAlt: 'ninja',
+      name: 'Premium Quality',
+      description: 'Pellentesque habitant morbi ',
+      price: '£15',
+      // oldPrice: '£12',
+      // starRating: 2,
+    },
+    {
+      imgSrc: poster5,
+      imgAlt: 'ninja',
+      name: 'Premium Quality',
+      description: 'Pellentesque',
+      price: '£15',
+      oldPrice: '£12',
+      starRating: '25%',
     },
   ],
 };

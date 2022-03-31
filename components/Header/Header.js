@@ -1,5 +1,7 @@
 import styles from './Header.module.scss';
 import { headerData } from '../../utils/dataConfig';
+import { ShoppingBag } from '../../components/Icons/Icons.js';
+// import { FaBitcoin } from 'react-icons/fa';
 
 export default function Header() {
   return (
@@ -8,9 +10,9 @@ export default function Header() {
         <div className={styles.headerInner}>
           <div className={styles.topLeft}>
             <div className={styles.socialIcon}>
-              {headerData.socialIcon.map((data, index) => (
-                <a href={data.url} key={index}>
-                  <i className={data.icon}></i>
+              {headerData.socialIcon.map((item, index) => (
+                <a href={item.url} key={index}>
+                  <i className={item.icon}></i>
                 </a>
               ))}
             </div>
@@ -19,8 +21,8 @@ export default function Header() {
           <div className={styles.topRight}>
             <p>Opening Hours : {headerData.openingHours}</p>
             <span className={styles.space}></span>
-            <span className={styles.icon}>
-              <i className='fas fa-bag-shopping'></i>
+            <span className={styles.iconWrap}>
+              <ShoppingBag size='20px' fill='#fff' strokeWidth='1' />
               <span className={styles.count}>0</span>
             </span>
           </div>

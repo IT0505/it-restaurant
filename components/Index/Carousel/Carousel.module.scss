@@ -8,9 +8,8 @@
       margin: 0;
       cursor: pointer;
       position: relative;
-      max-height: 525px;
-      height: 100%;
-      display: flex;
+      max-width: 100%;
+      width: 100%;
 
       &::after {
         position: absolute;
@@ -36,12 +35,19 @@
         padding-top: 0px;
         color: #ffffff;
         font-size: 18px;
-        transition: 0.5s;
         opacity: 0;
+        transition: 0.5s;
+      }
+
+      img {
+        transition: transform 0.5s;
       }
 
       &:hover {
-        figcaption {
+        img {
+          transform: scale(1.2);
+        }
+        .caption {
           bottom: 0;
           opacity: 1;
         }

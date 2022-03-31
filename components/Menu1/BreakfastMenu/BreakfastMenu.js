@@ -17,6 +17,7 @@ export default function BreakfastMenu() {
               <Image
                 src={breakfastMenuData.imgSrc}
                 alt={breakfastMenuData.imgAlt}
+                layout='responsive'
               />
             </figure>
             <MainTitle

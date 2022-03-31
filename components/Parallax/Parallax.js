@@ -1,14 +1,20 @@
 import styles from './Parallax.module.scss';
 
-export default function Parallax(props) {
-  const classImplement = props.classImplement;
-  const backgroundImageSrc = props.backgroundImage.src;
+export default function Parallax({
+  style,
+  className,
+  backgroundImage,
+  children,
+}) {
+  // const customStyle = props.style;
+  // const classImplement = props.className;
+  // const backgroundImageSrc = props.backgroundImage.src;
   return (
     <div
-      className={`${styles.parallax} ${classImplement}`}
-      style={{ backgroundImage: `url(${backgroundImageSrc})` }}
+      className={`${styles.parallax} ${styles[style]} ${className}`}
+      style={{ backgroundImage: `url(${backgroundImage.src})` }}
     >
-      {props.children}
+      {children}
     </div>
   );
 }

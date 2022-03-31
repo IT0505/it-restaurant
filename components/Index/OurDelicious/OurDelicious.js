@@ -41,36 +41,40 @@ export default function OurDelicious() {
                 },
               }}
             >
-              {chefList.map((data, index) => (
+              {chefList.map((item, index) => (
                 <SwiperSlide key={index}>
                   <figure className={styles.image}>
-                    <Image src={data.imgSrc} alt={data.imgAlt} />
+                    <Image
+                      src={item.imgSrc}
+                      alt={item.imgAlt}
+                      layout='responsive'
+                    />
                     <figcaption className={styles.caption}>
                       <a
                         className='fa-brands fa-facebook-f'
-                        href={data.facebook}
+                        href={item.facebook}
                       ></a>
                       <a
                         className='fa-brands fa-twitter'
-                        href={data.twitter}
+                        href={item.twitter}
                       ></a>
                       <a
                         className='fa-brands fa-linkedin-in'
-                        href={data.linkedin}
+                        href={item.linkedin}
                       ></a>
                       <a
                         className='fa-brands fa-instagram-square'
-                        href={data.instagram}
+                        href={item.instagram}
                       ></a>
                       <a
                         className='fa-brands fa-vimeo-square'
-                        href={data.vimeo}
+                        href={item.vimeo}
                       ></a>
                     </figcaption>
                   </figure>
                   <div className={styles.lowerContent}>
-                    <h3 className={styles.name}>{data.name}</h3>
-                    <p className={styles.position}>{data.position}</p>
+                    <h3 className={styles.name}>{item.name}</h3>
+                    <p className={styles.position}>{item.position}</p>
                   </div>
                 </SwiperSlide>
               ))}

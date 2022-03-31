@@ -1,7 +1,15 @@
+@import '../../styles/_mixin';
+
 .scrollUpButton {
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: 20px;
+  right: 20px;
+
+  @include Responsive(XS) {
+    bottom: 10px;
+    right: 10px;
+  }
+
   width: 40px;
   height: 40px;
   color: #ffffff;
@@ -14,7 +22,7 @@
   border: none;
   border-radius: 50%;
   background: #0a0a0a;
-  transition: 0.5s;
+  transition: animation 0.5s;
   animation: myMove 1s;
 
   @keyframes myMove {

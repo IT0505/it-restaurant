@@ -1,0 +1,87 @@
+.starRatingInput {
+  // unicode-bidi: bidi-override;
+  color: #feb518;
+  display: inline-block;
+  // font-size: 64px;
+
+  width: fit-content;
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  font-size: 12px;
+
+  .fillRating {
+    color: transparent;
+    // height: 50px;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    // display: flex;
+    top: 0;
+    left: 0;
+    // overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    // pointer-events: none;
+
+    // width: 0%;
+    // Allows us to grab the width of the span elements
+    input {
+      display: none;
+      // position: absolute;
+    }
+
+    label {
+      // pointer-events: auto;
+      position: absolute;
+      display: flex;
+      cursor: pointer;
+      z-index: 1;
+
+      &:hover {
+        color: #feb518;
+      }
+
+      &.active {
+        color: #feb518;
+      }
+
+      &.oneStar {
+        z-index: 5;
+      }
+      &.twoStars {
+        z-index: 4;
+      }
+      &.threeStars {
+        z-index: 3;
+      }
+      &.fourStars {
+        z-index: 2;
+      }
+      &.fiveStars {
+        z-index: 1;
+      }
+    }
+  }
+
+  .emptyRating {
+    display: flex;
+    padding: 0;
+    z-index: 0;
+  }
+
+  .emptyRating,
+  .fillRating {
+    .secondStar {
+      padding-right: 13px;
+    }
+    .thirdStar {
+      padding-right: 26px;
+    }
+    .fourthStar {
+      padding-right: 39px;
+    }
+  }
+}

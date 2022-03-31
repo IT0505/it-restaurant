@@ -1,0 +1,198 @@
+@import '../../../styles/_mixin';
+.productSection {
+  .productSectionInner {
+    display: flex;
+    justify-content: space-between;
+
+    .sideBar {
+      width: 270px;
+      flex-grow: 1;
+      flex-shrink: 0;
+
+      .sideBarItem {
+        margin-bottom: 20px;
+
+        .title {
+          margin-bottom: 25px;
+          font-size: 18px;
+          color: #253d4a;
+          font-weight: 400;
+          text-transform: capitalize;
+        }
+
+        .searchBar {
+          position: relative;
+
+          .searchInput {
+            border: 1px solid #e8e8e8;
+            outline: none;
+            line-height: 22px;
+            padding: 8px 40px 8px 20px;
+            background: #ffffff;
+            color: #3a3a3a;
+            display: block;
+            font-size: 13px;
+            width: 100%;
+            height: 40px;
+            transition: border 0.5s;
+
+            &:focus {
+              border: 1px solid #feb518;
+            }
+          }
+
+          .searchBtn {
+            position: absolute;
+            border: none;
+            cursor: pointer;
+            right: 1px;
+            top: 1px;
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 15px;
+            color: #777777;
+            background: none;
+            font-weight: normal;
+            // display: block;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    .productWrap {
+      width: -webkit-fill-available;
+      margin-left: 30px;
+
+      .relatedProduct {
+        padding: 80px 0px 100px;
+
+        .title {
+          // font-family: 'Roboto Slab', serif;
+          font-size: 26px;
+          font-weight: 700;
+          color: #333333;
+          // margin-bottom: 20px;
+          text-transform: capitalize;
+          line-height: 1.4em;
+          text-align: center;
+
+          margin-bottom: 60px;
+        }
+
+        .relatedProductWrap {
+          display: flex;
+
+          justify-content: space-between;
+          flex-wrap: wrap;
+          align-items: center;
+
+          .content {
+            padding: 0 15px;
+            width: 33.33333333%;
+            margin: 0 auto 40px;
+
+            @include Responsive(M) {
+              width: 50%;
+            }
+
+            @include Responsive(XS) {
+              width: 100%;
+            }
+
+            pointer-events: none;
+            &:hover {
+              .image {
+                .addCart {
+                  bottom: 0;
+                }
+              }
+            }
+            .image {
+              position: relative;
+              width: 100%;
+              max-width: 100%;
+              overflow: hidden;
+
+              pointer-events: auto;
+              .addCart {
+                text-transform: uppercase;
+                position: absolute;
+                right: 0px;
+                color: #ffffff;
+                font-size: 13px;
+                line-height: 1;
+                padding: 10px 20px;
+                font-weight: 700;
+                bottom: -40px;
+                display: flex;
+                align-items: center;
+                background-color: #feb518;
+                z-index: 1;
+                transition: bottom 0.5s;
+
+                .icon {
+                  margin-right: 10px;
+                  // height: 20px;
+                  // filter: brightness(0) invert(1);
+                }
+
+                // &:hover {
+                //   .addCart {
+                //     bottom: 0;
+                //   }
+                // }
+              }
+            }
+
+            .inlineLink {
+              display: inline-block;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              font-size: 17px;
+              transition: color 0.2s;
+              margin-top: 10px;
+
+              pointer-events: auto;
+
+              &:hover {
+                color: #feb518;
+              }
+
+              .inlinePrice {
+                display: inline-block;
+                color: #333333;
+                &:hover {
+                  color: #333333;
+                }
+
+                .price,
+                .oldPrice {
+                  // color: #333333;
+                  font-weight: 700;
+                  line-height: 1.8em;
+                  font-family: 'Oswald', sans-serif;
+                  text-decoration-line: underline;
+                  display: inline-block;
+                }
+
+                .oldPrice {
+                  opacity: 0.5;
+                  text-decoration-line: line-through;
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

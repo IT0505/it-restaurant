@@ -58,7 +58,7 @@
       padding: 0 10px;
 
       .logo {
-        width: 100%;
+        max-width: 200px;
         margin: 0;
       }
 
@@ -78,7 +78,8 @@
       a {
         text-transform: capitalize;
         margin: 0 0 10px;
-        transition: 0.5s;
+        width: fit-content;
+        transition: color 0.5s;
 
         &:hover {
           color: #ffffff;
@@ -102,16 +103,21 @@
         }
 
         .blogImage {
+          display: block;
           position: relative;
           flex-shrink: 0;
-          height: 68px;
-          // width: 62px;
+          flex-grow: 1;
+          max-width: 68px;
+          width: 100%;
+          height: fit-content;
+          // height: 68px;
           border-radius: 50%;
           overflow: hidden;
           border: 3px solid #5c5c5c;
           margin: 0;
 
           a {
+            transition: opacity 0.5s;
             position: absolute;
             left: 0px;
             top: 0px;
@@ -125,7 +131,6 @@
             // flex-direction: column;
             justify-content: center;
             align-items: center;
-            transition: 0.5s;
           }
         }
 

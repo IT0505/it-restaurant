@@ -78,7 +78,9 @@
 
           .image {
             flex-shrink: 0;
-            height: 206px;
+            flex-grow: 1;
+            width: 100%;
+            max-width: 206px;
             border-radius: 50%;
             overflow: hidden;
             margin: 0;
@@ -90,12 +92,12 @@
 
             &:hover {
               .overlay {
-                display: flex;
                 opacity: 1;
               }
             }
             .overlay {
               position: absolute;
+              display: flex;
               top: 0;
               left: 0;
               width: 100%;
@@ -107,11 +109,11 @@
               display: flex;
               justify-content: center;
               align-items: center;
-              transition: 0.5s;
               color: #ffffff;
               font-size: 24px;
               line-height: 200px;
               font-weight: 700;
+              transition: opacity 0.5s;
             }
           }
 
@@ -140,7 +142,7 @@
               font-size: 15px;
               cursor: pointer;
               color: #feb518;
-              transition: 0.5s;
+              transition: color 0.5s;
 
               &:hover {
                 color: #000;

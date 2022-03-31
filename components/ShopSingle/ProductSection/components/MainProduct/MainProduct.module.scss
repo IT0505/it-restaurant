@@ -1,0 +1,247 @@
+.mainProduct {
+  .mainInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    .image {
+      max-width: 420px;
+      width: 100%;
+    }
+
+    .textWrap {
+      width: -webkit-fill-available;
+      margin-left: 30px;
+
+      .title {
+        font-size: 20px;
+        line-height: 1.4em;
+        color: #333333;
+        margin-bottom: 12px;
+      }
+
+      .inlineWrapReviews {
+        margin-bottom: 30px;
+
+        .totalReviews {
+          margin-left: 5px;
+          text-decoration: none;
+          cursor: pointer;
+          font-size: 12px;
+          color: #feb518;
+          vertical-align: super;
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+
+      .shortDescription {
+        margin-bottom: 22px;
+      }
+
+      .inlineWrapPrice {
+        padding: 25px 0px;
+        // margin-top: 22px;
+        border-top: 1px solid #f0f0f0;
+        border-bottom: 1px solid #f0f0f0;
+
+        .price,
+        .oldPrice {
+          color: #feb518;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 1.8em;
+          font-family: 'Oswald', sans-serif;
+          text-decoration-line: underline;
+          display: inline-block;
+        }
+
+        .oldPrice {
+          opacity: 0.5;
+          text-decoration-line: line-through;
+          margin-right: 5px;
+        }
+      }
+
+      .inlineWrapFunc {
+        margin-top: 40px;
+
+        .input {
+          height: 43px;
+          border: 1px solid #ededed;
+          margin: 0px 15px 0 0;
+          width: 3.631em;
+          text-align: center;
+          color: #777777;
+          font-size: 14px;
+          line-height: 1.8em;
+          outline: none;
+        }
+
+        .button {
+          color: #fff;
+
+          &:hover {
+            color: #feb518;
+          }
+        }
+      }
+    }
+  }
+
+  .subInfo {
+    .buttonWrap {
+      margin-bottom: 20px;
+
+      .button {
+        margin-right: 10px;
+        background-color: transparent;
+        border: 2px solid #feb518;
+        color: #feb518;
+
+        font-size: 12px;
+        // width: 150px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 24px;
+        padding: 7px 30px;
+
+        &:hover {
+          // background-color: #feb518;
+          color: #000;
+          border: 2px solid #feb518;
+        }
+
+        &.active {
+          background-color: #feb518;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .descriptionWrap {
+    padding: 30px;
+    background: #fbfbfb;
+    box-shadow: none;
+    border: none;
+    border-radius: 0px;
+
+    .title {
+      color: #1a1a1a;
+      font-family: 'Lato', serif;
+      font-weight: 500;
+      font-size: 18px;
+      text-transform: capitalize;
+      margin-bottom: 15px;
+    }
+  }
+
+  .reviewsWrap {
+    padding: 30px;
+    background: #fbfbfb;
+
+    .title {
+      color: #1a1a1a;
+      font-family: 'Lato', serif;
+      font-weight: 500;
+      font-size: 18px;
+      text-transform: capitalize;
+      margin-bottom: 50px;
+    }
+
+    .review {
+      margin-bottom: 20px;
+      display: flex;
+
+      .image {
+        max-width: 32px;
+        width: 100%;
+        height: fit-content;
+        padding: 3px;
+        // width: 32px;
+        // height: auto;
+        background: #ebe9eb;
+        border: 1px solid #e4e1e3;
+        margin: 0;
+        box-shadow: none;
+      }
+
+      .reviewInner {
+        margin: 0 0 0 20px;
+        // flex-grow: 1;
+        // flex-shrink: 0;
+        max-width: 100%;
+        width: 100%;
+        border: 1px solid #e4e1e3;
+        border-radius: 4px;
+        padding: 16px;
+
+        .inlineText {
+          font-size: 13px;
+          margin: 6px 0;
+
+          b {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .reviewForm {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+
+      .ratingTitle {
+        font-size: 14px;
+        font-weight: 700;
+        color: #555555;
+        margin: 10px 0;
+      }
+
+      .starRatingInput {
+        margin-bottom: 20px;
+      }
+
+      .reviewLabel {
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+
+      .input,
+      .textArea {
+        border: 1px solid #ebebeb;
+        outline: none;
+        width: 100%;
+        margin-bottom: 15px;
+        line-height: 1.4;
+        font-size: 16px;
+      }
+
+      .textArea {
+        // font-size: 16px;
+        height: 75px;
+      }
+      .input {
+        padding: 10px;
+      }
+
+      .button {
+        color: #fff;
+        width: fit-content;
+        border-radius: 3px;
+        font-weight: 900;
+        height: 45px;
+        text-transform: uppercase;
+        padding: 0 20px;
+
+        &:hover {
+          color: #feb518;
+        }
+      }
+    }
+  }
+}

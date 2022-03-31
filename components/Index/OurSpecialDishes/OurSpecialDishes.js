@@ -18,16 +18,16 @@ export default function OurSpecialDishes() {
             <div className={`${styles.openingHours} animate fadeInLeft`}>
               <h2 className={styles.title}>Opening Hours</h2>
               <ul>
-                {openingHours.map((data, index) => (
+                {openingHours.map((item, index) => (
                   <li key={index}>
-                    {data.phone ? (
-                      <p className={styles.phone}>{data.phone}</p>
-                    ) : data.note ? (
-                      <p className={styles.text}>{data.note}</p>
+                    {item.phone ? (
+                      <p className={styles.phone}>{item.phone}</p>
+                    ) : item.note ? (
+                      <p className={styles.text}>{item.note}</p>
                     ) : (
                       <>
-                        <p className={styles.text}>{data.date}</p>
-                        <p className={styles.text}>{data.hours}</p>
+                        <p className={styles.text}>{item.date}</p>
+                        <p className={styles.text}>{item.hours}</p>
                       </>
                     )}
                   </li>
@@ -35,7 +35,7 @@ export default function OurSpecialDishes() {
               </ul>
             </div>
             <div className={styles.specialDishes}>
-              {specialDishes.map((data, index) => (
+              {specialDishes.map((item, index) => (
                 <div
                   className={`${styles.content} ${
                     index % 2 === 0 && styles.reverse
@@ -43,13 +43,17 @@ export default function OurSpecialDishes() {
                   key={index}
                 >
                   <figure className={styles.image}>
-                    <Image src={data.imgSrc} alt={data.imgAlt} />
-                    <div className={styles.overlay}>{data.price}</div>
+                    <Image
+                      src={item.imgSrc}
+                      alt={item.imgAlt}
+                      layout='responsive'
+                    />
+                    <div className={styles.overlay}>{item.price}</div>
                   </figure>
                   <div className={styles.text}>
-                    <h3 className={styles.title}>{data.title}</h3>
-                    <p className={styles.description}>{data.description}</p>
-                    <a href={data.url} className={styles.url}>
+                    <h3 className={styles.title}>{item.title}</h3>
+                    <p className={styles.description}>{item.description}</p>
+                    <a href={item.url} className={styles.url}>
                       Read More
                     </a>
                   </div>

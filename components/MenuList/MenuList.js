@@ -1,29 +1,39 @@
 import Image from 'next/image';
 import styles from './MenuList.module.scss';
 
-export default function MenuList(props) {
-  const mainContent = props.data;
+export default function MenuList({ data, style, className }) {
+  // const customStyle = props.style;
+  // const classImplement = props.className;
   return (
-    <div className={styles.mainContent}>
-      {mainContent.map((data, index) => (
-        <div key={index} className={styles.content}>
-          <a className={styles.image} href={data.url}>
-            {data.status === 'new' && (
+    <div className={`${styles.menuList} ${styles[style]} ${className}`}>
+      {data.map((item, index) => (
+        <div key={index} className={styles.menuItem}>
+          <a className={styles.image} href={item.url}>
+            {item.status === 'new' && (
               <span className={styles.status}>New</span>
             )}
-            <Image src={data.imgSrc} alt={data.imgAlt}></Image>
+            <Image
+              src={item.imgSrc}
+              alt={item.imgAlt}
+              layout='responsive'
+            ></Image>
           </a>
           <div className={styles.text}>
             <div className={styles.inlineWrap}>
-              <a href={data.url} className={styles.inlineText}>
-                {data.name}
+              <a
+                href={item.url}
+                className={`${styles.inlineText} ${styles.name}`}
+              >
+                {item.name}
               </a>
               <span className={`${styles.inlineText} ${styles.dots}`}>
-                ...............
+                ..................................
               </span>
-              <p className={styles.inlineText}>{data.price}</p>
+              <p className={`${styles.inlineText} ${styles.price}`}>
+                {item.price}
+              </p>
             </div>
-            <p className={styles.description}>{data.description}</p>
+            <p className={styles.description}>{item.description}</p>
           </div>
         </div>
       ))}

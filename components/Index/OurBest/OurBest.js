@@ -6,16 +6,15 @@ import MainTitle from '../../MainTitle/MainTitle';
 export default function OurBest() {
   return (
     <Parallax
-      classImplement={styles.ourBest}
-      backgroundImage={ourBestData.backgroundImg}
+      backgroundImage={ourBestData.backgroundImage}
+      className={styles.ourBest}
     >
       <div className='container'>
         <div className={styles.ourBestInner}>
           <MainTitle
-            classImplement={styles.title}
             slogan={ourBestData.slogan}
             title={ourBestData.title}
-            style={2}
+            style={'style1'}
           />
         </div>
       </div>

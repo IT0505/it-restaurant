@@ -13,7 +13,7 @@
   }
 
   .ourDeliciousMenuInner {
-    padding: 70px 50px 100px;
+    padding: 72px 70px 55px 100px;
     border: 9px solid rgba(255, 255, 255, 0.2);
     display: flex;
     justify-content: space-between;
@@ -22,10 +22,11 @@
     @include Responsive(M) {
       flex-direction: column;
       align-items: center;
+      padding: 50px;
     }
 
     @include Responsive(XS) {
-      padding: 20px 10px;
+      padding: 20px;
     }
 
     &::after {
@@ -40,7 +41,7 @@
     }
 
     .swiperWrap {
-      width: 40%;
+      width: 35%;
       margin: 0;
       // flex-grow: 4;
       position: relative;
@@ -50,6 +51,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 30px;
       }
 
       .title {
@@ -60,9 +62,9 @@
         line-height: 46px;
         font-family: 'Dancing Script', cursive;
 
-        @include Responsive(M) {
-          text-align: center;
-        }
+        // @include Responsive(M) {
+        //   text-align: center;
+        // }
       }
 
       .slogan {
@@ -80,6 +82,8 @@
 
         .image {
           margin: 0;
+          max-width: 100%;
+          width: 100%;
         }
 
         .prev,
@@ -90,7 +94,7 @@
           width: 33px;
           height: 33px;
           margin: 0px;
-          margin-right: 10px;
+          // margin-right: 10px;
           text-align: center;
           display: inline-block;
           background-color: #262727;
@@ -101,10 +105,10 @@
           // padding: 10px;
           // display: flex;
 
-          @include Responsive(M) {
-            top: 45%;
-            bottom: unset;
-          }
+          // @include Responsive(M) {
+          //   top: 45%;
+          //   bottom: unset;
+          // }
 
           &:hover {
             background: none repeat scroll 0 0 #869791;
@@ -118,17 +122,16 @@
         .next {
           left: 50px;
 
-          @include Responsive(M) {
-            left: unset;
-            right: 0;
-          }
+          // @include Responsive(M) {
+          //   left: unset;
+          //   right: 0;
+          // }
         }
       }
     }
 
     .mainContent {
-      margin-left: 20px;
-      padding: 0 10px;
+      margin-left: 50px;
       position: relative;
       z-index: 1;
       width: -webkit-fill-available;
@@ -136,6 +139,7 @@
       // flex-grow: 6;
       @include Responsive(M) {
         margin-left: 0;
+        margin: 0 -10px;
       }
 
       .title {
@@ -143,80 +147,11 @@
         font-size: 22px;
         font-weight: 400;
         margin-bottom: 30px;
+        padding-left: 10px;
 
         @include Responsive(M) {
           text-align: center;
-        }
-      }
-
-      .content {
-        display: flex;
-        margin: 0 0 20px;
-
-        @include Responsive(XS) {
-          flex-direction: column;
-          align-items: center;
-          margin: 0;
-        }
-
-        .image {
-          position: relative;
-          height: 86px;
-          margin: 0;
-          flex-shrink: 0;
-
-          @include Responsive(XS) {
-            margin-bottom: 20px;
-          }
-
-          p {
-            position: absolute;
-            left: 2px;
-            top: 2px;
-            line-height: 17px;
-            padding: 0px 11px;
-            font-size: 11px;
-            color: #333333;
-            background-color: #feb518;
-            font-family: 'Roboto', sans-serif;
-          }
-        }
-
-        .text {
-          margin-left: 20px;
-          width: -webkit-fill-available;
-
-          @include Responsive(XS) {
-            margin-left: 0;
-          }
-
-          .inlineWrap {
-            color: #ffffff;
-            font-size: 17px;
-            font-weight: 400;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .inlineText {
-              margin: 0;
-            }
-
-            @include Responsive(XS) {
-              flex-direction: column;
-              text-align: center;
-            }
-          }
-
-          .description {
-            color: #aaaaaa;
-            margin: 10px 0 0;
-
-            @include Responsive(XS) {
-              margin: 0 auto 30px;
-              text-align: center;
-            }
-          }
+          padding: 0;
         }
       }
     }

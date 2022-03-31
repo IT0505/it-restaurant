@@ -5,7 +5,8 @@
     .titleWrap {
       .icon {
         text-align: center;
-        width: fit-content;
+        max-width: 175px;
+        width: 100%;
         margin: 0 auto;
 
         @include Responsive(M) {

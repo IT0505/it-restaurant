@@ -5,7 +5,7 @@ import logoImg from '../../assets/images/logo.png';
 import logoImg2 from '../../assets/images/logo-2.png';
 import Button from '../Button/Button';
 import Submenu from './components/Submenu/Submenu';
-import SocialIcon from './components/SocialIcon/SocialIcon';
+// import SocialIcon from './components/SocialIcon/SocialIcon';
 import { navigationData } from '../../utils/dataConfig';
 import Link from 'next/link';
 
@@ -30,7 +30,7 @@ export default function Navigation() {
         <div className={styles.navigationInner}>
           <Link href='/'>
             <a className={styles.logo}>
-              <Image src={logoImg} alt='logo'></Image>
+              <Image src={logoImg} alt='logo' layout='responsive'></Image>
             </a>
           </Link>
           <div
@@ -46,39 +46,47 @@ export default function Navigation() {
               <i className='fa-solid fa-xmark'></i>
             </button>
             <Link href='/'>
-              <a className={styles.logo}>
-                <Image src={logoImg2} alt='logo'></Image>
+              <a className={styles.logo1}>
+                <Image src={logoImg2} alt='logo' layout='responsive'></Image>
               </a>
             </Link>
 
-            {navigationData.menuItems.map((data, index) => (
+            {navigationData.menuItems.map((item, index) => (
               <div className={styles.menuItemWrap} key={index}>
-                {data.url ? (
-                  <Link href={data.url}>
-                    <a className={styles.menuItem}>{data.title}</a>
+                {item.url ? (
+                  <Link href={item.url}>
+                    <a className={styles.menuItem}>{item.title}</a>
                   </Link>
                 ) : (
                   <>
                     <input
                       className={styles.checkbox}
                       type='checkbox'
-                      id={data.title}
-                      name={data.title}
+                      id={item.title}
+                      name={item.title}
                     ></input>
-                    <label className={styles.icon} htmlFor={data.title}>
+                    <label className={styles.icon} htmlFor={item.title}>
                       <i className='fa-solid fa-angle-right'></i>
                     </label>
-                    <div className={styles.menuItem}>{data.title}</div>
+                    <p className={styles.menuItem}>{item.title}</p>
                     <Submenu
-                      submenu={data.submenu}
-                      classImplement={styles.submenu}
+                      submenu={item.submenu}
+                      className={styles.submenu}
                     />
                   </>
                 )}
               </div>
             ))}
-            <SocialIcon />
-            <Button classImplement={styles.button}>Reservation</Button>
+
+            <div className={styles.socialIconWrap}>
+              {navigationData.socialIcon.map((item, index) => (
+                <a href={item.url} key={index} className={styles.socialIcon}>
+                  <i className={item.icon}></i>
+                </a>
+              ))}
+            </div>
+
+            <Button className={styles.button}>Reservation</Button>
           </div>
           <button
             type='button'

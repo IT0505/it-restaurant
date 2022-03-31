@@ -55,7 +55,7 @@ export default function SlideShow() {
 
   return (
     <div className={styles.slideshow}>
-      {slideshowItems.map((data, index) => (
+      {slideshowItems.map((item, index) => (
         <figure
           className={`${styles.slide} ${css(classes.fadeIn)} ${
             slide === index && styles.active
@@ -63,38 +63,39 @@ export default function SlideShow() {
           key={index}
         >
           <Image
-            src={data.imgSrc}
-            alt={data.imgAlt}
+            src={item.imgSrc}
+            alt={item.imgAlt}
             objectFit='cover'
             layout='fill'
           />
           <div className={styles.textWrap}>
             <div
               className={`${styles.text} ${
-                styles[classNameCustom(data.title)]
+                styles[classNameCustom(item.title)]
               }`}
             >
-              {data.iconSrc && (
+              {item.iconSrc && (
                 <figure className={`${styles.image} ${css(classes.fadeInUp)}`}>
                   <Image
-                    src={data.iconSrc}
-                    alt={data.imgAlt}
+                    src={item.iconSrc}
+                    alt={item.imgAlt}
+                    layout='responsive'
                     // layout='fill'
                     // objectFit='contain'
                   ></Image>
                 </figure>
               )}
               <h3 className={`${styles.title} ${css(classes.slideInLeft)}`}>
-                {data.title}
+                {item.title}
               </h3>
               <p
                 className={`${styles.description} ${css(classes.slideInRight)}`}
               >
-                {data.description}
+                {item.description}
               </p>
               <Button
-                classImplement={`${styles.button} ${animateCustom(
-                  classNameCustom(data.title)
+                className={`${styles.button} ${animateCustom(
+                  classNameCustom(item.title)
                 )}`}
               >
                 Buy Now
@@ -118,7 +119,7 @@ export default function SlideShow() {
       </button>
 
       <div className={styles.pagination}>
-        {slideshowItems.map((data, index) => (
+        {slideshowItems.map((item, index) => (
           <span
             className={`${styles.dot} ${slide === index && styles.active}`}
             onClick={() => setSlide(index)}

@@ -2,8 +2,12 @@ import Head from 'next/head';
 
 import { useEffect } from 'react';
 import Layout from '../components/Layout/Layout';
-import OurDeliciousCombo from '../components/Menu1/OurDeliciousCombo/OurDeliciousCombo';
-
+import PageTitle from '../components/Menu1/PageTitle/PageTitle';
+import BreakfastMenu from '../components/Menu1/BreakfastMenu/BreakfastMenu';
+import LunchTitle from '../components/Menu1/LunchTitle/LunchTitle';
+import LunchMenu from '../components/Menu1/LunchMenu/LunchMenu';
+import DinnerTitle from '../components/Menu1/DinnerTitle/DinnerTitle';
+import DinnerMenu from '../components/Menu1/DinnerMenu/DinnerMenu';
 import { fadeIn, fadeInRight, fadeInLeft, zoomIn } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
 
@@ -71,7 +75,12 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Layout>
-        <OurDeliciousCombo />
+        <PageTitle />
+        <BreakfastMenu />
+        <LunchTitle />
+        <LunchMenu />
+        <DinnerTitle />
+        <DinnerMenu />
       </Layout>
     </>
   );

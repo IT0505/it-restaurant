@@ -11,24 +11,28 @@ export default function OurBlog() {
         <div className={styles.ourBlogInner}>
           <MainTitle slogan={ourBlogData.slogan} title={ourBlogData.title} />
           <div className={styles.mainContent}>
-            {mainContent.map((data, index) => (
+            {mainContent.map((item, index) => (
               <div className={`${styles.content} animate fadeIn`} key={index}>
-                <figure className={styles.image}>
-                  <Image src={data.imgSrc} alt={data.imgAlt}></Image>
-                </figure>
-                <a href={data.url} className={styles.title}>
-                  {data.title}
+                <a className={styles.image} href={item.url}>
+                  <Image
+                    src={item.imgSrc}
+                    alt={item.imgAlt}
+                    layout='responsive'
+                  ></Image>
+                </a>
+                <a href={item.url} className={styles.title}>
+                  {item.title}
                 </a>
                 <h3 className={styles.time}>
-                  {data.time} by <span>{data.author}</span>
+                  {item.time} by <span>{item.author}</span>
                 </h3>
-                <p>{data.description}</p>
+                <p>{item.description}</p>
                 <div className={styles.lowerContent}>
-                  <a href={data.url} className={styles.readMore}>
+                  <a href={item.url} className={styles.url}>
                     Read More
                   </a>
-                  <a href={data.url} className={styles.like}>
-                    {data.like} Likes
+                  <a href={item.url} className={styles.like}>
+                    {item.like} Likes
                   </a>
                 </div>
               </div>

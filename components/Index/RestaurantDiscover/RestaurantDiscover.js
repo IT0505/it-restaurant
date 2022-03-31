@@ -28,13 +28,13 @@ export default function RestaurantDiscover() {
         <div className={styles.restaurantDiscoverInner}>
           <div className={`${styles.mainContent}`}>
             <MainTitle
+              className={styles.title}
               slogan={mainContent.slogan}
               title={mainContent.title}
-              classImplement={styles.mainTitle}
             />
             <p className={styles.description}>{mainContent.description1}</p>
             <p className={styles.description}>{mainContent.description2}</p>
-            <Button classImplement={styles.button}>Read More</Button>
+            <Button className={styles.button}>Read More</Button>
           </div>
           {/* <div className={`${styles.swiperWrap} animate`}> */}
           <Swiper
@@ -56,13 +56,17 @@ export default function RestaurantDiscover() {
               },
             }}
           >
-            {restaurantDiscoverData.swiperImgs.map((data, index) => (
+            {restaurantDiscoverData.swiperImgs.map((item, index) => (
               <SwiperSlide className={styles.swiperSlide} key={index}>
                 {({ isActive }) => (
                   <figure
                     className={`${styles.image} ${isActive && styles.active}`}
                   >
-                    <Image src={data.imgSrc} alt={data.imgAlt}></Image>
+                    <Image
+                      src={item.imgSrc}
+                      alt={item.imgAlt}
+                      layout='responsive'
+                    ></Image>
                   </figure>
                 )}
               </SwiperSlide>

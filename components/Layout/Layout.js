@@ -4,12 +4,12 @@ import Footer from '../Footer/Footer';
 import ScrollUpButton from '../ScrollUpButton/ScrollUpButton';
 import ZaloWidget from '../ZaloWidget/ZaloWidget';
 
-export default function Layout(props) {
+export default function Layout({ children }) {
   return (
     <>
       <Header />
       <Navigation />
-      {props.children}
+      {children}
       <ScrollUpButton />
       <ZaloWidget />
       <Footer />

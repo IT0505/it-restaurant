@@ -1,3 +1,5 @@
+@import '../../../styles/_mixin';
+
 .ourDeliciousCombo {
   .ourDeliciousComboInner {
     .mainContent {
@@ -10,10 +12,35 @@
       .content {
         margin: 20px 0;
         padding: 0 10px;
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: 33%;
+        // display: block;
+
+        @include Responsive(M) {
+          width: 50%;
+        }
+
+        @include Responsive(XS) {
+          width: 100%;
+        }
 
         .image {
           position: relative;
           display: block;
+          max-width: 100%;
+          width: 100%;
+          margin-bottom: 10px;
+
+          img {
+            transition: transform 0.5s;
+          }
+
+          &:hover {
+            img {
+              transform: scale(1.2);
+            }
+          }
 
           .status {
             position: absolute;
