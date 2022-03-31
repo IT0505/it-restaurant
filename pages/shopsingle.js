@@ -4,29 +4,21 @@ import { useEffect } from 'react';
 import Layout from '../components/Layout/Layout';
 import PageTitle from '../components/ShopSingle/PageTitle/PageTitle';
 import ProductSection from '../components/ShopSingle/ProductSection/ProductSection';
-import { fadeIn, fadeInRight, fadeInLeft, zoomIn } from 'react-animations';
+import { fadeInUp, fadeIn } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
 
 const classes = StyleSheet.create({
+  fadeInUp: {
+    animationName: fadeInUp,
+    animationDuration: '1s',
+  },
   fadeIn: {
     animationName: fadeIn,
     animationDuration: '1s',
   },
-  fadeInRight: {
-    animationName: fadeInRight,
-    animationDuration: '1s',
-  },
-  fadeInLeft: {
-    animationName: fadeInLeft,
-    animationDuration: '1s',
-  },
-  zoomIn: {
-    animationName: zoomIn,
-    animationDuration: '1s',
-  },
 });
 
-const animationList = ['fadeIn', 'fadeInRight', 'fadeInLeft', 'zoomIn'];
+const animationList = ['fadeIn', 'fadeInUp'];
 
 export default function Home() {
   const customAnimations = (classList) => {

@@ -1,19 +1,40 @@
+@import '../../../../../styles/_mixin';
+
 .mainProduct {
   .mainInfo {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
 
+    @include Responsive(S) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .image {
       max-width: 420px;
       width: 100%;
-
+      flex-grow: 1;
+      flex-shrink: 0;
       cursor: pointer;
+
+      @include Responsive(M) {
+        flex-shrink: 1;
+      }
+
+      @include Responsive(S) {
+        margin-bottom: 20px;
+      }
     }
 
     .textWrap {
       width: -webkit-fill-available;
       margin-left: 30px;
+
+      @include Responsive(S) {
+        margin-left: 0;
+        text-align: center;
+      }
 
       .title {
         font-size: 20px;
@@ -97,8 +118,14 @@
     .buttonWrap {
       margin-bottom: 10px;
 
+      @include Responsive(M) {
+        margin: 0px auto;
+        text-align: center;
+      }
+
       .button {
         margin-right: 10px;
+        margin-bottom: 10px;
         background-color: transparent;
         border: 2px solid #feb518;
         color: #feb518;
@@ -131,6 +158,10 @@
     border: none;
     border-radius: 0px;
 
+    @include Responsive(XS) {
+      padding: 10px;
+    }
+
     .title {
       color: #1a1a1a;
       font-family: 'Lato', serif;
@@ -144,6 +175,10 @@
   .reviewsWrap {
     padding: 30px;
     background: #fbfbfb;
+
+    @include Responsive(XS) {
+      padding: 10px;
+    }
 
     .title {
       color: #1a1a1a;

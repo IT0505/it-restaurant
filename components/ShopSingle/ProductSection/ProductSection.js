@@ -9,37 +9,6 @@ import Link from 'next/link';
 import { ShoppingBag } from '../../Icons/Icons';
 import StarRating from './components/StarRating/StarRating';
 
-// import {
-//   fadeIn,
-//   fadeInRight,
-//   fadeInLeft,
-//   zoomIn,
-//   fadeInOut,
-// } from 'react-animations';
-// import { StyleSheet, css } from 'aphrodite';
-// const classes = StyleSheet.create({
-//   fadeIn: {
-//     animationName: fadeIn,
-//     animationDuration: '1s',
-//   },
-//   fadeInRight: {
-//     animationName: fadeInRight,
-//     animationDuration: '1s',
-//   },
-//   fadeInLeft: {
-//     animationName: fadeInLeft,
-//     animationDuration: '1s',
-//   },
-//   zoomIn: {
-//     animationName: zoomIn,
-//     animationDuration: '1s',
-//   },
-//   fadeInOut: {
-//     animationName: fadeIn,
-//     animationDuration: '1s',
-//   },
-// });
-
 export default function ProductSection() {
   return (
     <div className={`${styles.productSection} section`}>
@@ -60,7 +29,12 @@ export default function ProductSection() {
               </div>
             </div>
             {shopSingleSideBarData.mainContent.map((item, index) => (
-              <div className={`${styles.sideBarItem}`} key={index}>
+              <div
+                className={`${styles.sideBarItem} ${
+                  item.contents[0].imgSrc && 'animate fadeInUp'
+                }`}
+                key={index}
+              >
                 <h3 className={styles.title}>{item.title}</h3>
                 <SideBarList data={item.contents} />
               </div>
