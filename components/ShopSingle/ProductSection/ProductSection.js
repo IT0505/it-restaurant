@@ -8,7 +8,38 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ShoppingBag } from '../../Icons/Icons';
 import StarRating from './components/StarRating/StarRating';
-// import SubInfo from './components/SubInfo/SubInfo';
+
+// import {
+//   fadeIn,
+//   fadeInRight,
+//   fadeInLeft,
+//   zoomIn,
+//   fadeInOut,
+// } from 'react-animations';
+// import { StyleSheet, css } from 'aphrodite';
+// const classes = StyleSheet.create({
+//   fadeIn: {
+//     animationName: fadeIn,
+//     animationDuration: '1s',
+//   },
+//   fadeInRight: {
+//     animationName: fadeInRight,
+//     animationDuration: '1s',
+//   },
+//   fadeInLeft: {
+//     animationName: fadeInLeft,
+//     animationDuration: '1s',
+//   },
+//   zoomIn: {
+//     animationName: zoomIn,
+//     animationDuration: '1s',
+//   },
+//   fadeInOut: {
+//     animationName: fadeIn,
+//     animationDuration: '1s',
+//   },
+// });
+
 export default function ProductSection() {
   return (
     <div className={`${styles.productSection} section`}>
@@ -85,6 +116,19 @@ export default function ProductSection() {
               </div>
             </div>
           </div>
+
+          {/* <div className={styles.iconWrap}>
+            <i
+              className={`fa-brands fa-facebook-f ${styles.icon1} ${css(
+                classes.fadeInOut
+              )}`}
+            ></i>
+            <i
+              className={`fa-brands fa-facebook-f ${styles.icon2}  ${css(
+                classes.fadeIn
+              )} ${css(classes.fadeOut)}`}
+            ></i>
+          </div> */}
         </div>
       </div>
     </div>

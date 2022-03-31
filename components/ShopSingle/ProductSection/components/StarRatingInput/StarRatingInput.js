@@ -1,6 +1,6 @@
 import styles from './StarRatingInput.module.scss';
 import { useState } from 'react';
-export default function StarRatingInput({ className }) {
+export default function StarRatingInput({ className, onChange, value }) {
   const [starRating, setStarRating] = useState(0);
 
   const handleStarRating = (e) => {
@@ -20,13 +20,13 @@ export default function StarRatingInput({ className }) {
           type='radio'
           id='oneStar'
           name='starRating'
-          checked={starRating === '1'}
+          checked={value === '1'}
           value='1'
-          onChange={handleStarRating}
+          onChange={onChange}
         />
         <label
           htmlFor='oneStar'
-          className={`${styles.oneStar} ${starRating === '1' && styles.active}`}
+          className={`${styles.oneStar} ${value === '1' && styles.active}`}
         >
           <i className={`fa-solid fa-star ${styles.firstStar}`}></i>
         </label>
@@ -34,15 +34,13 @@ export default function StarRatingInput({ className }) {
           type='radio'
           id='twoStars'
           name='starRating'
-          checked={starRating === '2'}
+          checked={value === '2'}
           value='2'
-          onChange={handleStarRating}
+          onChange={onChange}
         />
         <label
           htmlFor='twoStars'
-          className={`${styles.twoStars} ${
-            starRating === '2' && styles.active
-          }`}
+          className={`${styles.twoStars} ${value === '2' && styles.active}`}
         >
           <i className={`fa-solid fa-star ${styles.firstStar}`}></i>
           <i className={`fa-solid fa-star ${styles.secondStar}`}></i>
@@ -51,15 +49,13 @@ export default function StarRatingInput({ className }) {
           type='radio'
           id='threeStars'
           name='starRating'
-          checked={starRating === '3'}
+          checked={value === '3'}
           value='3'
-          onChange={handleStarRating}
+          onChange={onChange}
         />
         <label
           htmlFor='threeStars'
-          className={`${styles.threeStars} ${
-            starRating === '3' && styles.active
-          }`}
+          className={`${styles.threeStars} ${value === '3' && styles.active}`}
         >
           <i className={`fa-solid fa-star ${styles.firstStar}`}></i>
           <i className={`fa-solid fa-star ${styles.secondStar}`}></i>
@@ -69,15 +65,13 @@ export default function StarRatingInput({ className }) {
           type='radio'
           id='fourStars'
           name='starRating'
-          checked={starRating === '4'}
+          checked={value === '4'}
           value='4'
-          onChange={handleStarRating}
+          onChange={onChange}
         />
         <label
           htmlFor='fourStars'
-          className={`${styles.fourStars} ${
-            starRating === '4' && styles.active
-          }`}
+          className={`${styles.fourStars} ${value === '4' && styles.active}`}
         >
           <i className={`fa-solid fa-star ${styles.firstStar}`}></i>
           <i className={`fa-solid fa-star ${styles.secondStar}`}></i>
@@ -88,15 +82,13 @@ export default function StarRatingInput({ className }) {
           type='radio'
           id='fiveStars'
           name='starRating'
-          checked={starRating === '5'}
+          checked={value === '5'}
           value='5'
-          onChange={handleStarRating}
+          onChange={onChange}
         />
         <label
           htmlFor='fiveStars'
-          className={`${styles.fiveStars} ${
-            starRating === '5' && styles.active
-          }`}
+          className={`${styles.fiveStars} ${value === '5' && styles.active}`}
         >
           <i className={`fa-solid fa-star ${styles.firstStar}`}></i>
           <i className={`fa-solid fa-star ${styles.secondStar}`}></i>

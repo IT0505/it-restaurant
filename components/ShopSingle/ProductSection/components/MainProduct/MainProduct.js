@@ -2,23 +2,53 @@ import styles from './MainProduct.module.scss';
 // import { flyingNinjaProductData } from '../../../../../utils/dataConfig';
 import Image from 'next/image';
 import StarRating from '../StarRating/StarRating';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from '../../../../Button/Button';
 import StarRatingInput from '../StarRatingInput/StarRatingInput';
+import ModalImage from '../../../../ModalImage/ModalImage';
+
 export default function MainProduct({ data, className }) {
   const [amountProduct, setAmountProduct] = useState(0);
+  const [reviewInput, setReviewInput] = useState({
+    name: '',
+    email: '',
+    comment: '',
+    starRating: 0,
+  });
+  const [activeSubContent, setActiveSubContent] = useState('description');
+  const [modalImage, setModalImage] = useState(false);
+
   const handleAmountProduct = (e) => {
     setAmountProduct(e.target.value);
   };
 
-  const [activeSubContent, setActiveSubContent] = useState('description');
+  const handleReviewInput = (e) => {
+    const value =
+      e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    setReviewInput({
+      ...reviewInput,
+      [e.target.name]: value,
+    });
+  };
+
+  useEffect(() => {
+    console.log(reviewInput);
+  });
 
   return (
     <div className={`${styles.mainProduct} ${className}`}>
       <div className={styles.mainInfo}>
-        <figure className={styles.image}>
+        <figure className={styles.image} onClick={() => setModalImage(true)}>
           <Image src={data.imgSrc} alt={data.imgAlt} layout='responsive' />
         </figure>
+        {modalImage && (
+          <ModalImage
+            src={data.imgSrc}
+            alt={data.imgAlt}
+            setVisibility={setModalImage}
+            // visibility={modalImage}
+          />
+        )}
         <div className={styles.textWrap}>
           <h3 className={styles.title}>{data.title}</h3>
 
@@ -65,7 +95,7 @@ export default function MainProduct({ data, className }) {
             }`}
             onClick={() => setActiveSubContent('reviews')}
           >
-            Reviews ({'4'})
+            Reviews ({data.totalReviews})
           </Button>
         </div>
 
@@ -107,36 +137,49 @@ export default function MainProduct({ data, className }) {
 
             <form className={styles.reviewForm}>
               <h3 className={styles.ratingTitle}>Your rating</h3>
-              <StarRatingInput className={styles.starRatingInput} />
-              <label htmlFor='reviewComment' className={styles.reviewLabel}>
+              <StarRatingInput
+                className={styles.starRatingInput}
+                value={reviewInput.starRating}
+                onChange={(e) => handleReviewInput(e)}
+              />
+              <label htmlFor='comment' className={styles.reviewLabel}>
                 Your review *
               </label>
               <textarea
                 className={styles.textArea}
-                id='reviewComment'
-                name='reviewComment'
+                id='comment'
+                name='comment'
+                type='text'
                 cols='45'
                 rows='8'
+                value={reviewInput.comment}
+                onChange={(e) => handleReviewInput(e)}
                 required
               />
-              <label htmlFor='reviewName' className={styles.reviewLabel}>
+              <label htmlFor='name' className={styles.reviewLabel}>
                 Name *
               </label>
               <input
                 className={styles.input}
-                id='reviewName'
-                name='reviewName'
+                id='name'
+                name='name'
+                type='text'
                 size='30'
+                value={reviewInput.name}
+                onChange={(e) => handleReviewInput(e)}
                 required
               />
-              <label htmlFor='reviewEmail' className={styles.reviewLabel}>
+              <label htmlFor='email' className={styles.reviewLabel}>
                 Email *
               </label>
               <input
                 className={styles.input}
-                id='reviewEmail'
-                name='reviewEmail'
+                id='email'
+                name='email'
+                type='text'
                 size='30'
+                value={reviewInput.email}
+                onChange={(e) => handleReviewInput(e)}
                 required
               />
               <Button className={styles.button}>Submit</Button>
