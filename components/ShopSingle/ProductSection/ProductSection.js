@@ -90,19 +90,6 @@ export default function ProductSection() {
               </div>
             </div>
           </div>
-
-          {/* <div className={styles.iconWrap}>
-            <i
-              className={`fa-brands fa-facebook-f ${styles.icon1} ${css(
-                classes.fadeInOut
-              )}`}
-            ></i>
-            <i
-              className={`fa-brands fa-facebook-f ${styles.icon2}  ${css(
-                classes.fadeIn
-              )} ${css(classes.fadeOut)}`}
-            ></i>
-          </div> */}
         </div>
       </div>
     </div>
