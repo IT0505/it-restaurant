@@ -1,45 +1,15 @@
 import styles from './ProductSection.module.scss';
-// import SideBar from './components/SideBar/SideBar';
-import { shopSingleSideBarData } from '../../../utils/dataConfig';
 import { flyingNinjaProductData } from '../../../utils/dataConfig';
-import SideBarList from './components/SideBarList/SideBarList';
 import MainProduct from './components/MainProduct/MainProduct';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ShoppingBag } from '../../Icons/Icons';
-import StarRating from './components/StarRating/StarRating';
+import RelatedProductItem from './components/RelatedProductItem/RelatedProductItem';
+import SideBar from '../../SideBar/SideBar';
 
 export default function ProductSection() {
   return (
     <div className={`${styles.productSection} section`}>
       <div className='container'>
         <div className={styles.productSectionInner}>
-          <div className={styles.sideBar}>
-            <div className={`${styles.sideBarItem}`}>
-              <div className={`${styles.searchBar}`}>
-                <input
-                  type='text'
-                  className={styles.searchInput}
-                  name='search'
-                  placeholder='Search'
-                />
-                <button type='submit' className={styles.searchBtn}>
-                  <i className='fa fa-search'></i>
-                </button>
-              </div>
-            </div>
-            {shopSingleSideBarData.mainContent.map((item, index) => (
-              <div
-                className={`${styles.sideBarItem} ${
-                  item.contents[0].imgSrc && 'animate fadeInUp'
-                }`}
-                key={index}
-              >
-                <h3 className={styles.title}>{item.title}</h3>
-                <SideBarList data={item.contents} />
-              </div>
-            ))}
-          </div>
+          <SideBar className={styles.sideBar} />
 
           <div className={styles.productWrap}>
             <MainProduct
@@ -51,41 +21,11 @@ export default function ProductSection() {
               <h3 className={styles.title}>Related Product</h3>
               <div className={styles.relatedProductWrap}>
                 {flyingNinjaProductData.relatedProduct.map((item, index) => (
-                  <div className={styles.content} key={index}>
-                    <figure className={styles.image}>
-                      <Image
-                        src={item.imgSrc}
-                        alt={item.imgAlt}
-                        layout='responsive'
-                      />
-                      <Link href='#'>
-                        <a className={styles.addCart}>
-                          <ShoppingBag
-                            size='20px'
-                            fill='#fff'
-                            stroke='#fff'
-                            strokeWidth='1'
-                            className={styles.icon}
-                          />
-                          Add to Bag
-                        </a>
-                      </Link>
-                    </figure>
-                    <Link href='#'>
-                      <a className={styles.inlineLink}>
-                        {item.name}
-                        <span className={styles.inlinePrice}>
-                          <p className={styles.oldPrice}>{item.oldPrice}</p>
-                          <p className={styles.price}>{item.price}</p>
-                        </span>
-                      </a>
-                    </Link>
-                    <p className={styles.description}>
-                      {item.description.slice(0, 28)}
-                      {item.description.length >= 28 && '...'}
-                    </p>
-                    <StarRating rating={item.starRating} />
-                  </div>
+                  <RelatedProductItem
+                    className={styles.relatedProductItem}
+                    data={item}
+                    key={index}
+                  />
                 ))}
               </div>
             </div>

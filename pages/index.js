@@ -1,6 +1,5 @@
 import Head from 'next/head';
 
-import { useEffect } from 'react';
 import Layout from '../components/Layout/Layout';
 import SlideShow from '../components/Index/Slideshow/Slideshow';
 import RestaurantDiscover from '../components/Index/RestaurantDiscover/RestaurantDiscover';
@@ -13,65 +12,7 @@ import OurDelicious from '../components/Index/OurDelicious/OurDelicious';
 import Testimonial from '../components/Index/Testimonial/Testimonial';
 import OurBlog from '../components/Index/OurBlog/OurBlog';
 
-import { fadeIn, fadeInRight, fadeInLeft, zoomIn } from 'react-animations';
-import { StyleSheet, css } from 'aphrodite';
-
-const classes = StyleSheet.create({
-  fadeIn: {
-    animationName: fadeIn,
-    animationDuration: '1s',
-  },
-  fadeInRight: {
-    animationName: fadeInRight,
-    animationDuration: '1s',
-  },
-  fadeInLeft: {
-    animationName: fadeInLeft,
-    animationDuration: '1s',
-  },
-  zoomIn: {
-    animationName: zoomIn,
-    animationDuration: '1s',
-  },
-});
-
-const animationList = ['fadeIn', 'fadeInRight', 'fadeInLeft', 'zoomIn'];
-
-export default function Menu() {
-  const customAnimations = (classList) => {
-    for (let i = 0; i < animationList.length; i++) {
-      if (classList.contains(animationList[i])) {
-        return animationList[i];
-      }
-    }
-
-    return 'fadeIn';
-  };
-  useEffect(() => {
-    let observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (entry.target.classList.contains('animate')) {
-              entry.target.style.visibility = 'visible';
-              entry.target.classList.add(
-                css(classes[customAnimations(entry.target.classList)])
-              );
-            }
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.2,
-      }
-    );
-
-    document.querySelectorAll('div').forEach((div) => {
-      observer.observe(div);
-    });
-  });
-
+export default function Index() {
   return (
     <>
       <Head>

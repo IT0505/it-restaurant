@@ -24,64 +24,66 @@
           text-align: center;
         }
 
-        pointer-events: none;
-
-        &:hover {
-          .image {
-            img {
-              transform: scale(1.2);
-            }
-          }
-        }
-
-        .image {
-          // min-height: 400px;
-          position: relative;
-          display: block;
-          margin: 0 auto 20px;
-          max-width: 100%;
-          width: 100%;
-
-          img {
-            transition: transform 0.5s;
-          }
-          // height: 400px;
-
-          pointer-events: auto;
-        }
-
-        .title {
-          margin-top: 30px;
-          color: #333333;
-          font-size: 18px;
-          text-transform: capitalize;
-          transition: color 0.5s;
-
-          pointer-events: auto;
+        .aboveContent {
+          pointer-events: none;
 
           &:hover {
-            color: #feb518;
+            .image {
+              img {
+                transform: scale(1.2);
+              }
+            }
           }
-        }
 
-        .time {
-          color: #777777;
-          font-size: 14px;
-          margin-bottom: 10px;
+          .image {
+            // min-height: 400px;
+            position: relative;
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 100%;
+            width: 100%;
 
-          span {
-            color: #feb518;
+            img {
+              transition: transform 0.5s;
+            }
+            // height: 400px;
+
+            pointer-events: auto;
           }
-        }
 
-        p {
-          color: #777777;
-          font-size: 14px;
-          margin-bottom: 18px;
+          .title {
+            margin-top: 30px;
+            color: #333333;
+            font-size: 18px;
+            text-transform: capitalize;
+            transition: color 0.5s;
+
+            pointer-events: auto;
+
+            &:hover {
+              color: #feb518;
+            }
+          }
+
+          .time {
+            color: #777777;
+            font-size: 14px;
+            margin-bottom: 10px;
+
+            span {
+              color: #feb518;
+            }
+          }
+
+          p {
+            color: #777777;
+            font-size: 14px;
+            margin-bottom: 18px;
+          }
         }
       }
 
-      .lowerContent {
+      .belowContent {
         padding-top: 15px;
         margin-top: 22px;
         border-top: 1px dashed #d6d6d6;
@@ -93,6 +95,7 @@
           font-size: 14px;
           font-weight: 700;
           transition: color 0.5s;
+          cursor: pointer;
 
           &:hover {
             color: #feb518;

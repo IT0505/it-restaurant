@@ -1,0 +1,59 @@
+@import '../../styles/_mixin';
+.sideBar {
+  width: 270px;
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  @include Responsive(M) {
+    margin: 0 auto;
+    // text-align: center;
+  }
+
+  .sideBarItem {
+    margin-bottom: 20px;
+
+    .searchBar {
+      position: relative;
+
+      .searchInput {
+        border: 1px solid #e8e8e8;
+        outline: none;
+        line-height: 22px;
+        padding: 8px 40px 8px 20px;
+        background: #ffffff;
+        color: #3a3a3a;
+        display: block;
+        font-size: 13px;
+        width: 100%;
+        height: 40px;
+        transition: border 0.5s;
+
+        &:focus {
+          border: 1px solid #feb518;
+        }
+      }
+
+      .searchBtn {
+        position: absolute;
+        border: none;
+        cursor: pointer;
+        right: 1px;
+        top: 1px;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 15px;
+        color: #777777;
+        background: none;
+        font-weight: normal;
+        // display: block;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

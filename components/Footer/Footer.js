@@ -18,11 +18,11 @@ export default function Footer() {
               </Link>
               <p>{footerData.aboutWidget.text}</p>
               <span className={styles.contactInfo}>
-                <i className='fas fa-phone'></i> Phone :
+                <i className='fas fa-phone' aria-hidden></i> Phone :
                 {footerData.aboutWidget.phone}
               </span>
               <span className={styles.contactInfo}>
-                <i className='fa-solid fa-envelope'></i> Email :
+                <i className='fa-solid fa-envelope' aria-hidden></i> Email :
                 {footerData.aboutWidget.email}
               </span>
             </div>
@@ -50,6 +50,7 @@ export default function Footer() {
                       <i
                         className='fa-solid fa-link'
                         style={{ fontSize: '16px' }}
+                        aria-hidden
                       ></i>
                     </a>
                   </figure>

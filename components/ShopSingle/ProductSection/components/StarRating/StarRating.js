@@ -1,11 +1,7 @@
 import styles from './StarRating.module.scss';
 
 export default function StarRating({ rating }) {
-  const handleRating = () => {
-    if (typeof rating === 'string' || rating instanceof String) return rating;
-    else if (rating < 1 && rating > 0) return rating * 100 + '%';
-    else return (rating / 5) * 100 + '%';
-  };
+  const handleRating = () => (rating / 5) * 100 + '%';
   return (
     <div className={styles.starRating}>
       {rating && (

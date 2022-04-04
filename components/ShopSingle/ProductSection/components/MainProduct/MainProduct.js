@@ -2,53 +2,46 @@ import styles from './MainProduct.module.scss';
 // import { flyingNinjaProductData } from '../../../../../utils/dataConfig';
 import Image from 'next/image';
 import StarRating from '../StarRating/StarRating';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Button from '../../../../Button/Button';
 import StarRatingInput from '../StarRatingInput/StarRatingInput';
 import ModalImage from '../../../../ModalImage/ModalImage';
+import ReadMore from '../../../../ReadMore/ReadMore';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+
+const ReviewSchema = Yup.object().shape({
+  starRating: Yup.number().required('Required').positive('Required').integer(),
+  comment: Yup.string()
+    .min(10, 'The comment must be more than 10 and less than 300 characters!')
+    .max(300, 'The comment must be more than 10 and less than 300 characters!')
+    .required('Required'),
+  name: Yup.string()
+    .min(5, 'The name must be more than 5 and less than 50 characters!')
+    .max(50, 'The name must be more than 5 and less than 50 characters!')
+    .required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+});
 
 export default function MainProduct({ data, className }) {
   const [amountProduct, setAmountProduct] = useState(0);
-  const [reviewInput, setReviewInput] = useState({
-    name: '',
-    email: '',
-    comment: '',
-    starRating: 0,
-  });
   const [activeSubContent, setActiveSubContent] = useState('description');
-  const [modalImage, setModalImage] = useState(false);
 
   const handleAmountProduct = (e) => {
     setAmountProduct(e.target.value);
   };
 
-  const handleReviewInput = (e) => {
-    const value =
-      e.target.type === 'checkbox' ? e.target.checked : e.target.value;
-    setReviewInput({
-      ...reviewInput,
-      [e.target.name]: value,
-    });
-  };
-
-  useEffect(() => {
-    console.log(reviewInput);
-  });
-
   return (
     <div className={`${styles.mainProduct} ${className}`}>
       <div className={styles.mainInfo}>
-        <figure className={styles.image} onClick={() => setModalImage(true)}>
-          <Image src={data.imgSrc} alt={data.imgAlt} layout='responsive' />
-        </figure>
-        {modalImage && (
+        <figure className={styles.image}>
+          {/* <Image src={data.imgSrc} alt={data.imgAlt} layout='responsive' /> */}
           <ModalImage
             src={data.imgSrc}
             alt={data.imgAlt}
-            setVisibility={setModalImage}
-            // visibility={modalImage}
+            // setVisibility={setModalImage}
           />
-        )}
+        </figure>
         <div className={styles.textWrap}>
           <h3 className={styles.title}>{data.title}</h3>
 
@@ -59,7 +52,9 @@ export default function MainProduct({ data, className }) {
             </a>
           </div>
 
-          <p className={styles.shortDescription}>{data.shortDescription}</p>
+          <p className={styles.shortDescription}>
+            <ReadMore>{data.shortDescription}</ReadMore>
+          </p>
 
           <div className={styles.inlineWrapPrice}>
             <p className={styles.oldPrice}>{data.oldPrice}</p>
@@ -102,7 +97,9 @@ export default function MainProduct({ data, className }) {
         {activeSubContent === 'description' && (
           <div className={styles.descriptionWrap}>
             <h2 className={styles.title}>description</h2>
-            <p>{data.description}</p>
+            <p className={styles.description}>
+              <ReadMore length={250}>{data.description}</ReadMore>
+            </p>
           </div>
         )}
         {activeSubContent === 'reviews' && (
@@ -129,61 +126,92 @@ export default function MainProduct({ data, className }) {
               </div>
             ))}
 
-            <p>Add a review</p>
-            <p>
-              Your email address will not be published. Required fields are
-              marked *
-            </p>
+            <Formik
+              initialValues={{
+                comment: '',
+                name: '',
+                email: '',
+                starRating: 0,
+              }}
+              validationSchema={ReviewSchema}
+              onSubmit={(values) => {
+                // same shape as initial values
+                console.log(values);
+              }}
+            >
+              <Form className={styles.reviewForm}>
+                <p className={styles.reviewNote}>Add a review</p>
+                <p className={styles.reviewNote}>
+                  Your email address will not be published. Required fields are
+                  marked *
+                </p>
+                <p className={styles.reviewLabel}>Your rating</p>
+                <Field
+                  name='starRating'
+                  component={StarRatingInput}
+                  className={styles.starRatingInput}
+                />
+                <ErrorMessage
+                  name='starRating'
+                  render={(msg) => (
+                    <span className={styles.errorMessage}>
+                      <i className='fa-solid fa-triangle-exclamation'></i>
+                      {msg}
+                    </span>
+                  )}
+                />
 
-            <form className={styles.reviewForm}>
-              <h3 className={styles.ratingTitle}>Your rating</h3>
-              <StarRatingInput
-                className={styles.starRatingInput}
-                value={reviewInput.starRating}
-                onChange={(e) => handleReviewInput(e)}
-              />
-              <label htmlFor='comment' className={styles.reviewLabel}>
-                Your review *
-              </label>
-              <textarea
-                className={styles.textArea}
-                id='comment'
-                name='comment'
-                type='text'
-                cols='45'
-                rows='8'
-                value={reviewInput.comment}
-                onChange={(e) => handleReviewInput(e)}
-                required
-              />
-              <label htmlFor='name' className={styles.reviewLabel}>
-                Name *
-              </label>
-              <input
-                className={styles.input}
-                id='name'
-                name='name'
-                type='text'
-                size='30'
-                value={reviewInput.name}
-                onChange={(e) => handleReviewInput(e)}
-                required
-              />
-              <label htmlFor='email' className={styles.reviewLabel}>
-                Email *
-              </label>
-              <input
-                className={styles.input}
-                id='email'
-                name='email'
-                type='text'
-                size='30'
-                value={reviewInput.email}
-                onChange={(e) => handleReviewInput(e)}
-                required
-              />
-              <Button className={styles.button}>Submit</Button>
-            </form>
+                <label htmlFor='comment' className={styles.reviewLabel}>
+                  Your review *
+                </label>
+                <Field
+                  name='comment'
+                  className={styles.textArea}
+                  as='textarea'
+                />
+                <ErrorMessage
+                  name='comment'
+                  render={(msg) => (
+                    <span className={styles.errorMessage}>
+                      <i className='fa-solid fa-triangle-exclamation'></i>
+                      {msg}
+                    </span>
+                  )}
+                />
+
+                <label htmlFor='name' className={styles.reviewLabel}>
+                  Name *
+                </label>
+                <Field name='name' className={styles.input} />
+                <ErrorMessage
+                  name='name'
+                  render={(msg) => (
+                    <span className={styles.errorMessage}>
+                      <i className='fa-solid fa-triangle-exclamation'></i>
+                      {msg}
+                    </span>
+                  )}
+                />
+
+                <label htmlFor='email' className={styles.reviewLabel}>
+                  Email *
+                </label>
+                <Field name='email' className={styles.input} />
+                <ErrorMessage
+                  name='email'
+                  render={(msg) => (
+                    <span className={styles.errorMessage}>
+                      <i className='fa-solid fa-triangle-exclamation'></i>
+                      {msg}
+                    </span>
+                  )}
+                />
+
+                <Button className={styles.button} type='submit'>
+                  Submit
+                </Button>
+              </Form>
+            </Formik>
           </div>
         )}
       </div>

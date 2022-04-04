@@ -233,6 +233,10 @@
       flex-direction: column;
       font-size: 14px;
 
+      .reviewNote {
+        margin: 2px 0;
+      }
+
       .ratingTitle {
         font-size: 14px;
         font-weight: 700;
@@ -245,8 +249,12 @@
       }
 
       .reviewLabel {
-        margin-bottom: 5px;
+        margin: 15px 0 5px;
         font-weight: 700;
+      }
+
+      .starRatingInput {
+        margin: 5px 0 10px;
       }
 
       .input,
@@ -254,7 +262,7 @@
         border: 1px solid #ebebeb;
         outline: none;
         width: 100%;
-        margin-bottom: 15px;
+        // margin-bottom: 15px;
         line-height: 1.4;
         font-size: 16px;
       }
@@ -267,6 +275,11 @@
         padding: 10px;
       }
 
+      .errorMessage {
+        color: red;
+        text-align: right;
+      }
+
       .button {
         color: #fff;
         width: fit-content;
@@ -275,6 +288,7 @@
         height: 45px;
         text-transform: uppercase;
         padding: 0 20px;
+        margin-top: 10px;
 
         &:hover {
           color: #feb518;

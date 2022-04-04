@@ -217,7 +217,7 @@ export const navigationData = {
         },
         {
           title: 'Blog simple',
-          url: '#',
+          url: '/blog',
           id: 'blog2',
         },
       ],
@@ -1008,7 +1008,7 @@ export const shopSinglePageTitleData = {
   backgroundImage: backgroundImg4,
 };
 
-export const shopSingleSideBarData = {
+export const sideBarData = {
   mainContent: [
     {
       title: 'Categories',
@@ -1059,55 +1059,8 @@ export const shopSingleSideBarData = {
 };
 
 export const flyingNinjaProductData = {
-  // sideBarContent: [
-  //   {
-  //     title: 'Categories',
-  //     contents: [
-  //       {
-  //         text: 'Home 1',
-  //         url: '#',
-  //       },
-  //       {
-  //         text: 'Latest news',
-  //         url: '#',
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: 'Top Rated',
-  //     contents: [
-  //       {
-  //         text: 'Hearty Grain Breakfast',
-  //         url: '#',
-  //         imgSrc: diningImg1,
-  //         imgAlt: 'breakfast',
-  //       },
-  //       {
-  //         text: 'Hearty Grain Breakfast',
-  //         url: '#',
-  //         imgSrc: diningImg2,
-  //         imgAlt: 'breakfast',
-  //       },
-  //       {
-  //         text: 'Hearty Grain Breakfast',
-  //         url: '#',
-  //         imgSrc: diningImg3,
-  //         imgAlt: 'breakfast',
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: 'Archives',
-  //     contents: [
-  //       {
-  //         text: 'January 2017',
-  //         url: '#',
-  //       },
-  //     ],
-  //   },
-  // ],
   title: 'Flying Ninja',
-  starRating: '70%',
+  starRating: '4.5',
   totalReviews: '4',
   description:
     'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
@@ -1167,7 +1120,7 @@ export const flyingNinjaProductData = {
         'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
       price: '£15',
       oldPrice: '£12',
-      starRating: '80%',
+      starRating: '4',
     },
     {
       imgSrc: poster4,
@@ -1185,7 +1138,13 @@ export const flyingNinjaProductData = {
       description: 'Pellentesque',
       price: '£15',
       oldPrice: '£12',
-      starRating: '25%',
+      starRating: '2.5',
     },
   ],
+};
+
+export const blogPageTitleData = {
+  title: 'Tips For New Dishes',
+  slogan: 'Latest News',
+  backgroundImage: backgroundImg4,
 };

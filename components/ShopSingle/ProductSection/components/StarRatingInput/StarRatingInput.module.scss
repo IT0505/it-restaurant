@@ -3,7 +3,6 @@
   color: #feb518;
   display: inline-block;
   // font-size: 64px;
-
   width: fit-content;
   position: relative;
   margin: 0;
@@ -74,14 +73,11 @@
 
   .emptyRating,
   .fillRating {
-    .secondStar {
-      padding-right: 13px;
-    }
-    .thirdStar {
-      padding-right: 26px;
-    }
+    .firstStar,
+    .secondStar,
+    .thirdStar,
     .fourthStar {
-      padding-right: 39px;
+      margin-right: 10px;
     }
   }
 }

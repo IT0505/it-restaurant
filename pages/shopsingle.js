@@ -1,60 +1,10 @@
 import Head from 'next/head';
 
-import { useEffect } from 'react';
 import Layout from '../components/Layout/Layout';
 import PageTitle from '../components/ShopSingle/PageTitle/PageTitle';
 import ProductSection from '../components/ShopSingle/ProductSection/ProductSection';
-import { fadeInUp, fadeIn } from 'react-animations';
-import { StyleSheet, css } from 'aphrodite';
 
-const classes = StyleSheet.create({
-  fadeInUp: {
-    animationName: fadeInUp,
-    animationDuration: '1s',
-  },
-  fadeIn: {
-    animationName: fadeIn,
-    animationDuration: '1s',
-  },
-});
-
-const animationList = ['fadeIn', 'fadeInUp'];
-
-export default function Home() {
-  const customAnimations = (classList) => {
-    for (let i = 0; i < animationList.length; i++) {
-      if (classList.contains(animationList[i])) {
-        return animationList[i];
-      }
-    }
-
-    return 'fadeIn';
-  };
-  useEffect(() => {
-    let observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (entry.target.classList.contains('animate')) {
-              entry.target.style.visibility = 'visible';
-              entry.target.classList.add(
-                css(classes[customAnimations(entry.target.classList)])
-              );
-            }
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.2,
-      }
-    );
-
-    document.querySelectorAll('div').forEach((div) => {
-      observer.observe(div);
-    });
-  });
-
+export default function ShopSingle() {
   return (
     <>
       <Head>
