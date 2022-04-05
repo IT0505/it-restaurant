@@ -3,6 +3,7 @@ import MainTitle from '../../MainTitle/MainTitle';
 import { ourBlogData } from '../../../utils/dataConfig';
 import Image from 'next/image';
 import Link from 'next/link';
+import BlogContent from '../../BlogContent/BlogContent';
 
 export default function OurBlog() {
   const mainContent = ourBlogData.mainContent;
@@ -13,7 +14,13 @@ export default function OurBlog() {
           <MainTitle slogan={ourBlogData.slogan} title={ourBlogData.title} />
           <div className={styles.mainContent}>
             {mainContent.map((item, index) => (
-              <div className={`${styles.content} animate fadeIn`} key={index}>
+              <BlogContent
+                className={styles.blogContent}
+                data={item}
+                key={index}
+              />
+            ))}
+            {/* <div className={`${styles.content} animate fadeIn`} key={index}>
                 <div className={styles.aboveContent}>
                   <a className={styles.image} href={item.url}>
                     <Image
@@ -39,8 +46,7 @@ export default function OurBlog() {
                     <a className={styles.like}>{item.like} Likes</a>
                   </Link>
                 </div>
-              </div>
-            ))}
+              </div> */}
           </div>
         </div>
       </div>

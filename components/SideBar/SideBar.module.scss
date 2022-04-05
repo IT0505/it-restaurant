@@ -3,10 +3,14 @@
   width: 270px;
   flex-grow: 1;
   flex-shrink: 0;
+  margin: 0 auto;
+
+  // @include Responsive(M) {
+  //   width: 250px;
+  // }
 
   @include Responsive(M) {
-    margin: 0 auto;
-    // text-align: center;
+    width: 100%;
   }
 
   .sideBarItem {

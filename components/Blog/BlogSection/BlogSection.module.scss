@@ -1,0 +1,24 @@
+@import '../../../styles/_mixin';
+
+.blogSection {
+  .blogSectionInner {
+    display: flex;
+    justify-content: space-between;
+
+    @include Responsive(M) {
+      flex-direction: column;
+    }
+
+    .blogList {
+      margin-right: 35px;
+
+      @include Responsive(M) {
+        margin-right: 0;
+      }
+
+      .blogContent {
+        margin-bottom: 55px;
+      }
+    }
+  }
+}

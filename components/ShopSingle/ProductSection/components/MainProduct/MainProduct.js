@@ -39,6 +39,7 @@ export default function MainProduct({ data, className }) {
           <ModalImage
             src={data.imgSrc}
             alt={data.imgAlt}
+
             // setVisibility={setModalImage}
           />
         </figure>

@@ -57,6 +57,10 @@ import reviewerAvt2 from '../assets/images/3472757f6a3732d6470f98d7d7e9cece.png'
 import reviewerAvt3 from '../assets/images/7a6df00789e50714fcde1b759befcc84.jpeg';
 import reviewerAvt4 from '../assets/images/8026a390d28369f7a2befcaeb9557359.jpeg';
 
+import news1 from '../assets/images/news-10.jpg';
+import news2 from '../assets/images/news-7.jpg';
+import news3 from '../assets/images/news-4.jpg';
+
 export const headerData = {
   socialIcon: [
     {
@@ -212,12 +216,12 @@ export const navigationData = {
       submenu: [
         {
           title: 'Blog',
-          url: '#',
+          url: '/blog',
           id: 'blog1',
         },
         {
           title: 'Blog simple',
-          url: '/blog',
+          url: '#',
           id: 'blog2',
         },
       ],
@@ -591,33 +595,33 @@ export const ourBlogData = {
       imgAlt: 'restaurant blog',
       title: 'Ingredients For Cooking Pasta',
       url: '#',
-      time: '06 Jan 2017',
+      date: '06 Jan 2017',
       author: 'admin',
       description:
         'Curabitur quas nets lacusets nulat iaculis loremis etis nisle varius vitae seditum fugiatum ligul aliquam qui sequi nets lacusets nulat',
-      like: '11',
+      numLikes: '11',
     },
     {
       imgSrc: blogImg2,
       imgAlt: 'restaurant blog',
       title: 'Ingredients For Cooking Pasta',
       url: '#',
-      time: '06 Jan 2017',
+      date: '06 Jan 2017',
       author: 'admin',
       description:
         'Curabitur quas nets lacusets nulat iaculis loremis etis nisle varius vitae seditum fugiatum ligul aliquam qui sequi nets lacusets nulat',
-      like: '11',
+      numLikes: '11',
     },
     {
       imgSrc: blogImg3,
       imgAlt: 'restaurant blog',
       title: 'Ingredients For Cooking Pasta',
       url: '#',
-      time: '06 Jan 2017',
+      date: '06 Jan 2017',
       author: 'admin',
       description:
         'Curabitur quas nets lacusets nulat iaculis loremis etis nisle varius vitae seditum fugiatum ligul aliquam qui sequi nets lacusets nulat',
-      like: '11',
+      numLikes: '11',
     },
   ],
 };
@@ -1147,4 +1151,64 @@ export const blogPageTitleData = {
   title: 'Tips For New Dishes',
   slogan: 'Latest News',
   backgroundImage: backgroundImg4,
+};
+
+export const blogSectionData = {
+  mainContent: [
+    {
+      imgSrc: news1,
+      imgAlt: 'Delicious food blog',
+      title: 'Ingredients For Cooking Pasta With Creamy Mushroom',
+      url: '#',
+      date: '20 Jan 2017',
+      author: 'Admin',
+      description:
+        'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magniol res eos qui rate voluptatem sequi nesciunt Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipisci vel sed quia suthagara lukuthea satham non numquam eius modi tempra. Incidunt ut labore et dolore magnam aliquam',
+      numComments: '3',
+    },
+    {
+      imgSrc: news2,
+      imgAlt: 'Delicious food blog',
+      title: 'Ingredients For Cooking Pasta With Creamy Mushroom',
+      url: '#',
+      date: '20 Jan 2017',
+      author: 'Admin',
+      description:
+        'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magniol res eos qui rate voluptatem sequi nesciunt Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipisci vel sed quia suthagara lukuthea satham non numquam eius modi tempra. Incidunt ut labore et dolore magnam aliquam',
+      numComments: '3',
+    },
+    {
+      imgSrc: news3,
+      imgAlt: 'Delicious food blog',
+      title: 'Ingredients For Cooking Pasta With Creamy Mushroom',
+      url: '#',
+      date: '20 Jan 2017',
+      author: 'Admin',
+      description:
+        'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magniol res eos qui rate voluptatem sequi nesciunt Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipisci vel sed quia suthagara lukuthea satham non numquam eius modi tempra. Incidunt ut labore et dolore magnam aliquam',
+      numComments: '3',
+    },
+    {
+      imgSrc: news1,
+      imgAlt: 'Delicious food blog',
+      title: 'Ingredients For Cooking Pasta With Creamy Mushroom',
+      url: '#',
+      date: '20 Jan 2017',
+      author: 'Admin',
+      description:
+        'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magniol res eos qui rate voluptatem sequi nesciunt Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipisci vel sed quia suthagara lukuthea satham non numquam eius modi tempra. Incidunt ut labore et dolore magnam aliquam',
+      numComments: '3',
+    },
+    {
+      imgSrc: news1,
+      imgAlt: 'Delicious food blog',
+      title: 'Ingredients For Cooking Pasta With Creamy Mushroom',
+      url: '#',
+      date: '20 Jan 2017',
+      author: 'Admin',
+      description:
+        'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magniol res eos qui rate voluptatem sequi nesciunt Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipisci vel sed quia suthagara lukuthea satham non numquam eius modi tempra. Incidunt ut labore et dolore magnam aliquam',
+      numComments: '3',
+    },
+  ],
 };
