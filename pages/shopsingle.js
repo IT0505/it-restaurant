@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 import Layout from '../components/Layout/Layout';
 import PageTitle from '../components/ShopSingle/PageTitle/PageTitle';
-import ProductSection from '../components/ShopSingle/ProductSection/ProductSection';
+import ShopSingleSection from '../components/ShopSingle/ShopSingleSection/ShopSingleSection';
 
 export default function ShopSingle() {
   return (
@@ -14,7 +14,7 @@ export default function ShopSingle() {
       </Head>
       <Layout>
         <PageTitle />
-        <ProductSection />
+        <ShopSingleSection />
       </Layout>
     </>
   );

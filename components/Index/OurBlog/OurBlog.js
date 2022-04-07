@@ -15,38 +15,11 @@ export default function OurBlog() {
           <div className={styles.mainContent}>
             {mainContent.map((item, index) => (
               <BlogContent
-                className={styles.blogContent}
+                className={`${styles.blogContent} animate fadeIn`}
                 data={item}
                 key={index}
               />
             ))}
-            {/* <div className={`${styles.content} animate fadeIn`} key={index}>
-                <div className={styles.aboveContent}>
-                  <a className={styles.image} href={item.url}>
-                    <Image
-                      src={item.imgSrc}
-                      alt={item.imgAlt}
-                      layout='responsive'
-                    ></Image>
-                  </a>
-                  <a href={item.url} className={styles.title}>
-                    {item.title}
-                  </a>
-                  <h3 className={styles.time}>
-                    {item.time} by <span>{item.author}</span>
-                  </h3>
-                  <p>{item.description}</p>
-                </div>
-                <div className={styles.belowContent}>
-                  <Link href={item.url}>
-                    <a className={styles.url}>Read More</a>
-                  </Link>
-
-                  <Link href={item.url}>
-                    <a className={styles.like}>{item.like} Likes</a>
-                  </Link>
-                </div>
-              </div> */}
           </div>
         </div>
       </div>

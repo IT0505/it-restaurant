@@ -2,7 +2,7 @@ import styles from './RelatedProductItem.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ShoppingBag } from '../../../../Icons/Icons';
-import StarRating from '../StarRating/StarRating';
+import StarRating from '../../../../StarRating/StarRating';
 
 export default function RelatedProductItem({ data }) {
   return (

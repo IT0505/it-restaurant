@@ -1,6 +1,6 @@
 import styles from './Navigation.module.scss';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import logoImg from '../../assets/images/logo.png';
 import logoImg2 from '../../assets/images/logo-2.png';
 import Button from '../Button/Button';
@@ -14,8 +14,13 @@ export default function Navigation() {
   const [top, setTop] = useState(true);
 
   useEffect(() => {
+    window.addEventListener('load', (e) => {
+      if (window.pageYOffset <= 200) {
+        setTop(true);
+      } else setTop(false);
+    });
     window.addEventListener('scroll', () => {
-      if (window.pageYOffset === 0) {
+      if (window.pageYOffset <= 200) {
         setTop(true);
       } else setTop(false);
     });

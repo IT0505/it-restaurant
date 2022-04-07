@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function BlogContent({ data, className }) {
   return (
-    <div className={`${styles.blogContent} ${className} animate fadeIn`}>
+    <div className={`${styles.blogContent} ${className}`}>
       <div className={styles.aboveContent}>
         <Link href={data.url}>
           <a className={styles.image}>

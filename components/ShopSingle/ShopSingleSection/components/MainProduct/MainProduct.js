@@ -1,10 +1,10 @@
 import styles from './MainProduct.module.scss';
 // import { flyingNinjaProductData } from '../../../../../utils/dataConfig';
 import Image from 'next/image';
-import StarRating from '../StarRating/StarRating';
+import StarRating from '../../../../StarRating/StarRating';
 import { useState } from 'react';
 import Button from '../../../../Button/Button';
-import StarRatingInput from '../StarRatingInput/StarRatingInput';
+import StarRatingInput from './components/StarRatingInput/StarRatingInput';
 import ModalImage from '../../../../ModalImage/ModalImage';
 import ReadMore from '../../../../ReadMore/ReadMore';
 import { Formik, Field, Form, ErrorMessage } from 'formik';

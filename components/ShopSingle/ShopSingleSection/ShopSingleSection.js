@@ -1,14 +1,14 @@
-import styles from './ProductSection.module.scss';
+import styles from './ShopSingleSection.module.scss';
 import { flyingNinjaProductData } from '../../../utils/dataConfig';
 import MainProduct from './components/MainProduct/MainProduct';
 import RelatedProductItem from './components/RelatedProductItem/RelatedProductItem';
 import SideBar from '../../SideBar/SideBar';
 
-export default function ProductSection() {
+export default function ShopSingleSection() {
   return (
-    <div className={`${styles.productSection} section`}>
+    <div className={`${styles.shopSingleSection} section`}>
       <div className='container'>
-        <div className={styles.productSectionInner}>
+        <div className={styles.shopSingleSectionInner}>
           <SideBar className={styles.sideBar} />
 
           <div className={styles.productWrap}>
