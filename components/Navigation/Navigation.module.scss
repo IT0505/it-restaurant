@@ -52,39 +52,6 @@
       align-items: center;
       transition: 0.5s right;
       // height: auto;
-      overflow-y: auto;
-
-      &::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-        background-color: #000;
-        border-radius: 10px;
-        opacity: 0.5;
-      }
-
-      &::-webkit-scrollbar {
-        width: 5px;
-        background-color: transparent;
-        position: relative;
-        right: 5px;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background-color: #eee;
-        // opacity: 0.5;
-        cursor: pointer;
-
-        &:hover {
-          background-color: #fff;
-        }
-        // background-image: -webkit-linear-gradient(
-        //   top,
-        //   #e4f5fc 0%,
-        //   #bfe8f9 50%,
-        //   #9fd8ef 51%,
-        //   #2ab0ed 100%
-        // );
-      }
 
       .logo1 {
         max-width: 200px;
@@ -114,6 +81,40 @@
         width: 305px;
         height: 100%;
         background: #272727;
+
+        overflow-y: auto;
+
+        &::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+          background-color: #000;
+          border-radius: 10px;
+          opacity: 0.5;
+        }
+
+        &::-webkit-scrollbar {
+          width: 5px;
+          background-color: transparent;
+          position: relative;
+          right: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          background-color: #eee;
+          // opacity: 0.5;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #fff;
+          }
+          // background-image: -webkit-linear-gradient(
+          //   top,
+          //   #e4f5fc 0%,
+          //   #bfe8f9 50%,
+          //   #9fd8ef 51%,
+          //   #2ab0ed 100%
+          // );
+        }
       }
 
       // ul {
