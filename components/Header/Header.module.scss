@@ -1,20 +1,12 @@
 @import '../../styles/_mixin';
 
 .header {
-  width: 100%;
-  background: #222222;
-  color: #ffffff;
+  .headerTop {
+    width: 100%;
+    background: #222222;
+    color: #ffffff;
 
-  .headerInner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @include Responsive(M) {
-      flex-direction: column;
-    }
-
-    .topLeft {
+    .headerInner {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -23,101 +15,111 @@
         flex-direction: column;
       }
 
-      p {
-        line-height: 24px;
-        color: #dddddd;
-        font-size: 13px;
-        display: inline-block;
-        margin: 0;
-      }
-
-      .socialIcon {
-        padding: 8px 0px;
-        margin-right: 25px;
-        display: inline-block;
-        border-right: 1px solid #434343;
+      .topLeft {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         @include Responsive(M) {
-          margin: 0;
-          border: none;
+          flex-direction: column;
         }
 
-        a {
-          position: relative;
-          display: inline-block;
-          text-align: center;
-          margin-right: 26px;
-          line-height: 22px;
-          font-size: 13px;
+        p {
+          line-height: 24px;
           color: #dddddd;
-          &:hover {
-            color: #feb518;
+          font-size: 13px;
+          display: inline-block;
+          margin: 0;
+        }
+
+        .socialIcon {
+          padding: 8px 0px;
+          margin-right: 25px;
+          display: inline-block;
+          border-right: 1px solid #434343;
+
+          @include Responsive(M) {
+            margin: 0;
+            border: none;
+          }
+
+          a {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            margin-right: 26px;
+            line-height: 22px;
+            font-size: 13px;
+            color: #dddddd;
+            &:hover {
+              color: #feb518;
+            }
+
+            @include Responsive(M) {
+              margin: 0 10px;
+            }
+          }
+        }
+      }
+
+      .topRight {
+        display: flex;
+        align-items: center;
+        p,
+        span {
+          margin: 0;
+          color: #dddddd;
+          font-size: 13px;
+          display: inline-block;
+          padding: 8px 18px;
+          background-color: #222222;
+          border-left: 1px solid #434343;
+        }
+
+        .iconWrap {
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          .icon {
+            font-size: 20px;
+            display: flex;
+            align-content: center;
+            // filter: brightness(0) invert(1);
+            // height: 22px;
+          }
+
+          .count {
+            position: absolute;
+            padding: 0;
+            right: 10px;
+            top: 18px;
+            font-size: 10px;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #feb518;
+          }
+        }
+
+        p {
+          @include Responsive(M) {
+            border-left: none;
           }
 
           @include Responsive(M) {
-            margin: 0 10px;
+            padding: 8px;
           }
         }
-      }
-    }
 
-    .topRight {
-      display: flex;
-      align-items: center;
-      p,
-      span {
-        margin: 0;
-        color: #dddddd;
-        font-size: 13px;
-        display: inline-block;
-        padding: 8px 18px;
-        background-color: #222222;
-        border-left: 1px solid #434343;
-      }
-
-      .iconWrap {
-        position: relative;
-        display: flex;
-        align-items: center;
-
-        .icon {
-          font-size: 20px;
-          display: flex;
-          align-content: center;
-          // filter: brightness(0) invert(1);
-          // height: 22px;
-        }
-
-        .count {
-          position: absolute;
-          padding: 0;
-          right: 10px;
-          top: 18px;
-          font-size: 10px;
-          width: 16px;
-          height: 16px;
-          line-height: 16px;
-          color: #ffffff;
-          text-align: center;
-          border-radius: 50%;
-          display: inline-block;
-          background-color: #feb518;
-        }
-      }
-
-      p {
-        @include Responsive(M) {
-          border-left: none;
-        }
-
-        @include Responsive(M) {
-          padding: 8px;
-        }
-      }
-
-      .space {
-        @include Responsive(XS) {
-          display: none;
+        .space {
+          @include Responsive(XS) {
+            display: none;
+          }
         }
       }
     }

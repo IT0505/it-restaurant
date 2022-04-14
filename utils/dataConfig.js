@@ -1,3 +1,6 @@
+import logoImg from '../assets/images/logo.png';
+import logoImg1 from '../assets/images/logo-2.png';
+import logoImg2 from '../assets/images/footer-logo.png';
 import blogImg from '../assets/images/news-7-62x62.jpg';
 import sliderImg1 from '../assets/images/image-1.jpg';
 import sliderImg2 from '../assets/images/image-2.jpg';
@@ -62,6 +65,10 @@ import news2 from '../assets/images/news-7.jpg';
 import news3 from '../assets/images/news-4.jpg';
 
 export const headerData = {
+  logoSrc: logoImg,
+  logoAlt: 'restaurant',
+  logoSrc1: logoImg1,
+  logoAlt1: 'restaurant',
   socialIcon: [
     {
       url: '#',
@@ -83,131 +90,24 @@ export const headerData = {
 
   reservationPhone: '+011 29 345 678',
   openingHours: '9:00am - 10:00pm',
-};
 
-export const navigationData = {
-  socialIcon: [
-    {
-      url: '#',
-      icon: 'fa-brands fa-facebook-f',
-    },
-    {
-      url: '#',
-      icon: 'fa-brands fa-twitter',
-    },
-    {
-      url: '#',
-      icon: 'fa-brands fa-google-plus-g',
-    },
-    {
-      url: '#',
-      icon: 'fa-brands fa-tumblr',
-    },
-  ],
-
-  menuItems: [
+  navigationList: [
     {
       title: 'Home',
-      submenu: [
-        {
-          title: 'Homepage one',
-          url: '/',
-          id: 'homepage1',
-        },
-        {
-          title: 'Homepage two',
-          url: '#',
-          id: 'homepage2',
-        },
-        {
-          title: 'Homepage three',
-          id: 'homepage3',
-          submenu: [
-            {
-              title: 'Homepage one',
-              url: '#',
-              id: 'homepage31',
-            },
-            {
-              title: 'Homepage two',
-              url: '#',
-              id: 'homepage32',
-            },
-            {
-              title: 'Homepage three',
-              id: 'homepage33',
-              // url: '#',
-              submenu: [
-                {
-                  title: 'Homepage one',
-                  url: '#',
-                  id: 'homepage331',
-                },
-                {
-                  title: 'Homepage two',
-                  url: '#',
-                  id: 'homepage332',
-                },
-                {
-                  title: 'Homepage three',
-                  url: '#',
-                  id: 'homepage333',
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      title: 'About',
-      url: '#',
-    },
-    {
-      title: 'Reservation',
-      url: '#',
+      url: '/',
     },
     {
       title: 'Menu',
       submenu: [
         {
-          title: 'Menu style one',
-          url: '/menu',
-          id: 'menu',
-        },
-        {
-          title: 'Menu style two',
+          title: 'Menu Special',
+          url: '/menuspecial',
           id: 'menu1',
-          url: '/menu1',
         },
         {
-          title: 'Menu style three',
-          url: '#',
-          id: 'menu3',
-        },
-      ],
-    },
-    {
-      title: 'Gallery',
-      url: '#',
-    },
-    {
-      title: 'Shop',
-      submenu: [
-        {
-          title: 'Shop one',
-          url: '#',
-          id: 'shop1',
-        },
-        {
-          title: 'Shop Single',
-          url: '/shopsingle',
-          id: 'shop2',
-        },
-        {
-          title: 'Shop three',
-          url: '#',
-          id: 'shop3',
+          title: 'Menu',
+          id: 'menu2',
+          url: '/menu',
         },
       ],
     },
@@ -220,15 +120,15 @@ export const navigationData = {
           id: 'blog1',
         },
         {
-          title: 'Blog simple',
-          url: '#',
+          title: 'Blog Single',
+          url: '/blogsingle',
           id: 'blog2',
         },
       ],
     },
     {
       title: 'Contact',
-      url: '#',
+      url: '/contact',
     },
   ],
 };
@@ -263,6 +163,8 @@ export const slideshowData = {
 
 export const footerData = {
   aboutWidget: {
+    logoSrc: logoImg2,
+    logoAlt: 'restaurant',
     text: 'Marsh mallow muffin soufflé jelly-o tart cake Marshmallow macaroon jelly jubes dont tiramisu croissant cake.',
     phone: '(01) 800 433 633',
     email: 'info@Example.com',
@@ -635,9 +537,11 @@ export const ourDeliciousComboData = {
       imgSrc: dishImg1,
       imgAlt: 'Delicious Combo',
       name: 'Trio Sausages',
+      oldPrice: '$150',
       price: '$100',
       url: '#',
       description: 'Home 2, Wine',
+      starRating: '5',
     },
     {
       imgSrc: dishImg2,
@@ -646,12 +550,14 @@ export const ourDeliciousComboData = {
       price: '$100',
       url: '#',
       description: 'Home 2, Wine',
+      starRating: '4.5',
     },
     {
       status: 'new',
       imgSrc: dishImg3,
       imgAlt: 'Delicious Combo',
       name: 'Trio Sausages',
+      oldPrice: '$150',
       price: '$100',
       url: '#',
       description: 'Home 2, Wine',
@@ -660,6 +566,7 @@ export const ourDeliciousComboData = {
       imgSrc: dishImg4,
       imgAlt: 'Delicious Combo',
       name: 'Trio Sausages',
+      oldPrice: '$150',
       price: '$100',
       url: '#',
       description: 'Home 2, Wine',
@@ -671,6 +578,7 @@ export const ourDeliciousComboData = {
       price: '$100',
       url: '#',
       description: 'Home 2, Wine',
+      starRating: '4.7',
     },
     {
       imgSrc: dishImg6,
@@ -684,9 +592,11 @@ export const ourDeliciousComboData = {
       imgSrc: dishImg7,
       imgAlt: 'Delicious Combo',
       name: 'Trio Sausages',
+      oldPrice: '$150',
       price: '$100',
       url: '#',
       description: 'Home 2, Wine',
+      starRating: '3.6',
     },
     {
       imgSrc: dishImg8,
@@ -1209,6 +1119,62 @@ export const blogSectionData = {
       description:
         'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magniol res eos qui rate voluptatem sequi nesciunt Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipisci vel sed quia suthagara lukuthea satham non numquam eius modi tempra. Incidunt ut labore et dolore magnam aliquam',
       numComments: '3',
+    },
+  ],
+};
+
+export const blogSinglePageTitleData = {
+  title: 'Ingredients For Cooking Pasta With Creamy Mushroom',
+  backgroundImage: backgroundImg4,
+};
+
+export const blogSingleSectionData = {
+  title: 'Ingredients For Cooking Pasta With Creamy Mushroom',
+  imgSrc: news1,
+  imgAlt: 'Delicious food blog',
+  title: 'Ingredients For Cooking Pasta With Creamy Mushroom',
+  url: '#',
+  date: '20 Jan 2017',
+  author: 'Admin',
+  description:
+    'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magniol res eos qui rate voluptatem sequi nesciunt Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipisci vel sed quia suthagara lukuthea satham non numquam eius modi tempra. Incidunt ut labore et dolore magnam aliquam',
+  numComments: '3',
+  comments: [
+    {
+      imgSrc: reviewerAvt1,
+      imgAlt: 'avatar',
+      name: 'Cobus Bester',
+      starRating: 4,
+      date: 'June 7, 2013',
+      comment:
+        'Really happy with this print. The colors are great, and the paper quality is good too.',
+    },
+    {
+      imgSrc: reviewerAvt2,
+      imgAlt: 'avatar',
+      name: 'Cobus Bester',
+      starRating: 5,
+      date: 'June 7, 2013',
+      comment:
+        'You only get the picture, not the person holding it, something they don’t mention in the description, now I’ve got to find my own person',
+    },
+    {
+      imgSrc: reviewerAvt3,
+      imgAlt: 'avatar',
+      name: 'Cobus Bester',
+      starRating: 2,
+      date: 'June 7, 2013',
+      comment:
+        'Really happy with this print. The colors are great, and the paper quality is good too.',
+    },
+    {
+      imgSrc: reviewerAvt4,
+      imgAlt: 'avatar',
+      name: 'Cobus Bester',
+      starRating: 4,
+      date: 'June 7, 2013',
+      comment:
+        'You only get the picture, not the person holding it, something they don’t mention in the description, now I’ve got to find my own person',
     },
   ],
 };

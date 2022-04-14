@@ -1,8 +1,12 @@
 import Head from 'next/head';
 
 import Layout from '../components/Layout/Layout';
-import OurDeliciousCombo from '../components/Menu/OurDeliciousCombo/OurDeliciousCombo';
-
+import PageTitle from '../components/Menu/PageTitle/PageTitle';
+import BreakfastMenu from '../components/Menu/BreakfastMenu/BreakfastMenu';
+import LunchTitle from '../components/Menu/LunchTitle/LunchTitle';
+import LunchMenu from '../components/Menu/LunchMenu/LunchMenu';
+import DinnerTitle from '../components/Menu/DinnerTitle/DinnerTitle';
+import DinnerMenu from '../components/Menu/DinnerMenu/DinnerMenu';
 export default function Menu() {
   return (
     <>
@@ -12,7 +16,12 @@ export default function Menu() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Layout>
-        <OurDeliciousCombo />
+        <PageTitle />
+        <BreakfastMenu />
+        <LunchTitle />
+        <LunchMenu />
+        <DinnerTitle />
+        <DinnerMenu />
       </Layout>
     </>
   );

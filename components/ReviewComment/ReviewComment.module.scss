@@ -1,0 +1,34 @@
+.reviewComment {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+
+  .image {
+    max-width: 32px;
+    width: 100%;
+    height: fit-content;
+    padding: 3px;
+    background: #ebe9eb;
+    border: 1px solid #e4e1e3;
+    margin: 0;
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  .reviewCommentInner {
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid #e4e1e3;
+    border-radius: 4px;
+    padding: 16px;
+
+    .inlineText {
+      font-size: 13px;
+      margin: 6px 0;
+
+      .highlight {
+        font-weight: 600;
+      }
+    }
+  }
+}

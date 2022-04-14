@@ -1,18 +1,14 @@
 import Header from '../Header/Header';
-import Navigation from '../Navigation/Navigation';
 import Footer from '../Footer/Footer';
 import ScrollUpButton from '../ScrollUpButton/ScrollUpButton';
-import ZaloWidget from '../ZaloWidget/ZaloWidget';
-
+import styles from './Layout.module.scss';
 export default function Layout({ children }) {
   return (
-    <>
+    <div className={styles.pageWrap}>
       <Header />
-      <Navigation />
       {children}
       <ScrollUpButton />
-      <ZaloWidget />
       <Footer />
-    </>
+    </div>
   );
 }

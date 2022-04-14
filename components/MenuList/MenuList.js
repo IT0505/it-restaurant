@@ -2,8 +2,6 @@ import Image from 'next/image';
 import styles from './MenuList.module.scss';
 
 export default function MenuList({ data, style, className }) {
-  // const customStyle = props.style;
-  // const classImplement = props.className;
   return (
     <div className={`${styles.menuList} ${styles[style]} ${className}`}>
       {data.map((item, index) => (

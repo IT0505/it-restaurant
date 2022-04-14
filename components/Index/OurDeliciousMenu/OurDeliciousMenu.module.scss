@@ -18,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    gap: 50px;
 
     @include Responsive(M) {
       flex-direction: column;
@@ -43,7 +44,6 @@
     .swiperWrap {
       width: 35%;
       margin: 0;
-      // flex-grow: 4;
       position: relative;
 
       @include Responsive(M) {
@@ -61,10 +61,6 @@
         color: #ffffff;
         line-height: 46px;
         font-family: 'Dancing Script', cursive;
-
-        // @include Responsive(M) {
-        //   text-align: center;
-        // }
       }
 
       .slogan {
@@ -94,7 +90,6 @@
           width: 33px;
           height: 33px;
           margin: 0px;
-          // margin-right: 10px;
           text-align: center;
           display: inline-block;
           background-color: #262727;
@@ -102,13 +97,6 @@
           border-radius: 0px;
           z-index: 2;
           cursor: pointer;
-          // padding: 10px;
-          // display: flex;
-
-          // @include Responsive(M) {
-          //   top: 45%;
-          //   bottom: unset;
-          // }
 
           &:hover {
             background: none repeat scroll 0 0 #869791;
@@ -121,24 +109,16 @@
 
         .next {
           left: 50px;
-
-          // @include Responsive(M) {
-          //   left: unset;
-          //   right: 0;
-          // }
         }
       }
     }
 
     .mainContent {
-      margin-left: 50px;
       position: relative;
       z-index: 1;
       width: -webkit-fill-available;
 
-      // flex-grow: 6;
       @include Responsive(M) {
-        margin-left: 0;
         margin: 0 -10px;
       }
 

@@ -2,6 +2,7 @@ import styles from './OurSpecialDishes.module.scss';
 import MainTitle from '../../MainTitle/MainTitle';
 import { ourSpecialDishesData } from '../../../utils/dataConfig';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function OurSpecialDishes() {
   const openingHours = ourSpecialDishesData.openingHours;
@@ -34,7 +35,7 @@ export default function OurSpecialDishes() {
                 ))}
               </ul>
             </div>
-            <div className={styles.specialDishes}>
+            <div className={styles.specialList}>
               {specialDishes.map((item, index) => (
                 <div
                   className={`${styles.content} ${
@@ -53,9 +54,9 @@ export default function OurSpecialDishes() {
                   <div className={styles.text}>
                     <h3 className={styles.title}>{item.title}</h3>
                     <p className={styles.description}>{item.description}</p>
-                    <a href={item.url} className={styles.url}>
-                      Read More
-                    </a>
+                    <Link href={item.url}>
+                      <a className={styles.url}>Read More</a>
+                    </Link>
                   </div>
                 </div>
               ))}

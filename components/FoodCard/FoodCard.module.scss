@@ -1,9 +1,9 @@
-@import '../../../../../styles/_mixin';
+@import '../../styles/_mixin';
 
-.relatedProductItem {
+.foodCard {
   padding: 0 15px;
   width: 33.33333333%;
-  margin: 0 auto 40px;
+  margin: 0 auto 20px;
 
   @include Responsive(M) {
     width: 50%;
@@ -16,6 +16,10 @@
   pointer-events: none;
   &:hover {
     .image {
+      img {
+        transform: scale(1.2);
+      }
+
       .addCart {
         bottom: 0;
       }
@@ -26,8 +30,29 @@
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-
+    display: block;
     pointer-events: auto;
+
+    img {
+      transition: transform 0.5s;
+    }
+
+    .status {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      line-height: 17px;
+      padding: 1px 19px;
+      font-size: 12px;
+      color: #333333;
+      z-index: 1;
+      border-radius: 2px;
+      background-color: #feb518;
+    }
+
     .addCart {
       text-transform: uppercase;
       position: absolute;
@@ -46,15 +71,7 @@
 
       .icon {
         margin-right: 10px;
-        // height: 20px;
-        // filter: brightness(0) invert(1);
       }
-
-      // &:hover {
-      //   .addCart {
-      //     bottom: 0;
-      //   }
-      // }
     }
   }
 

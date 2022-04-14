@@ -1,15 +1,17 @@
 import styles from './Navigation.module.scss';
 import Image from 'next/image';
-import { useState, useEffect, useCallback } from 'react';
-import logoImg from '../../assets/images/logo.png';
-import logoImg2 from '../../assets/images/logo-2.png';
-import Button from '../Button/Button';
+import { useState, useEffect } from 'react';
+// import logoImg from '../../assets/images/logo.png';
+// import logoImg2 from '../../assets/images/logo-2.png';
+import Button from '../../../Button/Button';
 import Submenu from './components/Submenu/Submenu';
 // import SocialIcon from './components/SocialIcon/SocialIcon';
-import { navigationData } from '../../utils/dataConfig';
+// import { navigationData } from '../../../../utils/dataConfig';
 import Link from 'next/link';
 
-export default function Navigation() {
+export default function Navigation({ data }) {
+  const { navigationList, socialIcon, logoSrc, logoAlt, logoSrc1, logoAlt1 } =
+    data;
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [top, setTop] = useState(true);
 
@@ -27,15 +29,12 @@ export default function Navigation() {
   }, [top]);
 
   return (
-    <div
-      className={`${styles.navigation} ${!top && styles.nonTop}`}
-      // style={{ position: !top && 'fixed' }}
-    >
+    <div className={`${styles.navigation} ${!top && styles.nonTop}`}>
       <div className='container'>
         <div className={styles.navigationInner}>
           <Link href='/'>
             <a className={styles.logo}>
-              <Image src={logoImg} alt='logo' layout='responsive'></Image>
+              <Image src={logoSrc} alt={logoAlt} layout='responsive'></Image>
             </a>
           </Link>
           <div
@@ -52,11 +51,15 @@ export default function Navigation() {
             </button>
             <Link href='/'>
               <a className={styles.logo1}>
-                <Image src={logoImg2} alt='logo' layout='responsive'></Image>
+                <Image
+                  src={logoSrc1}
+                  alt={logoAlt1}
+                  layout='responsive'
+                ></Image>
               </a>
             </Link>
 
-            {navigationData.menuItems.map((item, index) => (
+            {navigationList.map((item, index) => (
               <div className={styles.menuItemWrap} key={index}>
                 {item.url ? (
                   <Link href={item.url}>
@@ -84,7 +87,7 @@ export default function Navigation() {
             ))}
 
             <div className={styles.socialIconWrap}>
-              {navigationData.socialIcon.map((item, index) => (
+              {socialIcon.map((item, index) => (
                 <a href={item.url} key={index} className={styles.socialIcon}>
                   <i className={item.icon}></i>
                 </a>

@@ -1,0 +1,14 @@
+@import '../../../styles/_mixin';
+
+.pageTitle {
+  padding: 120px 0;
+  min-height: 300px;
+
+  @include Responsive(XS) {
+    padding: 50px 0;
+  }
+
+  &::after {
+    content: none;
+  }
+}

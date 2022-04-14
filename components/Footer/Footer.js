@@ -1,19 +1,22 @@
 import Image from 'next/image';
-import logoImg from '../../assets/images/footer-logo.png';
 import styles from './Footer.module.scss';
 import { footerData } from '../../utils/dataConfig';
 import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <>
-      <div className={styles.footer}>
+    <footer className={styles.footer}>
+      <div className={styles.footerTop}>
         <div className='container'>
           <div className={styles.footerInner}>
             <div className={`${styles.aboutWidget} ${styles.contentWrap}`}>
               <Link href='/'>
                 <a className={styles.logo}>
-                  <Image src={logoImg} alt='logo' layout='responsive' />
+                  <Image
+                    src={footerData.aboutWidget.logoSrc}
+                    alt={footerData.aboutWidget.logoAlt}
+                    layout='responsive'
+                  />
                 </a>
               </Link>
               <p>{footerData.aboutWidget.text}</p>
@@ -86,6 +89,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </>
+    </footer>
   );
 }

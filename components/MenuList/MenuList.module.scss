@@ -9,11 +9,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  // flex-grow: 6;
-  @include Responsive(M) {
-    margin-left: 0;
-  }
-
   &.style1 {
     .menuItem {
       .text {
@@ -24,24 +19,13 @@
       }
     }
   }
-
-  // .title {
-  //   color: #ffffff;
-  //   font-size: 22px;
-  //   font-weight: 400;
-  //   margin-bottom: 30px;
-
-  //   @include Responsive(M) {
-  //     text-align: center;
-  //   }
-  // }
-
   .menuItem {
     display: flex;
     align-items: center;
     max-width: 550px;
     width: 100%;
     margin-bottom: 20px;
+    gap: 20px;
 
     @include Responsive(L) {
       max-width: 1024px;
@@ -95,12 +79,7 @@
     }
 
     .text {
-      margin-left: 20px;
       width: -webkit-fill-available;
-
-      @include Responsive(XS) {
-        margin-left: 0;
-      }
 
       .inlineWrap {
         font-size: 15px;

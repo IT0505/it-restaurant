@@ -1,9 +1,8 @@
 import styles from './ShopSingleSection.module.scss';
 import { flyingNinjaProductData } from '../../../utils/dataConfig';
 import MainProduct from './components/MainProduct/MainProduct';
-import RelatedProductItem from './components/RelatedProductItem/RelatedProductItem';
 import SideBar from '../../SideBar/SideBar';
-
+import FoodCard from '../../FoodCard/FoodCard';
 export default function ShopSingleSection() {
   return (
     <div className={`${styles.shopSingleSection} section`}>
@@ -21,11 +20,7 @@ export default function ShopSingleSection() {
               <h3 className={styles.title}>Related Product</h3>
               <div className={styles.relatedProductWrap}>
                 {flyingNinjaProductData.relatedProduct.map((item, index) => (
-                  <RelatedProductItem
-                    className={styles.relatedProductItem}
-                    data={item}
-                    key={index}
-                  />
+                  <FoodCard data={item} key={index} />
                 ))}
               </div>
             </div>

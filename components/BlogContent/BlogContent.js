@@ -19,9 +19,9 @@ export default function BlogContent({ data, className }) {
           {data.title}
         </a>
         <h3 className={styles.date}>
-          {data.date} by <span>{data.author}</span>
+          {data.date} by <span className={styles.highlight}>{data.author}</span>
         </h3>
-        <p>{data.description}</p>
+        <p className={styles.description}>{data.description}</p>
       </div>
       <div className={styles.belowContent}>
         <Link href={data.url}>

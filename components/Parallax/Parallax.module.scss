@@ -1,10 +1,6 @@
 @import '../../styles/_mixin';
 
 .parallax {
-  /* The image used */
-  // background-image: url('../../assets/images/1-1024x750.jpg');
-
-  /* Set a specific height */
   min-height: 500px;
   position: relative;
   display: flex;
@@ -21,7 +17,6 @@
     padding: 50px 0;
   }
 
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

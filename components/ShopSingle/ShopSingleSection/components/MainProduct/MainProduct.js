@@ -7,6 +7,7 @@ import Button from '../../../../Button/Button';
 import StarRatingInput from './components/StarRatingInput/StarRatingInput';
 import ModalImage from '../../../../ModalImage/ModalImage';
 import ReadMore from '../../../../ReadMore/ReadMore';
+import ReviewComment from '../../../../ReviewComment/ReviewComment';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
@@ -109,22 +110,7 @@ export default function MainProduct({ data, className }) {
               {data.totalReviews} Reviews For {data.title}
             </h2>
             {data.reviews.map((item, index) => (
-              <div className={styles.review} key={index}>
-                <figure className={styles.image}>
-                  <Image
-                    src={item.imgSrc}
-                    alt={item.imgAlt}
-                    layout='responsive'
-                  />
-                </figure>
-                <div className={styles.reviewInner}>
-                  <StarRating rating={item.starRating} />
-                  <p className={styles.inlineText}>
-                    <b>{item.name}</b> – {item.date}
-                  </p>
-                  <p className={styles.comment}>{item.comment}</p>
-                </div>
-              </div>
+              <ReviewComment data={item} key={index} />
             ))}
 
             <Formik

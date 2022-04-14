@@ -8,14 +8,18 @@ export default function ReadMore({ children, length }) {
   const toggleReadMore = () => {
     setIsReadMore(!isReadMore);
   };
-  return textLength >= children.length ? (
-    text
-  ) : (
-    <>
-      {isReadMore ? text.slice(0, textLength) : text}
-      <span onClick={toggleReadMore} className={styles.showHideButton}>
-        {isReadMore ? '...read more' : ' show less'}
-      </span>
-    </>
+  return (
+    <span className={styles.readMore}>
+      {textLength >= children.length ? (
+        text
+      ) : (
+        <>
+          {isReadMore ? text.slice(0, textLength) : text}
+          <span onClick={toggleReadMore} className={styles.showHideButton}>
+            {isReadMore ? '...read more' : ' show less'}
+          </span>
+        </>
+      )}
+    </span>
   );
 }

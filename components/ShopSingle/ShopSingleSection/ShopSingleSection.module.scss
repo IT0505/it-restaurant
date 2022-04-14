@@ -3,6 +3,7 @@
   .shopSingleSectionInner {
     display: flex;
     justify-content: space-between;
+    gap: 35px;
 
     @include Responsive(M) {
       flex-direction: column;
@@ -10,11 +11,6 @@
 
     .productWrap {
       width: -webkit-fill-available;
-      margin-left: 30px;
-
-      @include Responsive(M) {
-        margin-left: 0;
-      }
 
       .relatedProduct {
         padding: 80px 0px 100px;

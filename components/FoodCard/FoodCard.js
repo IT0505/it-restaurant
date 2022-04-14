@@ -1,16 +1,17 @@
-import styles from './RelatedProductItem.module.scss';
+import styles from './FoodCard.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShoppingBag } from '../../../../Icons/Icons';
-import StarRating from '../../../../StarRating/StarRating';
+import { ShoppingBag } from '../Icons/Icons';
+import StarRating from '../StarRating/StarRating';
 
-export default function RelatedProductItem({ data }) {
+export default function FoodCard({ data }) {
   return (
-    <div className={styles.relatedProductItem}>
-      <figure className={styles.image}>
-        <Image src={data.imgSrc} alt={data.imgAlt} layout='responsive' />
-        <Link href='#'>
-          <a className={styles.addCart}>
+    <div className={styles.foodCard}>
+      <Link href='#'>
+        <a className={styles.image}>
+          {data.status && <span className={styles.status}>{data.status}</span>}
+          <Image src={data.imgSrc} alt={data.imgAlt} layout='responsive' />
+          <span className={styles.addCart}>
             <ShoppingBag
               size='20px'
               fill='#fff'
@@ -19,9 +20,9 @@ export default function RelatedProductItem({ data }) {
               className={styles.icon}
             />
             Add to Bag
-          </a>
-        </Link>
-      </figure>
+          </span>
+        </a>
+      </Link>
       <Link href='#'>
         <a className={styles.inlineLink}>
           {data.name}
