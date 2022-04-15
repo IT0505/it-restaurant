@@ -1,0 +1,115 @@
+@import '../../styles/mixin';
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  max-width: 570px;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 20px;
+
+  @include Responsive(L) {
+    max-width: 1024px;
+  }
+
+  @include Responsive(XS) {
+    flex-direction: column;
+    align-items: center;
+    // margin: 0 0 20px;
+  }
+
+  pointer-events: none;
+
+  &:hover {
+    .image {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &.style1 {
+    .text {
+      .inlineWrap {
+        font-size: 17px;
+        color: #fff;
+      }
+    }
+  }
+
+  .image {
+    position: relative;
+    max-width: 86px;
+    width: 100%;
+    margin: 0;
+    flex-shrink: 0;
+    flex-grow: 1;
+    pointer-events: auto;
+
+    img {
+      transition: transform 0.5s;
+    }
+
+    @include Responsive(XS) {
+      margin-bottom: 20px;
+    }
+
+    .status {
+      z-index: 2;
+      position: absolute;
+      text-transform: capitalize;
+      left: 0;
+      top: 0;
+      line-height: 17px;
+      padding: 0px 11px;
+      font-size: 11px;
+      color: #333333;
+      background-color: #feb518;
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+
+  .text {
+    width: -webkit-fill-available;
+
+    .inlineWrap {
+      font-size: 15px;
+      font-weight: 400;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .inlineText {
+        margin: 0;
+
+        &.name {
+          pointer-events: auto;
+        }
+
+        &.dots {
+          font-weight: 300;
+        }
+
+        &.price {
+          font-weight: 700;
+        }
+      }
+
+      @include Responsive(XS) {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    .description {
+      color: #aaaaaa;
+      font-size: 14px;
+      margin: 10px 0 0;
+
+      @include Responsive(XS) {
+        margin: 0 auto 30px;
+        text-align: center;
+      }
+    }
+  }
+}

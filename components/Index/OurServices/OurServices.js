@@ -4,15 +4,12 @@ import Image from 'next/image';
 import MainTitle from '../../MainTitle/MainTitle';
 
 export default function OurServices() {
-  const mainContent = ourServicesData.mainContent;
+  const { mainContent, title, slogan } = ourServicesData;
   return (
     <div className={styles.ourServices}>
       <div className='container'>
         <div className={`${styles.ourServicesInner} section`}>
-          <MainTitle
-            slogan={ourServicesData.slogan}
-            title={ourServicesData.title}
-          />
+          <MainTitle slogan={slogan} title={title} />
           <div className={styles.mainContent}>
             {mainContent.map((item, index) => (
               <div className={styles.content} key={index}>

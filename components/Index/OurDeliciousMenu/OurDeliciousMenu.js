@@ -3,14 +3,12 @@ import React from 'react';
 import Parallax from '../../Parallax/Parallax';
 import { ourDeliciousMenuData } from '../../../utils/dataConfig';
 import Image from 'next/image';
-import MenuList from '../../MenuList/MenuList';
+import MenuItem from '../../MenuItem/MenuItem';
 
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
-// import 'swiper/css/pagination';
 
 SwiperCore.use([Navigation]);
 
@@ -18,25 +16,29 @@ export default function OurDeliciousMenu() {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
 
-  const mainContent = ourDeliciousMenuData.mainContent;
+  const {
+    title,
+    slogan,
+    backgroundImage,
+    swiperImgs,
+    mainContent: { subTitle, menuList },
+  } = ourDeliciousMenuData;
 
   return (
     <Parallax
-      backgroundImage={ourDeliciousMenuData.backgroundImage}
+      backgroundImage={backgroundImage}
       className={styles.ourDeliciousMenu}
     >
       <div className='container'>
         <div className={styles.ourDeliciousMenuInner}>
           <div className={styles.swiperWrap}>
-            <h2 className={styles.title}>{ourDeliciousMenuData.title}</h2>
-            <h3 className={styles.slogan}>{ourDeliciousMenuData.slogan}</h3>
+            <h2 className={styles.title}>{title}</h2>
+            <h3 className={styles.slogan}>{slogan}</h3>
             <Swiper
-              // install Swiper modules
               modules={[Navigation]}
               spaceBetween={50}
               slidesPerView={1}
               loop={true}
-              // pagination={{ clickable: true }}
               navigation={{
                 prevEl: navigationPrevRef.current,
                 nextEl: navigationNextRef.current,
@@ -47,7 +49,7 @@ export default function OurDeliciousMenu() {
               }}
               className={styles.mySwiper}
             >
-              {ourDeliciousMenuData.slideImgs.map((item, index) => (
+              {swiperImgs.map((item, index) => (
                 <SwiperSlide className={styles.swiperSlide} key={index}>
                   <figure className={styles.image}>
                     <Image
@@ -68,8 +70,12 @@ export default function OurDeliciousMenu() {
           </div>
 
           <div className={styles.mainContent}>
-            <h2 className={styles.title}>{mainContent.title}</h2>
-            <MenuList data={mainContent.menuList} style={'style1'} />
+            <h2 className={styles.title}>{subTitle}</h2>
+            <div className={styles.menuList}>
+              {menuList.map((item, index) => (
+                <MenuItem data={item} key={index} style={'style1'} />
+              ))}
+            </div>
           </div>
         </div>
       </div>

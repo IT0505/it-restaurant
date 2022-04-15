@@ -1,0 +1,16 @@
+.openingHoursContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  .inlineText {
+    margin: 0;
+    margin-right: 5px;
+    text-transform: capitalize;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

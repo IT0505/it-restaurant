@@ -2,13 +2,7 @@ import styles from './ModalImage.module.scss';
 import Image from 'next/image';
 import { useState } from 'react';
 
-export default function ModalImage({
-  className,
-  // children,
-  src,
-  alt,
-  // setVisibility,
-}) {
+export default function ModalImage({ className, src, alt }) {
   const [visible, setVisible] = useState(false);
   return (
     <>
@@ -25,12 +19,7 @@ export default function ModalImage({
             &times;
           </span>
           <figure className={styles.image}>
-            <Image
-              src={src}
-              alt={alt}
-              // className={styles.modalContent}
-              layout='responsive'
-            />
+            <Image src={src} alt={alt} layout='responsive' />
           </figure>
         </div>
       )}

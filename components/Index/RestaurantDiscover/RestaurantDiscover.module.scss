@@ -55,10 +55,7 @@
       }
 
       .swiperSlide {
-        // height: 350px;
-        // width: 350px;
         position: relative;
-        // background-color: red;
         right: -170px;
         cursor: pointer;
 
@@ -68,10 +65,8 @@
 
         .image {
           position: relative;
-          // height: 100%;
           max-width: 100%;
           width: 100%;
-          // height: fit-content;
           margin: 0;
 
           &.active {

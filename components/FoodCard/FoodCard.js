@@ -5,12 +5,22 @@ import { ShoppingBag } from '../Icons/Icons';
 import StarRating from '../StarRating/StarRating';
 
 export default function FoodCard({ data }) {
+  const {
+    status,
+    imgSrc,
+    imgAlt,
+    name,
+    description,
+    price,
+    oldPrice,
+    starRating,
+  } = data;
   return (
     <div className={styles.foodCard}>
       <Link href='#'>
         <a className={styles.image}>
-          {data.status && <span className={styles.status}>{data.status}</span>}
-          <Image src={data.imgSrc} alt={data.imgAlt} layout='responsive' />
+          {status && <span className={styles.status}>{status}</span>}
+          <Image src={imgSrc} alt={imgAlt} layout='responsive' />
           <span className={styles.addCart}>
             <ShoppingBag
               size='20px'
@@ -25,18 +35,18 @@ export default function FoodCard({ data }) {
       </Link>
       <Link href='#'>
         <a className={styles.inlineLink}>
-          {data.name}
+          {name}
           <span className={styles.inlinePrice}>
-            <p className={styles.oldPrice}>{data.oldPrice}</p>
-            <p className={styles.price}>{data.price}</p>
+            <p className={styles.oldPrice}>{oldPrice}</p>
+            <p className={styles.price}>{price}</p>
           </span>
         </a>
       </Link>
       <p className={styles.description}>
-        {data.description.slice(0, 28)}
-        {data.description.length >= 28 && '...'}
+        {description.slice(0, 28)}
+        {description.length >= 28 && '...'}
       </p>
-      <StarRating rating={data.starRating} />
+      <StarRating rating={starRating} />
     </div>
   );
 }

@@ -3,40 +3,47 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function BlogContent({ data, className }) {
+  const {
+    url,
+    imgSrc,
+    imgAlt,
+    title,
+    date,
+    author,
+    description,
+    numLikes,
+    numComments,
+  } = data;
   return (
     <div className={`${styles.blogContent} ${className}`}>
       <div className={styles.aboveContent}>
-        <Link href={data.url}>
+        <Link href={url}>
           <a className={styles.image}>
-            <Image
-              src={data.imgSrc}
-              alt={data.imgAlt}
-              layout='responsive'
-            ></Image>
+            <Image src={imgSrc} alt={imgAlt} layout='responsive'></Image>
           </a>
         </Link>
-        <a href={data.url} className={styles.title}>
-          {data.title}
+        <a href={url} className={styles.title}>
+          {title}
         </a>
         <h3 className={styles.date}>
-          {data.date} by <span className={styles.highlight}>{data.author}</span>
+          {date} by <span className={styles.highlight}>{author}</span>
         </h3>
-        <p className={styles.description}>{data.description}</p>
+        <p className={styles.description}>{description}</p>
       </div>
       <div className={styles.belowContent}>
-        <Link href={data.url}>
+        <Link href={url}>
           <a className={styles.url}>Read More</a>
         </Link>
 
-        {data.numLikes && (
-          <Link href={data.url}>
-            <a className={styles.numLikes}>{data.numLikes} likes</a>
+        {numLikes && (
+          <Link href={url}>
+            <a className={styles.numLikes}>{numLikes} likes</a>
           </Link>
         )}
 
-        {data.numComments && (
-          <Link href={data.url}>
-            <a className={styles.numComments}>{data.numComments} comments</a>
+        {numComments && (
+          <Link href={url}>
+            <a className={styles.numComments}>{numComments} comments</a>
           </Link>
         )}
       </div>

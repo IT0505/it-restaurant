@@ -2,82 +2,58 @@ import Image from 'next/image';
 import styles from './Footer.module.scss';
 import { footerData } from '../../utils/dataConfig';
 import Link from 'next/link';
+import LatestBlogContent from './components/LatestBlogContent/LatestBlogContent';
+import OpeningHoursContent from './components/OpeningHoursContent/OpeningHoursContent';
+import UsefulLinkContent from './components/UsefulLinkContent/UsefulLinkContent';
 
 export default function Footer() {
+  const {
+    aboutWidget: { logoSrc, logoAlt, phone, email, description },
+    latestBlog,
+    openingHours,
+    usefulLink,
+    copyright,
+  } = footerData;
   return (
     <footer className={styles.footer}>
       <div className={styles.footerTop}>
         <div className='container'>
           <div className={styles.footerInner}>
-            <div className={`${styles.aboutWidget} ${styles.contentWrap}`}>
+            <div className={`${styles.contentWrap} ${styles.aboutWidget}`}>
               <Link href='/'>
                 <a className={styles.logo}>
-                  <Image
-                    src={footerData.aboutWidget.logoSrc}
-                    alt={footerData.aboutWidget.logoAlt}
-                    layout='responsive'
-                  />
+                  <Image src={logoSrc} alt={logoAlt} layout='responsive' />
                 </a>
               </Link>
-              <p>{footerData.aboutWidget.text}</p>
+              <p className={styles.description}>{description}</p>
               <span className={styles.contactInfo}>
-                <i className='fas fa-phone' aria-hidden></i> Phone :
-                {footerData.aboutWidget.phone}
+                <i className='fas fa-phone' aria-hidden></i> Phone: {phone}
               </span>
               <span className={styles.contactInfo}>
-                <i className='fa-solid fa-envelope' aria-hidden></i> Email :
-                {footerData.aboutWidget.email}
+                <i className='fa-solid fa-envelope' aria-hidden></i> Email:{' '}
+                {email}
               </span>
             </div>
 
-            <div className={`${styles.usefulLink} ${styles.contentWrap}`}>
-              <h2>Useful Link</h2>
-              {footerData.usefulLink.map((item, index) => (
-                <a href={item.url} key={index}>
-                  {item.text}
-                </a>
+            <div className={`${styles.contentWrap} ${styles.usefulLink}`}>
+              <h2 className={styles.title}>Useful Link</h2>
+              {usefulLink.map((item, index) => (
+                <UsefulLinkContent data={item} key={index} />
               ))}
             </div>
 
-            <div className={`${styles.latestBlog} ${styles.contentWrap}`}>
-              <h2>Latest Blog Post</h2>
-              {footerData.latestBlog.map((item, index) => (
-                <div className={styles.latestBlogContent} key={index}>
-                  <figure className={styles.blogImage}>
-                    <Image
-                      src={item.imgSrc}
-                      alt={item.imgAlt}
-                      layout='responsive'
-                    />
-                    <a href={item.url}>
-                      <i
-                        className='fa-solid fa-link'
-                        style={{ fontSize: '16px' }}
-                        aria-hidden
-                      ></i>
-                    </a>
-                  </figure>
-                  <div className={styles.blogText}>
-                    <a href={item.url}>{item.title}</a>
-                    <p>{item.time}</p>
-                  </div>
-                </div>
+            <div className={`${styles.contentWrap} ${styles.latestBlog}`}>
+              <h2 className={styles.title}>Latest Blog Post</h2>
+              {latestBlog.map((item, index) => (
+                <LatestBlogContent data={item} key={index} />
               ))}
             </div>
 
-            <div className={`${styles.openingHours} ${styles.contentWrap}`}>
-              <h2>Opening Hours</h2>
-              {footerData.openingHours.map((item, index) =>
-                item.note ? (
-                  <p key={index}>{item.note}</p>
-                ) : (
-                  <div className={styles.openingHoursContent} key={index}>
-                    <p>{item.date}</p>
-                    <span>..............</span>
-                    <p>{item.hours}</p>
-                  </div>
-                )
-              )}
+            <div className={`${styles.contentWrap} ${styles.openingHours}`}>
+              <h2 className={styles.title}>Opening Hours</h2>
+              {openingHours.map((item, index) => (
+                <OpeningHoursContent data={item} key={index} />
+              ))}
             </div>
           </div>
         </div>
@@ -85,7 +61,7 @@ export default function Footer() {
       <div className={styles.footerBottom}>
         <div className='container'>
           <div className={styles.footerBottomInner}>
-            <p>Copyright © 2020. All Rights Reserved</p>
+            <p className={styles.copyright}>{copyright}</p>
           </div>
         </div>
       </div>

@@ -25,6 +25,7 @@
         display: flex;
         flex-direction: column;
         width: 25%;
+        padding: 0 15px;
 
         @include Responsive(M) {
           width: 50%;
@@ -35,7 +36,7 @@
           width: 100%;
         }
 
-        h2 {
+        .title {
           position: relative;
           font-size: 14px;
           font-weight: 500;
@@ -55,118 +56,25 @@
             background-color: #feb518;
           }
         }
-      }
 
-      .aboutWidget {
-        padding: 0 15px;
-
-        .logo {
-          max-width: 200px;
-          margin: 0;
-        }
-
-        p {
-          margin: 10px 0 20px;
-        }
-
-        .contactInfo {
-          margin: 0 0 10px;
-        }
-      }
-
-      .usefulLink {
-        flex-shrink: 9;
-        padding: 0 15px;
-
-        a {
-          text-transform: capitalize;
-          margin: 0 0 10px;
-          width: fit-content;
-          transition: color 0.5s;
-
-          &:hover {
-            color: #ffffff;
-          }
-        }
-      }
-
-      .latestBlog {
-        padding: 0 15px;
-
-        .latestBlogContent {
-          display: flex;
-          margin-bottom: 16px;
-          gap: 16px;
-
-          &:hover {
-            .blogImage {
-              a {
-                opacity: 1;
-              }
-            }
-          }
-
-          .blogImage {
-            display: block;
-            position: relative;
-            flex-shrink: 0;
-            flex-grow: 1;
-            max-width: 68px;
+        &.aboutWidget {
+          .logo {
+            max-width: 180px;
             width: 100%;
-            height: fit-content;
-            // height: 68px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid #5c5c5c;
             margin: 0;
-
-            a {
-              transition: opacity 0.5s;
-              position: absolute;
-              left: 0px;
-              top: 0px;
-              width: 100%;
-              height: 100%;
-              background: rgba(254, 181, 24, 0.8);
-              color: #ffffff;
-              opacity: 0;
-              border-radius: 50%;
-              display: flex;
-              // flex-direction: column;
-              justify-content: center;
-              align-items: center;
-            }
           }
 
-          .blogText {
-            a {
-              position: relative;
-              font-size: 14px;
-              color: #cccccc;
-              line-height: 1.8em;
-              margin-bottom: 0px;
-            }
+          .description {
+            margin: 10px 0 20px;
+          }
 
-            p {
-              margin: 0;
-            }
+          .contactInfo {
+            margin: 0 0 10px;
           }
         }
-      }
 
-      .openingHours {
-        padding: 0 15px;
-
-        .openingHoursContent {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-bottom: 25px;
-
-          p {
-            margin: 0;
-            text-transform: capitalize;
-          }
+        &.usefulLink {
+          flex-shrink: 9;
         }
       }
     }
@@ -178,7 +86,7 @@
     background-color: #111111;
 
     .footerBottomInner {
-      p {
+      .copyright {
         margin: 0;
         color: #999999;
         font-size: 13px;

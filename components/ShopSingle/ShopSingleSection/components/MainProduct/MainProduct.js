@@ -1,6 +1,4 @@
 import styles from './MainProduct.module.scss';
-// import { flyingNinjaProductData } from '../../../../../utils/dataConfig';
-import Image from 'next/image';
 import StarRating from '../../../../StarRating/StarRating';
 import { useState } from 'react';
 import Button from '../../../../Button/Button';
@@ -25,6 +23,18 @@ const ReviewSchema = Yup.object().shape({
 });
 
 export default function MainProduct({ data, className }) {
+  const {
+    imgSrc,
+    imgAlt,
+    title,
+    shortDescription,
+    totalReviews,
+    price,
+    oldPrice,
+    starRating,
+    description,
+    reviews,
+  } = data;
   const [amountProduct, setAmountProduct] = useState(0);
   const [activeSubContent, setActiveSubContent] = useState('description');
 
@@ -36,31 +46,25 @@ export default function MainProduct({ data, className }) {
     <div className={`${styles.mainProduct} ${className}`}>
       <div className={styles.mainInfo}>
         <figure className={styles.image}>
-          {/* <Image src={data.imgSrc} alt={data.imgAlt} layout='responsive' /> */}
-          <ModalImage
-            src={data.imgSrc}
-            alt={data.imgAlt}
-
-            // setVisibility={setModalImage}
-          />
+          <ModalImage src={imgSrc} alt={imgAlt} />
         </figure>
         <div className={styles.textWrap}>
-          <h3 className={styles.title}>{data.title}</h3>
+          <h3 className={styles.title}>{title}</h3>
 
           <div className={styles.inlineWrapReviews}>
-            <StarRating rating={data.starRating} />
+            <StarRating rating={starRating} />
             <a className={styles.totalReviews} href='#'>
-              ({data.totalReviews} customer reviews)
+              ({totalReviews} customer reviews)
             </a>
           </div>
 
           <p className={styles.shortDescription}>
-            <ReadMore>{data.shortDescription}</ReadMore>
+            <ReadMore>{shortDescription}</ReadMore>
           </p>
 
           <div className={styles.inlineWrapPrice}>
-            <p className={styles.oldPrice}>{data.oldPrice}</p>
-            <p className={styles.price}>{data.price}</p>
+            <p className={styles.oldPrice}>{oldPrice}</p>
+            <p className={styles.price}>{price}</p>
           </div>
 
           <div className={styles.inlineWrapFunc}>
@@ -92,7 +96,7 @@ export default function MainProduct({ data, className }) {
             }`}
             onClick={() => setActiveSubContent('reviews')}
           >
-            Reviews ({data.totalReviews})
+            Reviews ({totalReviews})
           </Button>
         </div>
 
@@ -100,16 +104,16 @@ export default function MainProduct({ data, className }) {
           <div className={styles.descriptionWrap}>
             <h2 className={styles.title}>description</h2>
             <p className={styles.description}>
-              <ReadMore length={250}>{data.description}</ReadMore>
+              <ReadMore length={250}>{description}</ReadMore>
             </p>
           </div>
         )}
         {activeSubContent === 'reviews' && (
           <div className={styles.reviewsWrap}>
             <h2 className={styles.title}>
-              {data.totalReviews} Reviews For {data.title}
+              {totalReviews} Reviews For {title}
             </h2>
-            {data.reviews.map((item, index) => (
+            {reviews.map((item, index) => (
               <ReviewComment data={item} key={index} />
             ))}
 

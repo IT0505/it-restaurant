@@ -5,25 +5,15 @@ import Parallax from '../../Parallax/Parallax';
 import Image from 'next/image';
 
 export default function DinnerTitle() {
+  const { title, slogan, backgroundImage, imgSrc, imgAlt } = dinnerTitleData;
   return (
-    <Parallax
-      backgroundImage={dinnerTitleData.backgroundImage}
-      className={styles.dinnerTitle}
-    >
+    <Parallax backgroundImage={backgroundImage} className={styles.dinnerTitle}>
       <div className='container'>
         <div className={styles.dinnerTitleInner}>
           <figure className={styles.icon}>
-            <Image
-              src={dinnerTitleData.iconSrc}
-              alt={dinnerTitleData.iconAlt}
-              layout='responsive'
-            />
+            <Image src={imgSrc} alt={imgAlt} layout='responsive' />
           </figure>
-          <MainTitle
-            slogan={dinnerTitleData.slogan}
-            title={dinnerTitleData.title}
-            style={'style1'}
-          />
+          <MainTitle slogan={slogan} title={title} style={'style1'} />
         </div>
       </div>
     </Parallax>

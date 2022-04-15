@@ -1,17 +1,17 @@
 import styles from './Navigation.module.scss';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-// import logoImg from '../../assets/images/logo.png';
-// import logoImg2 from '../../assets/images/logo-2.png';
 import Button from '../../../Button/Button';
 import Submenu from './components/Submenu/Submenu';
-// import SocialIcon from './components/SocialIcon/SocialIcon';
-// import { navigationData } from '../../../../utils/dataConfig';
 import Link from 'next/link';
+import SocialIcon from '../../../SocialIcon/SocialIcon';
 
 export default function Navigation({ data }) {
-  const { navigationList, socialIcon, logoSrc, logoAlt, logoSrc1, logoAlt1 } =
-    data;
+  const {
+    navigation: { logoSrc, logoAlt, logoSrc1, logoAlt1, navigationList },
+    socialIcons,
+  } = data;
+
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [top, setTop] = useState(true);
 
@@ -87,10 +87,8 @@ export default function Navigation({ data }) {
             ))}
 
             <div className={styles.socialIconWrap}>
-              {socialIcon.map((item, index) => (
-                <a href={item.url} key={index} className={styles.socialIcon}>
-                  <i className={item.icon}></i>
-                </a>
+              {socialIcons.map((item, index) => (
+                <SocialIcon data={item} key={index} style={'style1'} />
               ))}
             </div>
 

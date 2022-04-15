@@ -32,7 +32,7 @@
           margin: 0;
         }
 
-        .socialIcon {
+        .socialIcons {
           padding: 8px 0px;
           margin-right: 25px;
           display: inline-block;
@@ -41,23 +41,6 @@
           @include Responsive(M) {
             margin: 0;
             border: none;
-          }
-
-          a {
-            position: relative;
-            display: inline-block;
-            text-align: center;
-            margin-right: 26px;
-            line-height: 22px;
-            font-size: 13px;
-            color: #dddddd;
-            &:hover {
-              color: #feb518;
-            }
-
-            @include Responsive(M) {
-              margin: 0 10px;
-            }
           }
         }
       }

@@ -13,8 +13,22 @@
     width: 100%;
   }
 
-  .sideBarItem {
-    margin-bottom: 20px;
+  .sideBarContent {
+    margin-bottom: 30px;
+
+    .title {
+      margin-bottom: 25px;
+      font-size: 18px;
+      color: #253d4a;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+
+    .sideBarList {
+      list-style: none;
+      padding: 0px;
+      margin: 0;
+    }
 
     .searchBar {
       position: relative;

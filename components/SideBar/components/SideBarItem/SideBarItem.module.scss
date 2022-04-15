@@ -1,80 +1,65 @@
 .sideBarItem {
-  .title {
-    margin-bottom: 25px;
-    font-size: 18px;
-    color: #253d4a;
-    font-weight: 400;
-    text-transform: capitalize;
+  line-height: 24px;
+  position: relative;
+  display: flex;
+
+  &:last-child {
+    margin-bottom: 0px;
   }
-  .sideBarList {
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
 
-    .sideBarItem {
-      line-height: 24px;
+  &::before {
+    background-color: #c2c3c5;
+    border-radius: 50%;
+    color: #c2c3c5;
+    content: '';
+    font-size: 26px;
+    height: 5px;
+    left: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 22px;
+    width: 5px;
+  }
+
+  &.imgItem {
+    margin-bottom: 25px;
+
+    &:hover {
+      .image {
+        opacity: 0.5;
+      }
+    }
+    .image {
       position: relative;
-      display: flex;
+      max-width: 80px;
+      width: 100%;
+      min-height: 80px;
+      overflow: hidden;
+      flex-grow: 1;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
 
-      &:last-child {
-        margin-bottom: 0px;
-      }
+    .link {
+      padding-top: 5px;
+      font-family: 'Roboto', serif;
+      font-size: 15px;
+      height: fit-content;
+      line-height: 1.4em;
+    }
+  }
 
-      &::before {
-        background-color: #c2c3c5;
-        border-radius: 50%;
-        color: #c2c3c5;
-        content: '';
-        font-size: 26px;
-        height: 5px;
-        left: 0;
-        line-height: 24px;
-        position: absolute;
-        top: 22px;
-        width: 5px;
-      }
+  .link {
+    color: #777777;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 12px 15px 5px 0;
+    margin-left: 20px;
 
-      &.imgItem {
-        margin-bottom: 25px;
-
-        &:hover {
-          .image {
-            opacity: 0.5;
-          }
-        }
-        .image {
-          position: relative;
-          max-width: 80px;
-          width: 100%;
-          min-height: 80px;
-          overflow: hidden;
-          flex-grow: 1;
-          flex-shrink: 0;
-          cursor: pointer;
-        }
-
-        .link {
-          padding-top: 5px;
-          font-family: 'Roboto', serif;
-          font-size: 15px;
-          height: fit-content;
-          line-height: 1.4em;
-        }
-      }
-
-      .link {
-        color: #777777;
-        display: block;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 24px;
-        padding: 12px 15px 5px 0;
-        margin-left: 20px;
-
-        &:hover {
-          color: #feb518;
-        }
-      }
+    &:hover {
+      color: #feb518;
     }
   }
 }

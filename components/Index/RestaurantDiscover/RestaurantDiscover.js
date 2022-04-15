@@ -7,7 +7,6 @@ import MainTitle from '../../MainTitle/MainTitle';
 import { Autoplay, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -15,13 +14,12 @@ export default function RestaurantDiscover() {
   const pagination = {
     bulletActiveClass: styles.active,
     clickable: true,
-    // bulletClass: styles.pagination,
     renderBullet: function (index, className) {
       return `<span class="${className} ${styles.pagination}"></span>`;
     },
   };
 
-  const mainContent = restaurantDiscoverData.mainContent;
+  const { mainContent, swiperImgs } = restaurantDiscoverData;
   return (
     <div className={`${styles.restaurantDiscover} section`}>
       <div className='container'>
@@ -36,9 +34,7 @@ export default function RestaurantDiscover() {
             <p className={styles.description}>{mainContent.description2}</p>
             <Button className={styles.button}>Read More</Button>
           </div>
-          {/* <div className={`${styles.swiperWrap} animate`}> */}
           <Swiper
-            // install Swiper modules
             modules={[Autoplay, Pagination]}
             spaceBetween={40}
             slidesPerView={1}
@@ -56,7 +52,7 @@ export default function RestaurantDiscover() {
               },
             }}
           >
-            {restaurantDiscoverData.swiperImgs.map((item, index) => (
+            {swiperImgs.map((item, index) => (
               <SwiperSlide className={styles.swiperSlide} key={index}>
                 {({ isActive }) => (
                   <figure
@@ -72,7 +68,6 @@ export default function RestaurantDiscover() {
               </SwiperSlide>
             ))}
           </Swiper>
-          {/* </div> */}
         </div>
       </div>
     </div>

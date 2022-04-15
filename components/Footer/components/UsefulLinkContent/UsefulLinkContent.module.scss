@@ -1,0 +1,10 @@
+.usefulLinkContent {
+  text-transform: capitalize;
+  margin: 0 0 10px;
+  width: fit-content;
+  transition: color 0.5s;
+
+  &:hover {
+    color: #ffffff;
+  }
+}

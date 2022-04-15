@@ -49,10 +49,6 @@ export default function SlideShow() {
     }
   };
 
-  // setInterval(() => {
-  //   setSlide(slide === slideLength - 1 ? 0 : slide + 1);
-  // }, 15000);
-
   return (
     <div className={styles.slideshow}>
       {slideshowItems.map((item, index) => (
@@ -80,8 +76,6 @@ export default function SlideShow() {
                     src={item.iconSrc}
                     alt={item.imgAlt}
                     layout='responsive'
-                    // layout='fill'
-                    // objectFit='contain'
                   ></Image>
                 </figure>
               )}

@@ -11,7 +11,6 @@ export default function ZaloWidget() {
         data-autopopup='0'
         data-width='300'
         data-height='300'
-        // style={{ left: '20px', bottom: '20px' }}
       ></div>
       <Script src='https://sp.zalo.me/plugins/sdk.js'></Script>
     </>

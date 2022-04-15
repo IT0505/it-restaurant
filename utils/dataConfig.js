@@ -65,11 +65,7 @@ import news2 from '../assets/images/news-7.jpg';
 import news3 from '../assets/images/news-4.jpg';
 
 export const headerData = {
-  logoSrc: logoImg,
-  logoAlt: 'restaurant',
-  logoSrc1: logoImg1,
-  logoAlt1: 'restaurant',
-  socialIcon: [
+  socialIcons: [
     {
       url: '#',
       icon: 'fa-brands fa-facebook-f',
@@ -88,49 +84,57 @@ export const headerData = {
     },
   ],
 
-  reservationPhone: '+011 29 345 678',
-  openingHours: '9:00am - 10:00pm',
+  headerInfo: {
+    reservationPhone: '+011 29 345 678',
+    openingHours: '9:00am - 10:00pm',
+  },
 
-  navigationList: [
-    {
-      title: 'Home',
-      url: '/',
-    },
-    {
-      title: 'Menu',
-      submenu: [
-        {
-          title: 'Menu Special',
-          url: '/menuspecial',
-          id: 'menu1',
-        },
-        {
-          title: 'Menu',
-          id: 'menu2',
-          url: '/menu',
-        },
-      ],
-    },
-    {
-      title: 'Blog',
-      submenu: [
-        {
-          title: 'Blog',
-          url: '/blog',
-          id: 'blog1',
-        },
-        {
-          title: 'Blog Single',
-          url: '/blogsingle',
-          id: 'blog2',
-        },
-      ],
-    },
-    {
-      title: 'Contact',
-      url: '/contact',
-    },
-  ],
+  navigation: {
+    logoSrc: logoImg,
+    logoAlt: 'restaurant',
+    logoSrc1: logoImg1,
+    logoAlt1: 'restaurant',
+    navigationList: [
+      {
+        title: 'Home',
+        url: '/',
+      },
+      {
+        title: 'Menu',
+        submenu: [
+          {
+            title: 'Menu Special',
+            url: '/menuspecial',
+            id: 'menu1',
+          },
+          {
+            title: 'Menu',
+            id: 'menu2',
+            url: '/menu',
+          },
+        ],
+      },
+      {
+        title: 'Blog',
+        submenu: [
+          {
+            title: 'Blog',
+            url: '/blog',
+            id: 'blog1',
+          },
+          {
+            title: 'Blog Single',
+            url: '/blogsingle',
+            id: 'blog2',
+          },
+        ],
+      },
+      {
+        title: 'Contact',
+        url: '/contact',
+      },
+    ],
+  },
 };
 
 export const slideshowData = {
@@ -165,7 +169,8 @@ export const footerData = {
   aboutWidget: {
     logoSrc: logoImg2,
     logoAlt: 'restaurant',
-    text: 'Marsh mallow muffin soufflé jelly-o tart cake Marshmallow macaroon jelly jubes dont tiramisu croissant cake.',
+    description:
+      'Marsh mallow muffin soufflé jelly-o tart cake Marshmallow macaroon jelly jubes dont tiramisu croissant cake.',
     phone: '(01) 800 433 633',
     email: 'info@Example.com',
   },
@@ -201,40 +206,41 @@ export const footerData = {
       imgAlt: 'food',
       url: '#',
       title: 'Marsh mallow muffin',
-      time: '14th February 2022',
+      date: '14th February 2022',
     },
     {
       imgSrc: blogImg,
       imgAlt: 'food',
       url: '#',
       title: 'Marsh mallow muffin',
-      time: '14th February 2022',
+      date: '14th February 2022',
     },
     {
       imgSrc: blogImg,
       imgAlt: 'food',
       url: '#',
       title: 'Marsh mallow muffin',
-      time: '14th February 2022',
+      date: '14th February 2022',
     },
   ],
   openingHours: [
     {
       date: 'mon - fri',
-      hours: '9:00 am - 23:00 pm',
+      time: '9:00 am - 23:00 pm',
     },
     {
       date: 'saturday',
-      hours: '10:00 am - 22:00 pm',
+      time: '10:00 am - 22:00 pm',
     },
     {
       date: 'sunday',
-      hours: '10:00 am - 21:00 pm',
+      time: '10:00 am - 21:00 pm',
     },
     {
       note: 'Note: Arctica Restaurant is closed on holidays.',
     },
   ],
+  copyright: 'Copyright © 2020. All Rights Reserved',
 };
 
 export const restaurantDiscoverData = {
@@ -303,7 +309,7 @@ export const ourDeliciousMenuData = {
   title: 'Our Delicious Menu',
   slogan: 'Best offers from the house chef',
   backgroundImage: backgroundImg2,
-  slideImgs: [
+  swiperImgs: [
     {
       imgSrc: chickenImg1,
       imgAlt: 'chicken',
@@ -318,7 +324,7 @@ export const ourDeliciousMenuData = {
     },
   ],
   mainContent: {
-    title: 'Our Best Chicken Recipes',
+    subTitle: 'Our Best Chicken Recipes',
     menuList: [
       {
         status: 'new',
@@ -363,15 +369,15 @@ export const ourSpecialDishesData = {
   openingHours: [
     {
       date: 'Monday — Friday',
-      hours: '9:00 am - 23:00 pm',
+      time: '9:00 am - 23:00 pm',
     },
     {
       date: 'Saturday',
-      hours: '10:00 am - 22:00 pm',
+      time: '10:00 am - 22:00 pm',
     },
     {
       date: 'Sunday',
-      hours: '10:00 am - 21:00 pm',
+      time: '10:00 am - 21:00 pm',
     },
     { note: 'Note: Arctica Restaurant is closed on holidays.' },
     { phone: '0844.335.1211' },
@@ -441,31 +447,78 @@ export const ourDeliciousData = {
       name: 'Rick Grimes',
       position: 'Chef cook',
       imgSrc: chefImg1,
-      facebook: '#',
-      twitter: '#',
-      linkedin: '#',
-      instagram: '#',
-      vimeo: '#',
+      socialIcons: [
+        {
+          url: '#',
+          icon: 'fa-brands fa-facebook-f',
+        },
+        {
+          url: '#',
+          icon: 'fa-brands fa-twitter',
+        },
+        {
+          url: '#',
+          icon: 'fa-brands fa-google-plus-g',
+        },
+        {
+          url: '#',
+          icon: 'fa-brands fa-tumblr',
+        },
+        {
+          icon: 'fa-brands fa-vimeo-square',
+          url: '#',
+        },
+      ],
     },
     {
       name: 'Rick Grimes',
       position: 'Chef cook',
       imgSrc: chefImg2,
-      facebook: '#',
-      twitter: '#',
-      linkedin: '#',
-      instagram: '#',
-      vimeo: '#',
+      socialIcons: [
+        {
+          url: '#',
+          icon: 'fa-brands fa-facebook-f',
+        },
+        {
+          url: '#',
+          icon: 'fa-brands fa-twitter',
+        },
+        {
+          url: '#',
+          icon: 'fa-brands fa-google-plus-g',
+        },
+        {
+          url: '#',
+          icon: 'fa-brands fa-tumblr',
+        },
+      ],
     },
     {
       name: 'Rick Grimes',
       position: 'Chef cook',
       imgSrc: chefImg3,
-      facebook: '#',
-      twitter: '#',
-      linkedin: '#',
-      instagram: '#',
-      vimeo: '#',
+      socialIcons: [
+        {
+          url: '#',
+          icon: 'fa-brands fa-facebook-f',
+        },
+        {
+          url: '#',
+          icon: 'fa-brands fa-twitter',
+        },
+        {
+          url: '#',
+          icon: 'fa-brands fa-google-plus-g',
+        },
+        {
+          url: '#',
+          icon: 'fa-brands fa-tumblr',
+        },
+        {
+          icon: 'fa-brands fa-vimeo-square',
+          url: '#',
+        },
+      ],
     },
   ],
 };
@@ -618,7 +671,7 @@ export const ourDeliciousComboData = {
   ],
 };
 
-export const menu1PageTitleData = {
+export const menuPageTitleData = {
   title: 'Taste The Best Dishes.',
   slogan: 'Our Menu List',
   backgroundImage: backgroundImg4,
@@ -722,8 +775,8 @@ export const breakfastMenuData = {
 export const lunchTitleData = {
   title: 'With Meat, Fish or Vegetables',
   slogan: 'Special Lunch Menu Items',
-  iconSrc: serviceIcon5,
-  iconAlt: 'lunch',
+  imgSrc: serviceIcon5,
+  imgAlt: 'lunch',
   backgroundImage: backgroundImg5,
 };
 
@@ -821,8 +874,8 @@ export const lunchMenuData = {
 export const dinnerTitleData = {
   title: 'Our Fresh And Healthy',
   slogan: 'Special Dinner Menu Items',
-  iconSrc: serviceIcon6,
-  iconAlt: 'dinner',
+  imgSrc: serviceIcon6,
+  imgAlt: 'dinner',
   backgroundImage: backgroundImg6,
 };
 
@@ -917,62 +970,47 @@ export const dinnerMenuData = {
   ],
 };
 
-export const shopSinglePageTitleData = {
-  title: 'Flying Ninja',
-  backgroundImage: backgroundImg4,
-};
-
 export const sideBarData = {
-  mainContent: [
+  categories: [
     {
-      title: 'Categories',
-      contents: [
-        {
-          text: 'Home 1',
-          url: '#',
-        },
-        {
-          text: 'Latest news',
-          url: '#',
-        },
-      ],
+      text: 'Home 1',
+      url: '#',
     },
     {
-      title: 'Top Rated',
-      contents: [
-        {
-          text: 'Hearty Grain Breakfast',
-          url: '#',
-          imgSrc: diningImg1,
-          imgAlt: 'breakfast',
-        },
-        {
-          text: 'Hearty Grain Breakfast',
-          url: '#',
-          imgSrc: diningImg4,
-          imgAlt: 'breakfast',
-        },
-        {
-          text: 'Hearty Grain Breakfast',
-          url: '#',
-          imgSrc: diningImg3,
-          imgAlt: 'breakfast',
-        },
-      ],
+      text: 'Latest news',
+      url: '#',
+    },
+  ],
+  topRated: [
+    {
+      text: 'Hearty Grain Breakfast',
+      url: '#',
+      imgSrc: diningImg1,
+      imgAlt: 'breakfast',
     },
     {
-      title: 'Archives',
-      contents: [
-        {
-          text: 'January 2017',
-          url: '#',
-        },
-      ],
+      text: 'Hearty Grain Breakfast',
+      url: '#',
+      imgSrc: diningImg4,
+      imgAlt: 'breakfast',
+    },
+    {
+      text: 'Hearty Grain Breakfast',
+      url: '#',
+      imgSrc: diningImg3,
+      imgAlt: 'breakfast',
+    },
+  ],
+  archives: [
+    {
+      text: 'January 2017',
+      url: '#',
     },
   ],
 };
 
 export const flyingNinjaProductData = {
+  backgroundImage: backgroundImg4,
   title: 'Flying Ninja',
   starRating: '4.5',
   totalReviews: '4',
@@ -1042,8 +1080,6 @@ export const flyingNinjaProductData = {
       name: 'Premium Quality',
       description: 'Pellentesque habitant morbi ',
       price: '£15',
-      // oldPrice: '£12',
-      // starRating: 2,
     },
     {
       imgSrc: poster5,

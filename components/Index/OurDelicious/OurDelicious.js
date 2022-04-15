@@ -1,12 +1,10 @@
 import styles from './OurDelicious.module.scss';
 import MainTitle from '../../MainTitle/MainTitle';
 import { ourDeliciousData } from '../../../utils/dataConfig';
-
-import Image from 'next/image';
-
+import ChefItem from './components/ChefItem/ChefItem';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
-// Import Swiper styles
+
 import 'swiper/css';
 
 export default function OurDelicious() {
@@ -42,40 +40,8 @@ export default function OurDelicious() {
               }}
             >
               {chefList.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <figure className={styles.image}>
-                    <Image
-                      src={item.imgSrc}
-                      alt={item.imgAlt}
-                      layout='responsive'
-                    />
-                    <figcaption className={styles.caption}>
-                      <a
-                        className='fa-brands fa-facebook-f'
-                        href={item.facebook}
-                      ></a>
-                      <a
-                        className='fa-brands fa-twitter'
-                        href={item.twitter}
-                      ></a>
-                      <a
-                        className='fa-brands fa-linkedin-in'
-                        href={item.linkedin}
-                      ></a>
-                      <a
-                        className='fa-brands fa-instagram-square'
-                        href={item.instagram}
-                      ></a>
-                      <a
-                        className='fa-brands fa-vimeo-square'
-                        href={item.vimeo}
-                      ></a>
-                    </figcaption>
-                  </figure>
-                  <div className={styles.lowerContent}>
-                    <h3 className={styles.name}>{item.name}</h3>
-                    <p className={styles.position}>{item.position}</p>
-                  </div>
+                <SwiperSlide key={index} className={styles.swiperSlide}>
+                  <ChefItem data={item} />
                 </SwiperSlide>
               ))}
             </Swiper>

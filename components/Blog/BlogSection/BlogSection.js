@@ -3,12 +3,13 @@ import { blogSectionData } from '../../../utils/dataConfig';
 import BlogContent from '../../BlogContent/BlogContent';
 import SideBar from '../../SideBar/SideBar';
 export default function BlogSection() {
+  const { mainContent } = blogSectionData;
   return (
     <div className={`${styles.blogSection} section`}>
       <div className='container'>
         <div className={styles.blogSectionInner}>
           <div className={styles.blogList}>
-            {blogSectionData.mainContent.map((item, index) => (
+            {mainContent.map((item, index) => (
               <BlogContent
                 className={styles.blogContent}
                 data={item}

@@ -4,6 +4,7 @@ import MainProduct from './components/MainProduct/MainProduct';
 import SideBar from '../../SideBar/SideBar';
 import FoodCard from '../../FoodCard/FoodCard';
 export default function ShopSingleSection() {
+  const { relatedProduct } = flyingNinjaProductData;
   return (
     <div className={`${styles.shopSingleSection} section`}>
       <div className='container'>
@@ -19,7 +20,7 @@ export default function ShopSingleSection() {
             <div className={styles.relatedProduct}>
               <h3 className={styles.title}>Related Product</h3>
               <div className={styles.relatedProductWrap}>
-                {flyingNinjaProductData.relatedProduct.map((item, index) => (
+                {relatedProduct.map((item, index) => (
                   <FoodCard data={item} key={index} />
                 ))}
               </div>

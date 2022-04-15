@@ -5,7 +5,7 @@
   position: relative;
   z-index: 1;
 
-  h2 {
+  .title {
     font-size: 38px;
     font-weight: 500;
     color: #feb518;
@@ -18,7 +18,7 @@
     }
   }
 
-  h3 {
+  .slogan {
     font-family: 'Roboto Slab', serif;
     font-size: 26px;
     font-weight: 700;

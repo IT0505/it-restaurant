@@ -4,19 +4,12 @@ import MainTitle from '../../MainTitle/MainTitle';
 import { blogPageTitleData } from '../../../utils/dataConfig';
 
 export default function PageTitle() {
+  const { title, slogan, backgroundImage } = blogPageTitleData;
   return (
-    <Parallax
-      backgroundImage={blogPageTitleData.backgroundImage}
-      className={styles.pageTitle}
-    >
+    <Parallax backgroundImage={backgroundImage} className={styles.pageTitle}>
       <div className='container'>
         <div className={styles.pageTitleInner}>
-          <MainTitle
-            // className={styles.title}
-            title={blogPageTitleData.title}
-            slogan={blogPageTitleData.slogan}
-            style={'style1'}
-          />
+          <MainTitle title={title} slogan={slogan} style={'style1'} />
         </div>
       </div>
     </Parallax>

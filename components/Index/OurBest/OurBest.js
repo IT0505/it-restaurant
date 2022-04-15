@@ -4,18 +4,12 @@ import { ourBestData } from '../../../utils/dataConfig';
 import MainTitle from '../../MainTitle/MainTitle';
 
 export default function OurBest() {
+  const { title, slogan, backgroundImage } = ourBestData;
   return (
-    <Parallax
-      backgroundImage={ourBestData.backgroundImage}
-      className={styles.ourBest}
-    >
+    <Parallax backgroundImage={backgroundImage} className={styles.ourBest}>
       <div className='container'>
         <div className={styles.ourBestInner}>
-          <MainTitle
-            slogan={ourBestData.slogan}
-            title={ourBestData.title}
-            style={'style1'}
-          />
+          <MainTitle slogan={slogan} title={title} style={'style1'} />
         </div>
       </div>
     </Parallax>

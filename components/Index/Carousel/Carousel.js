@@ -4,13 +4,13 @@ import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
-// Import Swiper styles
+
 import 'swiper/css';
 
 export default function Carousel() {
-  const imgList = carouselData.imgList;
+  const { imgList } = carouselData;
   return (
-    <div className={styles.carouselContainer}>
+    <div className={styles.carousel}>
       <Swiper
         className={styles.myCarousel}
         slidesPerView={1}

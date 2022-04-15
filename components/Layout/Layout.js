@@ -7,8 +7,8 @@ export default function Layout({ children }) {
     <div className={styles.pageWrap}>
       <Header />
       {children}
-      <ScrollUpButton />
       <Footer />
+      <ScrollUpButton />
     </div>
   );
 }
