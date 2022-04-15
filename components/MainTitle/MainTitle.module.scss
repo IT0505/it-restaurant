@@ -4,14 +4,14 @@
   text-align: center;
   position: relative;
   z-index: 1;
+  margin: 0 0 20px;
 
   .title {
     font-size: 38px;
     font-weight: 500;
     color: #feb518;
-    line-height: 1.4em;
     font-family: 'Dancing Script', cursive;
-    margin: 0 0 5px;
+    line-height: 1.4em;
 
     @include Responsive(XS) {
       font-size: 30px;
@@ -23,10 +23,8 @@
     font-size: 26px;
     font-weight: 700;
     color: #333333;
-    margin-bottom: 20px;
     text-transform: capitalize;
     line-height: 1.4em;
-    margin: 0 0 20px;
 
     @include Responsive(XS) {
       font-size: 20px;
@@ -34,12 +32,34 @@
   }
 
   &.style1 {
-    h2 {
+    margin: 0;
+
+    .title {
       color: #feb518;
+      font-size: 38px;
+      margin: 0;
+      line-height: 1.6em;
     }
 
-    h3 {
+    .slogan {
       color: #ffffff;
+      font-size: 36px;
+      line-height: 1.6em;
+    }
+  }
+
+  &.style2 {
+    text-align: left;
+
+    .title {
+      font-size: 33px;
+      margin: 0;
+      line-height: 1.4em;
+    }
+
+    .slogan {
+      font-size: 28px;
+      line-height: 1.4em;
     }
   }
 }

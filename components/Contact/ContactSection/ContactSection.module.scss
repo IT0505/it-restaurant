@@ -1,0 +1,95 @@
+@import '../../../styles/_mixin';
+
+.contactSection {
+  padding-bottom: 0;
+
+  .contactSectionInner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+
+    @include Responsive(M) {
+      flex-direction: column-reverse;
+    }
+
+    .contactImage {
+      max-width: 50%;
+      width: 100%;
+      padding: 0 15px;
+      flex-shrink: 1;
+
+      @include Responsive(M) {
+        max-width: 100%;
+      }
+    }
+
+    .contactFormWrap {
+      margin-top: 80px;
+      padding: 0 15px;
+      width: -webkit-fill-available;
+
+      .contactForm {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+
+        .button {
+          max-width: 100%;
+          width: 100%;
+          background-color: #000;
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: 700;
+
+          &:hover {
+            background-color: transparent;
+            color: #000;
+            border-color: #000;
+          }
+        }
+
+        .inputWrap {
+          max-width: 50%;
+          width: 100%;
+          padding: 0 10px;
+          margin-bottom: 20px;
+
+          .input,
+          .textArea {
+            display: block;
+            width: 100%;
+            line-height: 22px;
+            height: 45px;
+            font-size: 13px;
+            border: 1px solid #e2e2e2;
+            padding: 10px 15px 10px 22px;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+            transition: all 500ms ease;
+
+            &:focus {
+              border-color: #feb518;
+            }
+          }
+          .textArea {
+            height: 170px;
+          }
+
+          .errorMessage {
+            color: red;
+          }
+
+          &.fullWidth {
+            max-width: 100%;
+            width: 100%;
+          }
+
+          @include Responsive(M) {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

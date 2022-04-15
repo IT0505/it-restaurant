@@ -2,14 +2,15 @@
   "name": "restaurant-nhat-tam",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "export": "npm run build && next export"
   },
   "dependencies": {
     "aphrodite": "^2.4.0",
     "formik": "^2.2.9",
+    "frontmatter-markdown-loader": "^3.7.0",
     "next": "^12.0.10",
     "react": "^17.0.2",
     "react-animations": "^1.0.0",

@@ -20,7 +20,7 @@
 
     .mainContent {
       .title {
-        text-align: left;
+        // text-align: left;
 
         @include Responsive(M) {
           text-align: center;

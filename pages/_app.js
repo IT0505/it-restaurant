@@ -1,6 +1,5 @@
 import '../styles/globals.scss';
-// import '@fortawesome/fontawesome-free/css/all.css';
-
+import Script from 'next/script';
 import { useEffect } from 'react';
 import {
   fadeIn,
@@ -78,6 +77,10 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Script
+        src='https://kit.fontawesome.com/397c67969c.js'
+        crossOrigin='anonymous'
+      ></Script>
       <Component {...pageProps} />
     </>
   );

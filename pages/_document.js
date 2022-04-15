@@ -31,12 +31,6 @@ export default class MyDocument extends Document {
             data-aphrodite
             dangerouslySetInnerHTML={{ __html: this.props.css.content }}
           />
-
-          {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-          <script
-            src='https://kit.fontawesome.com/397c67969c.js'
-            crossOrigin='anonymous'
-          ></script>
         </Head>
         <body>
           <Main />

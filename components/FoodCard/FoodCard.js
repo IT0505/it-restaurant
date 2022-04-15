@@ -12,12 +12,13 @@ export default function FoodCard({ data }) {
     name,
     description,
     price,
+    url,
     oldPrice,
     starRating,
   } = data;
   return (
     <div className={styles.foodCard}>
-      <Link href='#'>
+      <Link href={url}>
         <a className={styles.image}>
           {status && <span className={styles.status}>{status}</span>}
           <Image src={imgSrc} alt={imgAlt} layout='responsive' />
@@ -33,7 +34,7 @@ export default function FoodCard({ data }) {
           </span>
         </a>
       </Link>
-      <Link href='#'>
+      <Link href={url}>
         <a className={styles.inlineLink}>
           {name}
           <span className={styles.inlinePrice}>

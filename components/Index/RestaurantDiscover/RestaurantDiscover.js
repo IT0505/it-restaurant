@@ -27,6 +27,7 @@ export default function RestaurantDiscover() {
           <div className={`${styles.mainContent}`}>
             <MainTitle
               className={styles.title}
+              style='style2'
               slogan={mainContent.slogan}
               title={mainContent.title}
             />
