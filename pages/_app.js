@@ -77,6 +77,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></Script>
       <Script
         src='https://kit.fontawesome.com/397c67969c.js'
         crossOrigin='anonymous'

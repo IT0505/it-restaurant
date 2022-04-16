@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { restaurantDiscoverData } from '../../../utils/dataConfig';
 import Button from '../../Button/Button';
 import MainTitle from '../../MainTitle/MainTitle';
+import { attributes } from '../../../content/home.md';
 
 import { Autoplay, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,6 +12,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 export default function RestaurantDiscover() {
+  const { title, slogan, description1, description2 } = attributes;
+  console.log(attributes);
+
   const pagination = {
     bulletActiveClass: styles.active,
     clickable: true,
@@ -28,8 +32,8 @@ export default function RestaurantDiscover() {
             <MainTitle
               className={styles.title}
               style='style2'
-              slogan={mainContent.slogan}
-              title={mainContent.title}
+              slogan={slogan}
+              title={title}
             />
             <p className={styles.description}>{mainContent.description1}</p>
             <p className={styles.description}>{mainContent.description2}</p>
