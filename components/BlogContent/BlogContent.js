@@ -22,9 +22,9 @@ export default function BlogContent({ data, className }) {
             <Image src={imgSrc} alt={imgAlt} layout='responsive'></Image>
           </a>
         </Link>
-        <a href={url} className={styles.title}>
-          {title}
-        </a>
+        <Link href={url}>
+          <a className={styles.title}>{title}</a>
+        </Link>
         <h3 className={styles.date}>
           {date} by <span className={styles.highlight}>{author}</span>
         </h3>

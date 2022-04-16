@@ -7,6 +7,7 @@ import ModalImage from '../../../../ModalImage/ModalImage';
 import ReadMore from '../../../../ReadMore/ReadMore';
 import ReviewComment from '../../../../ReviewComment/ReviewComment';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+import Link from 'next/link';
 import * as Yup from 'yup';
 
 const ReviewSchema = Yup.object().shape({
@@ -53,9 +54,14 @@ export default function MainProduct({ data, className }) {
 
           <div className={styles.inlineWrapReviews}>
             <StarRating rating={starRating} />
-            <a className={styles.totalReviews} href='#'>
-              ({totalReviews} customer reviews)
-            </a>
+            <Link href='#reviews'>
+              <a
+                className={styles.totalReviews}
+                onClick={() => setActiveSubContent('reviews')}
+              >
+                ({totalReviews} customer reviews)
+              </a>
+            </Link>
           </div>
 
           <p className={styles.shortDescription}>
@@ -109,7 +115,7 @@ export default function MainProduct({ data, className }) {
           </div>
         )}
         {activeSubContent === 'reviews' && (
-          <div className={styles.reviewsWrap}>
+          <div className={styles.reviewsWrap} id='reviews'>
             <h2 className={styles.title}>
               {totalReviews} Reviews For {title}
             </h2>

@@ -2,6 +2,7 @@ import styles from './OurServices.module.scss';
 import { ourServicesData } from '../../../utils/dataConfig';
 import Image from 'next/image';
 import MainTitle from '../../MainTitle/MainTitle';
+import Link from 'next/Link';
 
 export default function OurServices() {
   const { mainContent, title, slogan } = ourServicesData;
@@ -20,11 +21,13 @@ export default function OurServices() {
                     layout='responsive'
                   />
                 </div>
-                <a className={styles.title}>{item.title}</a>
+                <Link href={item.url}>
+                  <a className={styles.title}>{item.title}</a>
+                </Link>
                 <p className={styles.description}>{item.description}</p>
-                <a href={item.url} className={styles.url}>
-                  Read More
-                </a>
+                <Link href={item.url}>
+                  <a className={styles.url}>Read More</a>
+                </Link>
               </div>
             ))}
           </div>

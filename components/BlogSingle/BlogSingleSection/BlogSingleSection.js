@@ -3,6 +3,7 @@ import Image from 'next/image';
 import SideBar from '../../SideBar/SideBar';
 import ReviewComment from '../../ReviewComment/ReviewComment';
 import ReadMore from '../../ReadMore/ReadMore';
+import Link from 'next/link';
 import { blogSingleSectionData } from '../../../utils/dataConfig';
 export default function BlogSingleSection() {
   const { title, imgSrc, imgAlt, date, author, description, url, comments } =
@@ -15,9 +16,9 @@ export default function BlogSingleSection() {
             <figure className={styles.image}>
               <Image src={imgSrc} alt={imgAlt} layout='responsive'></Image>
             </figure>
-            <a href={url} className={styles.title}>
-              {title}
-            </a>
+            <Link href={url}>
+              <a className={styles.title}>{title}</a>
+            </Link>
             <h3 className={styles.date}>
               {date} by <span className={styles.highlight}>{author}</span>
             </h3>
