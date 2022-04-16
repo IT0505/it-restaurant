@@ -4,7 +4,7 @@ export default function Parallax({ className, backgroundImage, children }) {
   return (
     <div
       className={`${styles.parallax} ${className}`}
-      style={{ backgroundImage: `url(${backgroundImage.src})` }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {children}
     </div>
