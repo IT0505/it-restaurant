@@ -8,5 +8,5 @@ description1: A cappuccino is an Italian coffee drink which is traditionally
 description2: It is typically smaller in volume than a caffe latte, with a
   thicker layer of micro foam. in this context referring to the color of the
   beverage when milk
-background1: assets/images/1-1024x750.jpg
+background1: public/img/1-1024x750.jpg
 ---
