@@ -11,14 +11,23 @@ collections:
         name: 'home'
         file: 'content/home.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Slogan', name: 'slogan', widget: 'string' }
-          - { label: 'Description1', name: 'description1', widget: 'text' }
-          - { label: 'Description2', name: 'description2', widget: 'text' }
-          - label: 'Swiper Images'
-            name: 'swiperImages'
-            widget: list
+          - label: 'Section 1'
+            name: 'section1'
+            widget: 'object'
+            collapsed: true
             fields:
-              - { label: 'Image Source', name: 'imgSrc', widget: 'image' }
-              - { label: 'Image Alt', name: 'imgAlt', widget: 'string' }
-          - { label: 'Background Image', name: 'background1', widget: 'image' }
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Slogan', name: 'slogan', widget: 'string' }
+              - { label: 'Description1', name: 'description1', widget: 'text' }
+              - { label: 'Description2', name: 'description2', widget: 'text' }
+              - label: 'Swiper Images'
+                name: 'swiperImages'
+                widget: list
+                fields:
+                  - { label: 'Image Source', name: 'imgSrc', widget: 'image' }
+                  - { label: 'Image Alt', name: 'imgAlt', widget: 'string' }
+              - {
+                  label: 'Background Image',
+                  name: 'background1',
+                  widget: 'image',
+                }
