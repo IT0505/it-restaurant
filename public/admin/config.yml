@@ -26,6 +26,13 @@ collections:
                 fields:
                   - { label: 'Image Source', name: 'imgSrc', widget: 'image' }
                   - { label: 'Image Alt', name: 'imgAlt', widget: 'string' }
+          - label: 'Section 2'
+            name: 'section2'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Slogan', name: 'slogan', widget: 'string' }
               - {
                   label: 'Background Image',
                   name: 'background1',
