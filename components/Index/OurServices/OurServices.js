@@ -1,14 +1,14 @@
-import styles from './OurServices.module.scss';
-import { ourServicesData } from '../../../utils/dataConfig';
-import Image from 'next/image';
-import MainTitle from '../../MainTitle/MainTitle';
-import Link from 'next/Link';
+import styles from "./OurServices.module.scss";
+import {ourServicesData} from "../../../utils/dataConfig";
+import Image from "next/image";
+import MainTitle from "../../MainTitle/MainTitle";
+import Link from "next/link";
 
 export default function OurServices() {
-  const { mainContent, title, slogan } = ourServicesData;
+  const {mainContent, title, slogan} = ourServicesData;
   return (
     <div className={styles.ourServices}>
-      <div className='container'>
+      <div className="container">
         <div className={`${styles.ourServicesInner} section`}>
           <MainTitle slogan={slogan} title={title} />
           <div className={styles.mainContent}>
@@ -18,7 +18,7 @@ export default function OurServices() {
                   <Image
                     src={item.imgSrc}
                     alt={item.imgAlt}
-                    layout='responsive'
+                    layout="responsive"
                   />
                 </div>
                 <Link href={item.url}>
