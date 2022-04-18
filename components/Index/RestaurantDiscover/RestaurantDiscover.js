@@ -12,8 +12,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 export default function RestaurantDiscover() {
-  const { title, slogan, description1, description2, swiperImages } =
-    attributes;
+  const {
+    section1: { title, slogan, description1, description2, swiperImages },
+  } = attributes;
   console.log(attributes);
 
   const pagination = {
@@ -24,7 +25,6 @@ export default function RestaurantDiscover() {
     },
   };
 
-  const { mainContent, swiperImgs } = restaurantDiscoverData;
   return (
     <div className={`${styles.restaurantDiscover} section`}>
       <div className='container'>

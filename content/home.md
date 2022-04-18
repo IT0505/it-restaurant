@@ -1,7 +1,7 @@
 ---
 section1:
   title: Great New Dishes
-  slogan: Discover Our Restaurant1
+  slogan: Discover Our Restaurant
   description1: A cappuccino is an Italian coffee drink which is traditionally
     prepared with espresso, hot milk and steamed milk foam. Coffee makes up a very
     important part of the Italian gastronomic culture. Cream may be used instead
@@ -16,5 +16,8 @@ section1:
       imgAlt: restaurant
     - imgSrc: /img/1-1.jpg
       imgAlt: restaurant
-  background1: /img/1-1.jpg
+section2:
+  title: Healthy Fresh And Hot Dishes.
+  slogan: Best Offers From The House Chef.
+  background1: /img/1-1024x750.jpg
 ---
