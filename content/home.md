@@ -9,11 +9,11 @@ description2: 'It is typically smaller in volume than a caffe latte, with a
   thicker layer of micro foam. in this context referring to the color of the
   beverage when milk'
 swiperImages:
-  - imgSrc: img/1-1.jpg
+  - imgSrc: /img/1-1.jpg
     imgAlt: restaurant
-  - imgSrc: img/1-1.jpg
+  - imgSrc: /img/1-1.jpg
     imgAlt: restaurant
-  - imgSrc: img/1-1.jpg
+  - imgSrc: /img/1-1.jpg
     imgAlt: restaurant
-background1: img/1-1.jpg
+background1: /img/1-1.jpg
 ---

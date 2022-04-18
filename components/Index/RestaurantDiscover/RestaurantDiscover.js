@@ -65,7 +65,7 @@ export default function RestaurantDiscover() {
                     className={`${styles.image} ${isActive && styles.active}`}
                   >
                     <Image
-                      src={'/' + item.imgSrc}
+                      src={item.imgSrc}
                       alt={item.imgAlt}
                       // layout='responsive'
                       layout='fill'
