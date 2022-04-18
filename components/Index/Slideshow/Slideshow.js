@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from './Slideshow.module.scss';
 import Button from '../../Button/Button';
 import { slideshowData } from '../../../utils/dataConfig';
-
+import { attributes } from '../../../content/home.md';
 import { fadeIn, fadeInUp, slideInLeft, slideInRight } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
 
@@ -31,6 +31,11 @@ export default function SlideShow() {
   const slideLength = slideshowData.slideshowItems.length;
   const slideshowItems = slideshowData.slideshowItems;
 
+  const {
+    section1: { slideshowImages },
+  } = attributes;
+
+  console.log('slideshowImages: ', slideshowImages);
   const classNameCustom = (title) => {
     switch (title) {
       case 'The Fresh And Tasty Burgers':
@@ -51,11 +56,11 @@ export default function SlideShow() {
 
   return (
     <div className={styles.slideshow}>
-      {slideshowItems.map((item, index) => (
+      {slideshowImages.map((item, index) => (
         <figure
-          className={`${styles.slide} ${css(classes.fadeIn)} ${
-            slide === index && styles.active
-          }`}
+          className={`${styles.slide} ${styles[item.style]} ${css(
+            classes.fadeIn
+          )} ${slide === index && styles.active}`}
           key={index}
         >
           <Image
@@ -65,17 +70,16 @@ export default function SlideShow() {
             layout='fill'
           />
           <div className={styles.textWrap}>
-            <div
-              className={`${styles.text} ${
-                styles[classNameCustom(item.title)]
-              }`}
-            >
+            <div className={`${styles.text}`}>
               {item.iconSrc && (
-                <figure className={`${styles.image} ${css(classes.fadeInUp)}`}>
+                <figure
+                  className={`${styles.iconImg} ${css(classes.fadeInUp)}`}
+                >
                   <Image
                     src={item.iconSrc}
                     alt={item.imgAlt}
-                    layout='responsive'
+                    layout='fill'
+                    objectFit='contain'
                   ></Image>
                 </figure>
               )}

@@ -16,6 +16,26 @@ collections:
             widget: 'object'
             collapsed: true
             fields:
+              - label: 'Slider Images'
+                name: 'slideshowImages'
+                widget: 'list'
+                fields:
+                  - { label: 'Image Source', name: 'imgSrc', widget: 'image' }
+                  - { label: 'Image Alt', name: 'imgAlt', widget: 'string' }
+                  - { label: 'Title', name: 'title', widget: 'text' }
+                  - {
+                      label: 'Description',
+                      name: 'description',
+                      widget: 'text',
+                    }
+                  - { label: 'Icon Source', name: 'iconSrc', widget: 'image' }
+                  - { label: 'Icon Alt', name: 'iconAlt', widget: 'string' }
+                  - { label: 'Style', name: 'style', widget: 'string' }
+          - label: 'Section 2'
+            name: 'section2'
+            widget: 'object'
+            collapsed: true
+            fields:
               - { label: 'Title', name: 'title', widget: 'string' }
               - { label: 'Slogan', name: 'slogan', widget: 'string' }
               - { label: 'Description1', name: 'description1', widget: 'text' }
@@ -26,8 +46,8 @@ collections:
                 fields:
                   - { label: 'Image Source', name: 'imgSrc', widget: 'image' }
                   - { label: 'Image Alt', name: 'imgAlt', widget: 'string' }
-          - label: 'Section 2'
-            name: 'section2'
+          - label: 'Section 3'
+            name: 'section3'
             widget: 'object'
             collapsed: true
             fields:

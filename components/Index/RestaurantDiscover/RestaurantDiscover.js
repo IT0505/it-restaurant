@@ -13,7 +13,7 @@ import 'swiper/css/pagination';
 
 export default function RestaurantDiscover() {
   const {
-    section1: { title, slogan, description1, description2, swiperImages },
+    section2: { title, slogan, description1, description2, swiperImages },
   } = attributes;
   console.log(attributes);
 

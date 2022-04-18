@@ -5,7 +5,7 @@ import { attributes } from '../../../content/home.md';
 
 export default function OurBest() {
   const {
-    section2: { title, slogan, background1 },
+    section3: { title, slogan, background1 },
   } = attributes;
 
   return (

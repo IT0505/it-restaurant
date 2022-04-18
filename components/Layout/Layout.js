@@ -5,8 +5,10 @@ import styles from './Layout.module.scss';
 export default function Layout({ children }) {
   return (
     <div className={styles.pageWrap}>
-      <Header />
-      {children}
+      <div className={styles.topPageWrap}>
+        <Header />
+        {children}
+      </div>
       <Footer />
       <ScrollUpButton />
     </div>

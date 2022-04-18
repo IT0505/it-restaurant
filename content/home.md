@@ -1,5 +1,22 @@
 ---
 section1:
+  slideshowImages:
+    - imgSrc: /img/image-1.jpg
+      imgAlt: restaurant
+      title: The Delicious Food Tasts
+      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium'
+    - imgSrc: /img/image-2.jpg
+      imgAlt: restaurant
+      title: The Delicious Food Tasts
+      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium'
+    - imgSrc: /img/image-3.jpg
+      imgAlt: restaurant
+      title: The Delicious Food Tasts
+      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium'
+      iconSrc: /img/icon-1.png
+      iconAlt: restaurantIcon
+      style: style1
+section2:
   title: Great New Dishes
   slogan: Discover Our Restaurant
   description1: A cappuccino is an Italian coffee drink which is traditionally
@@ -16,7 +33,7 @@ section1:
       imgAlt: restaurant
     - imgSrc: /img/1-1.jpg
       imgAlt: restaurant
-section2:
+section3:
   title: Healthy Fresh And Hot Dishes.
   slogan: Best Offers From The House Chef.
   background1: /img/10.jpg
