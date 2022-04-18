@@ -12,7 +12,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 export default function RestaurantDiscover() {
-  const { title, slogan, description1, description2 } = attributes;
+  const { title, slogan, description1, description2, swiperImages } =
+    attributes;
   console.log(attributes);
 
   const pagination = {
@@ -35,8 +36,8 @@ export default function RestaurantDiscover() {
               slogan={slogan}
               title={title}
             />
-            <p className={styles.description}>{mainContent.description1}</p>
-            <p className={styles.description}>{mainContent.description2}</p>
+            <p className={styles.description}>{description1}</p>
+            <p className={styles.description}>{description2}</p>
             <Button className={styles.button}>Read More</Button>
           </div>
           <Swiper
@@ -57,16 +58,18 @@ export default function RestaurantDiscover() {
               },
             }}
           >
-            {swiperImgs.map((item, index) => (
+            {swiperImages.map((item, index) => (
               <SwiperSlide className={styles.swiperSlide} key={index}>
                 {({ isActive }) => (
                   <figure
                     className={`${styles.image} ${isActive && styles.active}`}
                   >
                     <Image
-                      src={item.imgSrc}
+                      src={'/' + item.imgSrc}
                       alt={item.imgAlt}
-                      layout='responsive'
+                      // layout='responsive'
+                      layout='fill'
+                      objectFit='contain'
                     ></Image>
                   </figure>
                 )}
