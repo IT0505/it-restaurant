@@ -13,6 +13,10 @@
     font-family: 'Dancing Script', cursive;
     line-height: 1.4em;
 
+    @include Responsive(M) {
+      font-size: 34px;
+    }
+
     @include Responsive(XS) {
       font-size: 30px;
     }
@@ -25,6 +29,10 @@
     color: #333333;
     text-transform: capitalize;
     line-height: 1.4em;
+
+    @include Responsive(M) {
+      font-size: 23px;
+    }
 
     @include Responsive(XS) {
       font-size: 20px;
@@ -39,12 +47,28 @@
       font-size: 38px;
       margin: 0;
       line-height: 1.6em;
+
+      @include Responsive(M) {
+        font-size: 34px;
+      }
+
+      @include Responsive(XS) {
+        font-size: 30px;
+      }
     }
 
     .slogan {
       color: #ffffff;
       font-size: 36px;
       line-height: 1.6em;
+
+      @include Responsive(M) {
+        font-size: 30px;
+      }
+
+      @include Responsive(XS) {
+        font-size: 24px;
+      }
     }
   }
 
@@ -55,11 +79,27 @@
       font-size: 33px;
       margin: 0;
       line-height: 1.4em;
+
+      @include Responsive(M) {
+        font-size: 30px;
+      }
+
+      @include Responsive(XS) {
+        font-size: 27px;
+      }
     }
 
     .slogan {
       font-size: 28px;
       line-height: 1.4em;
+
+      @include Responsive(M) {
+        font-size: 24px;
+      }
+
+      @include Responsive(XS) {
+        font-size: 20px;
+      }
     }
   }
 }
