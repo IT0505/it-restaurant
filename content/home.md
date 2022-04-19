@@ -3,16 +3,22 @@ section1:
   slideshowImages:
     - imgSrc: /img/image-1.jpg
       imgAlt: restaurant
-      title: The Delicious Food Tasts
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium'
+      title: The Delicious Food Tasting
+      description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam. Sed ut
+        perspiciatis unde omnis iste natus error sit voluptatem accusantium
     - imgSrc: /img/image-2.jpg
       imgAlt: restaurant
       title: The Delicious Food Tasts
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium'
+      description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam. Sed ut
+        perspiciatis unde omnis iste natus error sit voluptatem accusantium
     - imgSrc: /img/image-3.jpg
       imgAlt: restaurant
       title: The Delicious Food Tasts
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium'
+      description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam. Sed ut
+        perspiciatis unde omnis iste natus error sit voluptatem accusantium
       iconSrc: /img/icon-1.png
       iconAlt: restaurantIcon
       style: style1
