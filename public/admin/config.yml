@@ -28,9 +28,24 @@ collections:
                       name: 'description',
                       widget: 'text',
                     }
-                  - { label: 'Icon Source', name: 'iconSrc', widget: 'image' }
-                  - { label: 'Icon Alt', name: 'iconAlt', widget: 'string' }
-                  - { label: 'Style', name: 'style', widget: 'string' }
+                  - {
+                      label: 'Icon Source',
+                      name: 'iconSrc',
+                      widget: 'image',
+                      required: false,
+                    }
+                  - {
+                      label: 'Icon Alt',
+                      name: 'iconAlt',
+                      widget: 'string',
+                      required: false,
+                    }
+                  - {
+                      label: 'Style',
+                      name: 'style',
+                      widget: 'string',
+                      required: false,
+                    }
           - label: 'Section 2'
             name: 'section2'
             widget: 'object'
