@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
+  local_backend: true
+  repo: danieltran3110/restaurantNhatTam
 media_folder: public/img
 public_folder: /img
 collections:
