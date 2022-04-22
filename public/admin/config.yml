@@ -106,6 +106,7 @@ collections:
       - { label: 'Blog Image Alt', name: 'imgAlt', widget: 'string' }
       - { label: 'Author', name: 'author', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Comments'
         name: 'comments'
         widget: 'list'
@@ -122,4 +123,3 @@ collections:
               format: 'LLL',
             }
           - { label: 'Comment', name: 'comment', widget: 'text' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
