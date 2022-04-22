@@ -120,7 +120,7 @@ export const headerData = {
         submenu: [
           {
             title: 'Blog',
-            url: '/blog',
+            url: '/blogs',
             id: 'blog1',
           },
           {
@@ -1097,13 +1097,13 @@ export const flyingNinjaProductData = {
   ],
 };
 
-export const blogPageTitleData = {
+export const blogsPageTitleData = {
   title: 'Tips For New Dishes',
   slogan: 'Latest News',
   backgroundImage: backgroundImg4,
 };
 
-export const blogSectionData = {
+export const blogsSectionData = {
   mainContent: [
     {
       imgSrc: news1,

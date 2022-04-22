@@ -6,7 +6,7 @@ export default function ReviewComment({ data }) {
   return (
     <div className={styles.reviewComment}>
       <figure className={styles.image}>
-        <Image src={imgSrc} alt={imgAlt} layout='responsive' />
+        <Image src={imgSrc} alt={imgAlt} layout='fill' objectFit='contain' />
       </figure>
       <div className={styles.reviewCommentInner}>
         <StarRating rating={starRating} />

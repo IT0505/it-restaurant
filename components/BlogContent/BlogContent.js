@@ -19,7 +19,12 @@ export default function BlogContent({ data, className }) {
       <div className={styles.aboveContent}>
         <Link href={url}>
           <a className={styles.image}>
-            <Image src={imgSrc} alt={imgAlt} layout='responsive'></Image>
+            <Image
+              src={imgSrc}
+              alt={imgAlt}
+              layout='fill'
+              objectFit='contain'
+            ></Image>
           </a>
         </Link>
         <Link href={url}>
