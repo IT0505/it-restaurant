@@ -90,4 +90,6 @@ collections:
           time_format: 'HH:mm',
           format: 'LLL',
         }
+      - { label: 'Blog Image', name: 'imgSrc', widget: 'image' }
+      - { label: 'Blog Image Alt', name: 'imgAlt', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
