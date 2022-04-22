@@ -75,6 +75,17 @@ collections:
                   name: 'background1',
                   widget: 'image',
                 }
+      - label: 'Blogs'
+        name: 'blogs'
+        file: 'content/blogs.md'
+        fields:
+          - {
+              label: 'Background Image',
+              name: 'backgroundImage',
+              widget: 'image',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Slogan', name: 'slogan', widget: 'string' }
   - name: 'blog' # Used in routes, e.g., /admin/collections/blog
     label: 'Blog' # Used in the UI
     folder: 'content/blogs' # The path to the folder where the documents are stored
