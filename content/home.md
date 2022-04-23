@@ -1,7 +1,7 @@
 ---
 section1:
   slideshowImages:
-    - imgSrc: /img/image-1.jpg
+    - imgSrc: /img/image017.png
       imgAlt: restaurant
       title: The Delicious Food Tasting
       description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem
