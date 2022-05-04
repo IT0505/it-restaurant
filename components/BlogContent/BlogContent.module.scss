@@ -13,18 +13,16 @@
     }
 
     .image {
-      // min-height: 400px;
       position: relative;
       display: block;
       margin: 0 auto 20px;
       max-width: 100%;
       width: 100%;
-      min-height: 450px;
+      // min-height: 420px;
 
       img {
         transition: transform 0.5s;
       }
-      // height: 400px;
 
       pointer-events: auto;
     }

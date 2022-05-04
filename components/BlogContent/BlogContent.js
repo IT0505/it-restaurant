@@ -22,9 +22,10 @@ export default function BlogContent({ data, className }) {
             <Image
               src={imgSrc}
               alt={imgAlt}
-              layout='fill'
-              objectFit='contain'
-            ></Image>
+              width={16}
+              height={9}
+              layout='responsive'
+            />
           </a>
         </Link>
         <Link href={url}>
