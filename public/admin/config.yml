@@ -119,6 +119,11 @@ collections:
                     widget: list
                     fields:
                       - {
+                          label: 'Name Of Food',
+                          name: 'name',
+                          widget: 'string',
+                        }
+                      - {
                           label: 'Status',
                           name: 'status',
                           widget: 'string',
@@ -130,7 +135,6 @@ collections:
                           widget: 'image',
                         }
                       - { label: 'Image Alt', name: 'imgAlt', widget: 'string' }
-                      - { label: 'Name', name: 'name', widget: 'string' }
                       - {
                           label: 'Description',
                           name: 'description',

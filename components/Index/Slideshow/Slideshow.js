@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Image from 'next/image';
 import styles from './Slideshow.module.scss';
 import Button from '../../Button/Button';
-// import { slideshowData } from '../../../utils/dataConfig';
 import { attributes } from '../../../content/home.md';
 import { fadeIn, fadeInUp, slideInLeft, slideInRight } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
@@ -28,8 +27,6 @@ const classes = StyleSheet.create({
 
 export default function SlideShow() {
   const [slide, setSlide] = useState(0);
-  // const slideLength = slideshowData.slideshowItems.length;
-  // const slideshowItems = slideshowData.slideshowItems;
 
   const {
     section1: { slideshowImages },

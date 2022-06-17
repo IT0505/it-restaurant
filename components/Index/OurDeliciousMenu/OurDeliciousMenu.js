@@ -1,7 +1,6 @@
 import styles from './OurDeliciousMenu.module.scss';
 import React from 'react';
 import Parallax from '../../Parallax/Parallax';
-import { ourDeliciousMenuData } from '../../../utils/dataConfig';
 import Image from 'next/image';
 import MenuItem from '../../MenuItem/MenuItem';
 import { attributes } from '../../../content/home.md';
