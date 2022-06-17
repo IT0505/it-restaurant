@@ -142,6 +142,40 @@ collections:
                         }
                       - { label: 'Price', name: 'price', widget: 'string' }
                       - { label: 'URL', name: 'url', widget: 'string' }
+          - label: 'Section 6'
+            name: 'section6'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Slogan', name: 'slogan', widget: 'string' }
+              - label: 'Opening Hours'
+                name: 'openingHours'
+                widget: list
+                fields:
+                  - { label: 'Date', name: 'date', widget: 'string' }
+                  - { label: 'Time', name: 'time', widget: 'string' }
+              - {
+                  label: 'Note',
+                  name: 'note',
+                  widget: 'string',
+                  required: false,
+                }
+              - { label: 'Phone', name: 'phone', widget: 'string' }
+              - label: 'Special Dishes'
+                name: 'specialDishes'
+                widget: list
+                fields:
+                  - { label: 'Image Source', name: 'imgSrc', widget: 'image' }
+                  - { label: 'Image Alt', name: 'imgAlt', widget: 'string' }
+                  - { label: 'Price', name: 'price', widget: 'string' }
+                  - { label: 'URL', name: 'url', widget: 'string' }
+                  - { label: 'Title', name: 'title', widget: 'string' }
+                  - {
+                      label: 'Description',
+                      name: 'description',
+                      widget: 'text',
+                    }
       - label: 'Blogs'
         name: 'blogs'
         file: 'content/blogs.md'

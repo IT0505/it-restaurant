@@ -104,4 +104,29 @@ section5:
         url: /shopsingle
         description: Black beans, Home 1, olive oil
         price: $35.40
+section6:
+  title: Our Special Dishes.
+  slogan: Best offers from the house chef
+  openingHours:
+    - date: Monday — Friday
+      time: 9:00 am - 23:00 pm
+    - date: Saturday
+      time: 10:00 am - 22:00 pm
+    - date: Sunday
+      time: 10:00 am - 21:00 pm
+  note: Arctica Restaurant is closed on holidays
+  phone: '0844.335.1211'
+  specialDishes:
+    - imgSrc: /img/special-1.jpg
+      imgAlt: Special Dishes
+      price: $50.35
+      url: '#'
+      title: Honey Strawberry
+      description: 'Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor nequeu tellus rhoncus ut eleifend nibh porttitor ut in nulla enim hasellus mirolestie magna non lorem ipsum dolor site amet.'
+    - imgSrc: /img/special-2.jpg
+      imgAlt: Special Dishes
+      price: $50.35
+      url: '#'
+      title: Scrambled Eggs in Puff Pastry
+      description: 'Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor nequeu tellus rhoncus ut eleifend nibh porttitor ut in nulla enim hasellus mirolestie magna non lorem ipsum dolor site amet.'
 ---

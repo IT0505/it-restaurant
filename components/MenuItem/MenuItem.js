@@ -12,8 +12,8 @@ export default function MenuItem({ data, style }) {
             src={imgSrc}
             alt={imgAlt}
             layout='responsive'
-            height='1'
-            width='1'
+            height={1}
+            width={1}
           ></Image>
         </a>
       </Link>

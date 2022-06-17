@@ -380,9 +380,9 @@ export const ourSpecialDishesData = {
       date: 'Sunday',
       time: '10:00 am - 21:00 pm',
     },
-    { note: 'Note: Arctica Restaurant is closed on holidays.' },
-    { phone: '0844.335.1211' },
   ],
+  note: 'Note: Arctica Restaurant is closed on holidays.',
+  phone: '0844.335.1211',
   specialDishes: [
     {
       imgSrc: specialImg1,

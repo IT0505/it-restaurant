@@ -9,7 +9,13 @@ export default function SpecialItem({ data, index }) {
       className={`${styles.specialItem} ${index % 2 === 0 && styles.reverse}`}
     >
       <figure className={styles.image}>
-        <Image src={imgSrc} alt={imgAlt} layout='responsive' />
+        <Image
+          src={imgSrc}
+          alt={imgAlt}
+          layout='responsive'
+          height={1}
+          width={1}
+        />
         <div className={styles.overlay}>{price}</div>
       </figure>
       <div className={styles.text}>

@@ -3,8 +3,12 @@ import MainTitle from '../../MainTitle/MainTitle';
 import { ourSpecialDishesData } from '../../../utils/dataConfig';
 import OpeningHoursItem from './components/OpeningHoursItem/OpeningHoursItem';
 import SpecialItem from './components/SpecialItem/SpecialItem';
+import { attributes } from '../../../content/home.md';
+
 export default function OurSpecialDishes() {
-  const { title, slogan, openingHours, specialDishes } = ourSpecialDishesData;
+  const {
+    section6: { title, slogan, openingHours, note, phone, specialDishes },
+  } = attributes;
 
   return (
     <div className={styles.ourSpecialDishes}>
@@ -18,6 +22,8 @@ export default function OurSpecialDishes() {
                 {openingHours.map((item, index) => (
                   <OpeningHoursItem data={item} key={index} />
                 ))}
+                <p className={styles.note}>{note}</p>
+                <p className={styles.phone}>{phone}</p>
               </div>
             </div>
             <div className={styles.specialList}>
