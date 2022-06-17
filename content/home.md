@@ -65,4 +65,43 @@ section4:
       imgTitle: Fish
       description: Vivamus sed fermentum tellus. Donec quis elit sapien. Aliquam commodo tortor nisi, nec varius mi finibus at. ut ullamcorper volutpat lectusu
       url: '#'
+section5:
+  title: Our Delicious Menu
+  slogan: Best offers from the house chef
+  backgroundImage: /img/2-860x1024.jpg
+  swiperImgs:
+    - imgSrc: /img/chicken-1.png
+      imgAlt: chicken
+    - imgSrc: /img/chicken-1.png
+      imgAlt: chicken
+    - imgSrc: /img/chicken-1.png
+      imgAlt: chicken
+  mainContent:
+    subTitle: Our Best Chicken Recipes
+    menuList:
+      - status: new
+        imgSrc: /img/dining-item-1.jpg
+        imgAlt: dining
+        name: Gosh Egg-White Omelet
+        url: /shopsingle
+        description: Black beans, Home 1, olive oil
+        price: $35.40
+      - imgSrc: /img/dining-item-2.jpg
+        imgAlt: dining
+        name: Powered Turkey Meatballs
+        url: shopsingle
+        description: Black beans, Home 1, olive oil
+        price: $35.40
+      - imgSrc: /img/dining-item-3.jpg
+        imgAlt: dining
+        name: Creamy Feta Salad Dressing
+        url: /shopsingle
+        description: Black beans, Home 1, olive oil
+        price: $35.40
+      - imgSrc: /img/dining-item-4.jpg
+        imgAlt: dining
+        name: Roasted Red Pepper Hummus
+        url: /shopsingle
+        description: Black beans, Home 1, olive oil
+        price: $35.40
 ---

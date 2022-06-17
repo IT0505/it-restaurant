@@ -8,7 +8,13 @@ export default function MenuItem({ data, style }) {
       <Link href={url}>
         <a className={styles.image}>
           {status === 'new' && <span className={styles.status}>New</span>}
-          <Image src={imgSrc} alt={imgAlt} layout='responsive'></Image>
+          <Image
+            src={imgSrc}
+            alt={imgAlt}
+            layout='responsive'
+            height='1'
+            width='1'
+          ></Image>
         </a>
       </Link>
       <div className={styles.text}>
