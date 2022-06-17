@@ -4,19 +4,22 @@ section1:
     - imgSrc: /img/image017.png
       imgAlt: restaurant
       title: The Delicious Food Tasting
-      description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+      description:
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam. Sed ut
         perspiciatis unde omnis iste natus error sit voluptatem accusantium
     - imgSrc: /img/image-2.jpg
       imgAlt: restaurant
       title: The Delicious Food Tasts
-      description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+      description:
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam. Sed ut
         perspiciatis unde omnis iste natus error sit voluptatem accusantium
     - imgSrc: /img/image-3.jpg
       imgAlt: restaurant
       title: The Delicious Food Tasts
-      description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+      description:
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam. Sed ut
         perspiciatis unde omnis iste natus error sit voluptatem accusantium
       iconSrc: /img/icon-1.png
@@ -43,4 +46,23 @@ section3:
   title: Healthy Fresh And Hot Dishes.
   slogan: Best Offers From The House Chef.
   background1: /img/10.jpg
+section4:
+  title: Our Services
+  slogan: We Create Delicious Memory
+  listServices:
+    - imgSrc: /img/services-1.png
+      imgAlt: Pizza
+      imgTitle: Pizza
+      description: Vivamus sed fermentum tellus. Donec quis elit sapien. Aliquam commodo tortor nisi, nec varius mi finibus at. ut ullamcorper volutpat lectusu
+      url: '#'
+    - imgSrc: /img/services-2.png
+      imgAlt: Burger
+      imgTitle: Burger
+      description: Vivamus sed fermentum tellus. Donec quis elit sapien. Aliquam commodo tortor nisi, nec varius mi finibus at. ut ullamcorper volutpat lectusu
+      url: '#'
+    - imgSrc: /img/services-3.png
+      imgAlt: Fish
+      imgTitle: Fish
+      description: Vivamus sed fermentum tellus. Donec quis elit sapien. Aliquam commodo tortor nisi, nec varius mi finibus at. ut ullamcorper volutpat lectusu
+      url: '#'
 ---

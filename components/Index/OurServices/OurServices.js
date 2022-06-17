@@ -1,24 +1,28 @@
-import styles from "./OurServices.module.scss";
-import {ourServicesData} from "../../../utils/dataConfig";
-import Image from "next/image";
-import MainTitle from "../../MainTitle/MainTitle";
-import Link from "next/link";
+import styles from './OurServices.module.scss';
+import Image from 'next/image';
+import MainTitle from '../../MainTitle/MainTitle';
+import Link from 'next/link';
+import { attributes } from '../../../content/home.md';
 
 export default function OurServices() {
-  const {mainContent, title, slogan} = ourServicesData;
+  const {
+    section4: { title, slogan, listServices },
+  } = attributes;
+
   return (
     <div className={styles.ourServices}>
-      <div className="container">
+      <div className='container'>
         <div className={`${styles.ourServicesInner} section`}>
           <MainTitle slogan={slogan} title={title} />
           <div className={styles.mainContent}>
-            {mainContent.map((item, index) => (
+            {listServices.map((item, index) => (
               <div className={styles.content} key={index}>
                 <div className={`${styles.image} animate zoomIn`}>
                   <Image
                     src={item.imgSrc}
                     alt={item.imgAlt}
-                    layout="responsive"
+                    layout='fill'
+                    objectFit='contain'
                   />
                 </div>
                 <Link href={item.url}>

@@ -30,8 +30,10 @@
         }
 
         .image {
+          position: relative;
           max-width: 175px;
           width: 100%;
+          min-height: 100px;
           margin: 0 auto;
         }
 

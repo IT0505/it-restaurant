@@ -75,6 +75,26 @@ collections:
                   name: 'background1',
                   widget: 'image',
                 }
+          - label: 'Section 4'
+            name: 'section4'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Slogan', name: 'slogan', widget: 'string' }
+              - label: 'List Services'
+                name: 'listServices'
+                widget: list
+                fields:
+                  - { label: 'Image Source', name: 'imgSrc', widget: 'image' }
+                  - { label: 'Image Alt', name: 'imgAlt', widget: 'string' }
+                  - { label: 'Image Title', name: 'imgTitle', widget: 'string' }
+                  - {
+                      label: 'Description',
+                      name: 'description',
+                      widget: 'text',
+                    }
+                  - { label: 'URL', name: 'url', widget: 'string' }
       - label: 'Blogs'
         name: 'blogs'
         file: 'content/blogs.md'
