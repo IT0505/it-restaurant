@@ -1,6 +1,5 @@
 import styles from './OurSpecialDishes.module.scss';
 import MainTitle from '../../MainTitle/MainTitle';
-import { ourSpecialDishesData } from '../../../utils/dataConfig';
 import OpeningHoursItem from './components/OpeningHoursItem/OpeningHoursItem';
 import SpecialItem from './components/SpecialItem/SpecialItem';
 import { attributes } from '../../../content/home.md';

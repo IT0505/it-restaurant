@@ -22,14 +22,14 @@ collections:
                 name: 'slideshowImages'
                 widget: 'list'
                 fields:
-                  - { label: 'Image Source', name: 'imgSrc', widget: 'image' }
-                  - { label: 'Image Alt', name: 'imgAlt', widget: 'string' }
                   - { label: 'Title', name: 'title', widget: 'text' }
                   - {
                       label: 'Description',
                       name: 'description',
                       widget: 'text',
                     }
+                  - { label: 'Image Source', name: 'imgSrc', widget: 'image' }
+                  - { label: 'Image Alt', name: 'imgAlt', widget: 'string' }
                   - {
                       label: 'Icon Source',
                       name: 'iconSrc',
@@ -86,9 +86,9 @@ collections:
                 name: 'listServices'
                 widget: list
                 fields:
+                  - { label: 'Image Title', name: 'imgTitle', widget: 'string' }
                   - { label: 'Image Source', name: 'imgSrc', widget: 'image' }
                   - { label: 'Image Alt', name: 'imgAlt', widget: 'string' }
-                  - { label: 'Image Title', name: 'imgTitle', widget: 'string' }
                   - {
                       label: 'Description',
                       name: 'description',
@@ -166,15 +166,31 @@ collections:
                 name: 'specialDishes'
                 widget: list
                 fields:
+                  - { label: 'Title', name: 'title', widget: 'string' }
                   - { label: 'Image Source', name: 'imgSrc', widget: 'image' }
                   - { label: 'Image Alt', name: 'imgAlt', widget: 'string' }
                   - { label: 'Price', name: 'price', widget: 'string' }
                   - { label: 'URL', name: 'url', widget: 'string' }
-                  - { label: 'Title', name: 'title', widget: 'string' }
                   - {
                       label: 'Description',
                       name: 'description',
                       widget: 'text',
+                    }
+          - label: 'Section 7'
+            name: 'section7'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - label: 'Image List'
+                name: 'imgList'
+                widget: list
+                fields:
+                  - { label: 'Image Source', name: 'imgSrc', widget: 'image' }
+                  - { label: 'Image Alt', name: 'imgAlt', widget: 'string' }
+                  - {
+                      label: 'Image Caption',
+                      name: 'imgCaption',
+                      widget: 'string',
                     }
       - label: 'Blogs'
         name: 'blogs'

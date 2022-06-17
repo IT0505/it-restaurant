@@ -1,6 +1,6 @@
 import styles from './Carousel.module.scss';
-import { carouselData } from '../../../utils/dataConfig';
 import Image from 'next/image';
+import { attributes } from '../../../content/home.md';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
@@ -8,7 +8,9 @@ import { Autoplay } from 'swiper';
 import 'swiper/css';
 
 export default function Carousel() {
-  const { imgList } = carouselData;
+  const {
+    section7: { imgList },
+  } = attributes;
   return (
     <div className={styles.carousel}>
       <Swiper
@@ -35,7 +37,13 @@ export default function Carousel() {
         {imgList.map((item, index) => (
           <SwiperSlide key={index}>
             <figure className={styles.image}>
-              <Image src={item.imgSrc} alt={item.imgAlt} layout='responsive' />
+              <Image
+                src={item.imgSrc}
+                alt={item.imgAlt}
+                layout='responsive'
+                width={627}
+                height={541}
+              />
               <figcaption className={styles.caption}>
                 {item.imgCaption}
               </figcaption>

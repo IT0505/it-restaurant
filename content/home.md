@@ -129,4 +129,24 @@ section6:
       url: '#'
       title: Scrambled Eggs in Puff Pastry
       description: 'Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor nequeu tellus rhoncus ut eleifend nibh porttitor ut in nulla enim hasellus mirolestie magna non lorem ipsum dolor site amet.'
+section7:
+  imgList:
+    - imgSrc: /img/1-1.jpg
+      imgAlt: delicious food
+      imgCaption: Masala Spiced Chickpeas
+    - imgSrc: /img/2-1.jpg
+      imgAlt: delicious food
+      imgCaption: Masala Spiced Chickpeas
+    - imgSrc: /img/3.jpg
+      imgAlt: delicious food
+      imgCaption: Masala Spiced Chickpeas
+    - imgSrc: /img/1-1.jpg
+      imgAlt: delicious food
+      imgCaption: Masala Spiced Chickpeas
+    - imgSrc: /img/2-1.jpg
+      imgAlt: delicious food
+      imgCaption: Masala Spiced Chickpeas
+    - imgSrc: /img/3.jpg
+      imgAlt: delicious food
+      imgCaption: Masala Spiced Chickpeas
 ---
