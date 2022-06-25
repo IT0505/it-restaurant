@@ -1,16 +1,38 @@
 import styles from './ChefItem.module.scss';
 import Image from 'next/image';
-import SocialIcon from '../../../../SocialIcon/SocialIcon';
+import Link from 'next/link';
 export default function ChefItem({ data }) {
-  const { imgSrc, imgAlt, socialIcons, name, position } = data;
+  const { imgSrc, imgAlt, social, name, position } = data;
   return (
     <div className={styles.chefItem}>
       <figure className={styles.image}>
         <Image src={imgSrc} alt={imgAlt} layout='responsive' />
         <figcaption className={styles.caption}>
-          {socialIcons.map((item, index) => (
-            <SocialIcon data={item} key={index} style={'style2'} />
-          ))}
+          <Link href={social.facebook}>
+            <a className={`${styles.socialIcon}`}>
+              <i className='fa-brands fa-facebook-f'></i>
+            </a>
+          </Link>
+          <Link href={social.twitter}>
+            <a className={`${styles.socialIcon}`}>
+              <i className='fa-brands fa-twitter'></i>
+            </a>
+          </Link>
+          <Link href={social.google}>
+            <a className={`${styles.socialIcon}`}>
+              <i className='fa-brands fa-google-plus-g'></i>
+            </a>
+          </Link>
+          <Link href={social.tumblr}>
+            <a className={`${styles.socialIcon}`}>
+              <i className='fa-brands fa-tumblr'></i>
+            </a>
+          </Link>
+          <Link href={social.vimeo}>
+            <a className={`${styles.socialIcon}`}>
+              <i className='fa-brands fa-vimeo-square'></i>
+            </a>
+          </Link>
         </figcaption>
       </figure>
       <div className={styles.lowerContent}>

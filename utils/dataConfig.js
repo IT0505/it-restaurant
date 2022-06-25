@@ -448,78 +448,37 @@ export const ourDeliciousData = {
       name: 'Rick Grimes',
       position: 'Chef cook',
       imgSrc: chefImg1,
-      socialIcons: [
-        {
-          url: '#',
-          icon: 'fa-brands fa-facebook-f',
-        },
-        {
-          url: '#',
-          icon: 'fa-brands fa-twitter',
-        },
-        {
-          url: '#',
-          icon: 'fa-brands fa-google-plus-g',
-        },
-        {
-          url: '#',
-          icon: 'fa-brands fa-tumblr',
-        },
-        {
-          icon: 'fa-brands fa-vimeo-square',
-          url: '#',
-        },
-      ],
+      social: {
+        facebook: '#',
+        twitter: '#',
+        google: '#',
+        tumblr: '#',
+        vimeo: '#',
+      },
     },
     {
       name: 'Rick Grimes',
       position: 'Chef cook',
       imgSrc: chefImg2,
-      socialIcons: [
-        {
-          url: '#',
-          icon: 'fa-brands fa-facebook-f',
-        },
-        {
-          url: '#',
-          icon: 'fa-brands fa-twitter',
-        },
-        {
-          url: '#',
-          icon: 'fa-brands fa-google-plus-g',
-        },
-        {
-          url: '#',
-          icon: 'fa-brands fa-tumblr',
-        },
-      ],
+      social: {
+        facebook: '#',
+        twitter: '#',
+        google: '#',
+        tumblr: '#',
+        vimeo: '#',
+      },
     },
     {
       name: 'Rick Grimes',
       position: 'Chef cook',
       imgSrc: chefImg3,
-      socialIcons: [
-        {
-          url: '#',
-          icon: 'fa-brands fa-facebook-f',
-        },
-        {
-          url: '#',
-          icon: 'fa-brands fa-twitter',
-        },
-        {
-          url: '#',
-          icon: 'fa-brands fa-google-plus-g',
-        },
-        {
-          url: '#',
-          icon: 'fa-brands fa-tumblr',
-        },
-        {
-          icon: 'fa-brands fa-vimeo-square',
-          url: '#',
-        },
-      ],
+      social: {
+        facebook: '#',
+        twitter: '#',
+        google: '#',
+        tumblr: '#',
+        vimeo: '#',
+      },
     },
   ],
 };
