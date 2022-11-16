@@ -1,7 +1,7 @@
 ---
 section1:
   slideshowImages:
-    - imgSrc: /img/image017.png
+    - imgSrc: /img/image-1.jpg
       imgAlt: restaurant
       title: The Delicious Food Tasting
       description:
